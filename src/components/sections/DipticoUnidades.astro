@@ -4,13 +4,13 @@ import { getLangFromUrl, useTranslations } from '../../i18n/index';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
-<section id="unidades" class="grid grid-cols-1 lg:grid-cols-2 min-h-[72vh]">
+<section id="unidades" class="group/dip grid grid-cols-1 lg:grid-cols-2 min-h-[72vh]">
 
   <!-- Unidad 01: Frigorífico Florida -->
   <!-- PLACEHOLDER: foto planta Florida, tono azulado-industrial, 16:9 horizontal -->
   <a href={`/${lang}/FrigorificoFlorida`}
-    class="group relative flex items-end overflow-hidden cursor-pointer min-h-[50vh] lg:min-h-0"
-    aria-label={`Conocer ${t('units.unit1Title')}`}>
+    class="group relative flex items-end overflow-hidden cursor-pointer min-h-[50vh] lg:min-h-0 lg:self-stretch transition-opacity duration-300 group-has-[[href*='FrigorificoSaturno']:hover]/dip:opacity-75"
+    aria-label={t('units.unit1Cta')}>
 
     <div class="absolute inset-0 bg-gradient-to-br from-[#2a3a50] via-[#1a2535] to-[#101820]
                 transition-transform duration-700 ease-out group-hover:scale-[1.03]"
@@ -47,8 +47,8 @@ const t = useTranslations(lang);
 
   <!-- Unidad 02: Frigorífico Saturno -->
   <a href={`/${lang}/FrigorificoSaturno`}
-    class="group relative flex items-end overflow-hidden cursor-pointer min-h-[50vh] lg:min-h-0"
-    aria-label={`Conocer ${t('units.unit2Title')}`}>
+    class="group relative flex items-end overflow-hidden cursor-pointer min-h-[50vh] lg:min-h-0 lg:self-stretch transition-opacity duration-300 group-has-[[href*='FrigorificoFlorida']:hover]/dip:opacity-75"
+    aria-label={t('units.unit2Cta')}>
 
     <img
       src="/images/saturno-exterior.jpg"
@@ -86,3 +86,13 @@ const t = useTranslations(lang);
   </a>
 
 </section>
+
+<style>
+  #unidades:has(a[href*="FrigorificoFlorida"]:hover) a[href*="FrigorificoSaturno"],
+  #unidades:has(a[href*="FrigorificoSaturno"]:hover) a[href*="FrigorificoFlorida"] {
+    opacity: 0.75;
+  }
+  #unidades a {
+    transition: opacity 0.3s ease-out;
+  }
+</style>
