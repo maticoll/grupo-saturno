@@ -24,7 +24,7 @@ const t = useTranslations(lang);
       </p>
 
       <h1 class="font-serif text-[clamp(2.8rem,6vw,5.5rem)] font-light leading-[1.0] tracking-[-0.02em] text-white mb-6">
-        {t('hero.h1').replace(t('hero.h1Italic'), '')}
+        {t('hero.h1').split(t('hero.h1Italic'))[0]}
         <em class="italic text-white/75">{t('hero.h1Italic')}</em>
       </h1>
 
