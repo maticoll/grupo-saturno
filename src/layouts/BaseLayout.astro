@@ -1,0 +1,82 @@
+---
+import '../styles/global.css';
+import { getLangFromUrl, useTranslations, languages } from '../i18n/index';
+import type { Lang } from '../i18n/index';
+
+export interface Props {
+  title: string;
+  description: string;
+  image?: string;
+}
+
+const { title, description, image = '/og-default.jpg' } = Astro.props;
+const lang = getLangFromUrl(Astro.url) as Lang;
+const t = useTranslations(lang);
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const hreflangs = languages.map(l => ({
+  lang: l === 'zh' ? 'zh-CN' : l,
+  href: new URL(`/${l}${Astro.url.pathname.replace(/^\/(es|en|zh)/, '')}`, Astro.site).href,
+}));
+---
+<!DOCTYPE html>
+<html lang={lang === 'zh' ? 'zh-CN' : lang}>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalURL} />
+
+  {hreflangs.map(({ lang: l, href }) => (
+    <link rel="alternate" hreflang={l} href={href} />
+  ))}
+  <link rel="alternate" hreflang="x-default" href={new URL('/es/', Astro.site).href} />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={new URL(image, Astro.site).href} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalURL} />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={new URL(image, Astro.site).href} />
+
+  <!-- Schema.org Organization (only on home pages) -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Grupo Saturno",
+    "url": "https://gruposaturno.com.uy",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Empalme Olmos",
+      "addressRegion": "Canelones",
+      "addressCountry": "UY"
+    },
+    "foundingDate": "1998",
+    "description": "Empresa uruguaya de producción, procesamiento y comercialización cárnica."
+  })} />
+
+  <!-- Preload fuentes críticas -->
+  <link rel="preload" as="font" type="font/woff2"
+    href="/fonts/cormorant-garamond-latin-300-normal.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2"
+    href="/fonts/inter-latin-400-normal.woff2" crossorigin />
+</head>
+<body>
+  <slot />
+  <script>
+    // Scroll reveal con IntersectionObserver
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('revealed'); }),
+      { threshold: 0.1 }
+    );
+    document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
