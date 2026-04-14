@@ -21,8 +21,8 @@ const lang = getLangFromUrl(Astro.url);
     <a href={`/${lang}/`} class="font-serif text-carbon hover:text-burgundy transition-colors">
       Grupo <span class="text-burgundy">Saturno</span>
     </a>
-    <span class="text-warm-gray/40">›</span>
-    <span class="text-burgundy">{unitName}</span>
+    <span class="text-warm-gray/40" aria-hidden="true">›</span>
+    <span class="text-burgundy" aria-current="page">{unitName}</span>
   </nav>
   <main>
     <slot />

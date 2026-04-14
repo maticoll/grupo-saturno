@@ -1,7 +1,6 @@
 ---
 import '../styles/global.css';
 import { getLangFromUrl, useTranslations, languages } from '../i18n/index';
-import type { Lang } from '../i18n/index';
 
 export interface Props {
   title: string;
@@ -10,7 +9,7 @@ export interface Props {
 }
 
 const { title, description, image = '/og-default.jpg' } = Astro.props;
-const lang = getLangFromUrl(Astro.url) as Lang;
+const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -60,7 +59,7 @@ const hreflangs = languages.map(l => ({
     },
     "foundingDate": "1998",
     "description": "Empresa uruguaya de producción, procesamiento y comercialización cárnica."
-  })} />
+  }).replace(/<\//g, '<\\/')} />
 
   <!-- Preload fuentes críticas -->
   <link rel="preload" as="font" type="font/woff2"
@@ -72,11 +71,13 @@ const hreflangs = languages.map(l => ({
   <slot />
   <script>
     // Scroll reveal con IntersectionObserver
-    const observer = new IntersectionObserver(
-      (entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('revealed'); }),
-      { threshold: 0.1 }
-    );
-    document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const observer = new IntersectionObserver(
+        (entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('revealed'); }),
+        { threshold: 0.1 }
+      );
+      document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+    }
   </script>
 </body>
 </html>
