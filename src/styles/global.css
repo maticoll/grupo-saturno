@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Cormorant Garamond */
+@import '@fontsource/cormorant-garamond/300.css';
+@import '@fontsource/cormorant-garamond/400.css';
+@import '@fontsource/cormorant-garamond/300-italic.css';
+@import '@fontsource/cormorant-garamond/400-italic.css';
+
+/* Inter */
+@import '@fontsource/inter/300.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+
+@layer base {
+  html { font-family: theme('fontFamily.sans'); color: theme('colors.carbon'); }
+  html[lang='zh'] { font-family: theme('fontFamily.sans-zh'); }
+
+  *:focus-visible {
+    outline: 2px solid theme('colors.burgundy.DEFAULT');
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: theme('colors.burgundy.DEFAULT');
+    color: white;
+  }
+}
+
+@layer utilities {
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  .scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-reveal { opacity: 1; transform: none; transition: none; }
+  }
+}
