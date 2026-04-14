@@ -1,0 +1,61 @@
+---
+import SubLandingLayout from '../../layouts/SubLandingLayout.astro';
+import SectionLabel from '../../components/ui/SectionLabel.astro';
+import ContactoComercial from '../../components/sections/ContactoComercial.astro';
+import { getLangFromUrl, useTranslations, languages } from '../../i18n/index';
+
+export function getStaticPaths() {
+  return languages.map(lang => ({ params: { lang } }));
+}
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+<SubLandingLayout
+  title={t('meta.floridaTitle')}
+  description={t('meta.floridaDesc')}
+  unitName="Frigorífico Florida"
+>
+  <!-- Hero — tono azulado-industrial -->
+  <!-- PLACEHOLDER: foto exterior Frigorífico Florida -->
+  <section class="relative h-[70vh] min-h-[500px] flex items-end overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-[#2a3a50] via-[#1a2535] to-[#101820]" aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-carbon/90 via-carbon/40 to-carbon/10" aria-hidden="true"></div>
+    <div class="relative z-10 max-w-[1440px] mx-auto px-8 lg:px-20 pb-16 w-full">
+      <p class="font-sans text-[0.6rem] tracking-[0.22em] uppercase text-burgundy mb-4 flex items-center gap-3">
+        <span class="w-5 h-px bg-burgundy inline-block" aria-hidden="true"></span>
+        Unidad 01 · Grupo Saturno
+      </p>
+      <h1 class="font-serif text-[clamp(2.5rem,5vw,4.5rem)] font-light leading-[1.0] tracking-[-0.02em] text-white">
+        Frigorífico Florida
+      </h1>
+    </div>
+  </section>
+
+  <!-- Capacidades -->
+  <section class="bg-off-white py-24 px-8 lg:px-20">
+    <div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <div>
+        <SectionLabel class="mb-4">Presentación</SectionLabel>
+        <h2 class="font-serif text-[clamp(1.8rem,2.5vw,2.5rem)] font-light tracking-[-0.025em] text-carbon mb-6">
+          Especialización y capacidad de escala
+        </h2>
+        <p class="font-sans text-[0.85rem] font-light text-[#555] leading-[1.8]">
+          {/* [CONTENIDO A DEFINIR CON CLIENTE] */}
+          Procesamiento especializado con foco en exportación de cortes premium al mercado internacional.
+        </p>
+        <p class="mt-4 inline-block bg-burgundy/[0.08] text-burgundy font-sans text-[0.62rem] px-3 py-1.5">
+          [ CONTENIDO A DEFINIR CON CLIENTE ]
+        </p>
+      </div>
+      <!-- PLACEHOLDER: galería de instalaciones Florida (3 fotos) -->
+      <div class="grid grid-cols-3 gap-2">
+        {[1,2,3].map(_ => (
+          <div class="h-40 bg-gradient-to-br from-[#2a3a50] to-[#101820] rounded-sm" aria-hidden="true"></div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <ContactoComercial />
+</SubLandingLayout>
