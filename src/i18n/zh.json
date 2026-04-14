@@ -1,0 +1,146 @@
+{
+  "_notice": "REQUIRES NATIVE REVIEW — DO NOT PUBLISH WITHOUT HUMAN NATIVE SPEAKER REVIEW BY SOMEONE WITH AGRI-INDUSTRIAL TRADE EXPERIENCE",
+  "nav": {
+    "group": "集团",
+    "units": "业务单元",
+    "history": "发展历程",
+    "contact": "联系我们",
+    "ctaContact": "商业联系"
+  },
+  "lang": {
+    "es": "ES",
+    "en": "EN",
+    "zh": "中文"
+  },
+  "hero": {
+    "kicker": "乌拉圭恩帕尔梅奥尔莫斯 · 创立于1998年",
+    "h1": "26年，将乌拉圭品质带向世界。",
+    "h1Italic": "带向世界。",
+    "lead": "萨图诺集团整合了畜牧业生产、冷冻加工和商业销售。对于那些深知品质源于每一个环节的合作伙伴而言，我们是可靠的选择。",
+    "ctaPrimary": "了解我们的业务单元",
+    "ctaSecondary": "联系我们"
+  },
+  "units": {
+    "unit1Number": "业务单元 01",
+    "unit1Title": "佛罗里达冷冻厂",
+    "unit1Desc": "【待客户确认内容】— 专业化加工，专注于出口及国内高端市场。",
+    "unit1Cta": "了解佛罗里达冷冻厂",
+    "unit2Number": "业务单元 02",
+    "unit2Title": "萨图诺冷冻厂",
+    "unit2Desc": "集生产与加工于一体，从源头实现全程溯源管理。集团核心单元。",
+    "unit2Cta": "了解萨图诺冷冻厂"
+  },
+  "about": {
+    "label": "关于集团",
+    "h2": "一个集团，一条完整链条。",
+    "h2Italic": "一条完整链条。",
+    "body": "萨图诺集团是一家拥有26年发展历程的乌拉圭企业，专注于牛肉的生产、加工与商业销售。从我们位于恩帕尔梅奥尔莫斯的田野，到世界各地的餐桌，每一个环节均遵循同一标准：一致性、溯源性与人文承诺。",
+    "stat1Number": "26",
+    "stat1Unit": "年",
+    "stat1Desc": "发展历程",
+    "stat2Number": "100%",
+    "stat2Unit": "全程溯源",
+    "stat2Desc": "从源头到最终产品",
+    "stat3Number": "—",
+    "stat3Unit": "市场",
+    "stat3Desc": "出口市场【待确认】"
+  },
+  "mvv": {
+    "label": "企业宗旨",
+    "h2": "驱动我们每一天前行的力量。",
+    "h2Italic": "每一天前行的力量。",
+    "misionLabel": "使命",
+    "mision": "将乌拉圭的品质与精髓带向世界。",
+    "visionLabel": "愿景",
+    "vision": "以同理心、严谨性和信赖感赢得认可，构建战略性的长期合作关系。",
+    "valores": [
+      { "word": "学习", "desc": "将每个生产周期视为改进提升的机会。" },
+      { "word": "成长", "desc": "个人、职业与组织层面的共同成长。" },
+      { "word": "努力", "desc": "持续的工作投入是唯一的根本保障。" },
+      { "word": "适应力", "desc": "26年的历程要求我们善于把握变革时机。" },
+      { "word": "责任心", "desc": "对产品、团队与客户的全面担当。" },
+      { "word": "同理心", "desc": "理解他人，是商业经营的重要组成部分。" }
+    ]
+  },
+  "product": {
+    "label": "能力证明",
+    "h2": "乌拉圭牛肉，细节之处见真章。",
+    "h2Italic": "细节之处见真章。",
+    "subtitle": "产品摄影、生产设施及物流配送。",
+    "spec1Cat": "可供切割部位",
+    "spec1Title": "切割类型",
+    "spec1Text": "国际标准切割与乌拉圭传统切割。",
+    "spec1Pending": "【待客户确认】",
+    "spec2Cat": "产品呈现",
+    "spec2Title": "发货格式",
+    "spec2Text": "新鲜 · 冷冻 · 真空包装 · 箱装牛肉",
+    "spec2Pending": "【待确认】",
+    "spec3Cat": "质量认证",
+    "spec3Title": "认证资质",
+    "spec3Text": "HACCP · 欧盟认证 · 中国GACC · 清真认证 · 犹太洁食认证",
+    "spec3Pending": "【待客户核实】"
+  },
+  "chain": {
+    "label": "垂直整合",
+    "h2": "从田野到餐桌，无需中间环节。",
+    "h2Italic": "无需中间环节。",
+    "steps": [
+      { "n": "01", "title": "畜牧业生产", "desc": "乌拉圭自有牧场" },
+      { "n": "02", "title": "冷冻加工", "desc": "自主质量管控" },
+      { "n": "03", "title": "批发销售", "desc": "进口商与经销商" },
+      { "n": "04", "title": "零售销售", "desc": "肉铺与超级市场" },
+      { "n": "05", "title": "电子商务", "desc": "全国直达覆盖" },
+      { "n": "06", "title": "拉阿西恩达餐厅", "desc": "美食体验" }
+    ]
+  },
+  "why": {
+    "label": "核心差异化优势",
+    "h2": "我们的独特之处。",
+    "items": [
+      { "n": "01", "title": "全链条整合", "text": "我们负责生产、加工与销售全过程，对供应链每一环节实施真正的管控。" },
+      { "n": "02", "title": "稳定如一的品质", "text": "无中间商干扰结果。我们对产品的了解始于其源头。" },
+      { "n": "03", "title": "规模与亲和并重", "text": "工业化产能，人性化服务。我们兼而有之，而非二者取一。" },
+      { "n": "04", "title": "国际化视野", "text": "持续向全球市场迈进，标准与国际高要求全面对接。" }
+    ]
+  },
+  "contact": {
+    "label": "商业联系",
+    "h2": "让我们探讨长期合作。",
+    "h2Italic": "长期合作。",
+    "lead": "如果您代表进口商、经销商或食品行业企业，诚邀您深入了解我们。",
+    "locationLabel": "地址",
+    "location": "乌拉圭卡内洛内斯省恩帕尔梅奥尔莫斯",
+    "emailLabel": "电子邮件",
+    "email": "【待客户确认】",
+    "linkedinLabel": "领英",
+    "linkedin": "/grupo-saturno",
+    "fieldName": "姓名",
+    "fieldCompany": "公司",
+    "fieldCountry": "国家",
+    "fieldEmail": "电子邮件",
+    "fieldMessage": "留言",
+    "fieldNamePlaceholder": "您的姓名",
+    "fieldCompanyPlaceholder": "公司名称",
+    "fieldCountryPlaceholder": "所在国家",
+    "fieldEmailPlaceholder": "mail@company.com",
+    "fieldMessagePlaceholder": "请问有什么可以帮助您？",
+    "submit": "发送询盘 →"
+  },
+  "footer": {
+    "desc": "一家拥有26年历史的乌拉圭企业，专注于牛肉的生产、加工与商业销售。",
+    "navTitle": "导航",
+    "unitsTitle": "业务单元",
+    "legalTitle": "法律声明",
+    "legal": "法律声明",
+    "privacy": "隐私政策",
+    "copyright": "© 2026 萨图诺集团 · 乌拉圭恩帕尔梅奥尔莫斯"
+  },
+  "meta": {
+    "homeTitle": "萨图诺集团 — 牛肉生产与加工 | 乌拉圭",
+    "homeDesc": "26年专注于畜牧业、肉类加工与国际商业销售。乌拉圭恩帕尔梅奥尔莫斯。",
+    "floridaTitle": "佛罗里达冷冻厂 — 萨图诺集团",
+    "floridaDesc": "【待客户确认】",
+    "saturnoTitle": "萨图诺冷冻厂 — 萨图诺集团",
+    "saturnoDesc": "萨图诺集团核心生产单元。从源头实现全程溯源的一体化加工。"
+  }
+}

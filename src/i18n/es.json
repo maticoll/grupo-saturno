@@ -1,0 +1,145 @@
+{
+  "nav": {
+    "group": "Grupo",
+    "units": "Unidades de negocio",
+    "history": "Trayectoria",
+    "contact": "Contacto",
+    "ctaContact": "Contacto comercial"
+  },
+  "lang": {
+    "es": "ES",
+    "en": "EN",
+    "zh": "中文"
+  },
+  "hero": {
+    "kicker": "Empalme Olmos, Uruguay · Est. 1998",
+    "h1": "26 años llevando la calidad uruguaya al mundo.",
+    "h1Italic": "al mundo.",
+    "lead": "Grupo Saturno integra producción ganadera, procesamiento frigorífico y comercialización. Un socio confiable para quienes entienden que la calidad se construye en cada eslabón.",
+    "ctaPrimary": "Conocé nuestras unidades",
+    "ctaSecondary": "Contactanos"
+  },
+  "units": {
+    "unit1Number": "Unidad 01",
+    "unit1Title": "Frigorífico Florida",
+    "unit1Desc": "[CONTENIDO A CONFIRMAR CON CLIENTE] — Procesamiento especializado con foco en exportación y mercado interno premium.",
+    "unit1Cta": "Conocer Frigorífico Florida",
+    "unit2Number": "Unidad 02",
+    "unit2Title": "Frigorífico Saturno",
+    "unit2Desc": "Producción y procesamiento integrados con trazabilidad desde el origen. Núcleo del grupo.",
+    "unit2Cta": "Conocer Frigorífico Saturno"
+  },
+  "about": {
+    "label": "El Grupo",
+    "h2": "Un grupo, una cadena completa.",
+    "h2Italic": "una cadena completa.",
+    "body": "Grupo Saturno es una empresa uruguaya con 26 años de trayectoria dedicada a la producción, procesamiento y comercialización de carne. Desde nuestros campos en Empalme Olmos hasta mesas en todo el mundo, cada etapa ocurre bajo el mismo estándar: consistencia, trazabilidad y compromiso humano.",
+    "stat1Number": "26",
+    "stat1Unit": "años",
+    "stat1Desc": "de trayectoria",
+    "stat2Number": "100%",
+    "stat2Unit": "trazabilidad",
+    "stat2Desc": "origen al producto final",
+    "stat3Number": "—",
+    "stat3Unit": "mercados",
+    "stat3Desc": "de exportación [A CONFIRMAR]"
+  },
+  "mvv": {
+    "label": "Propósito",
+    "h2": "Lo que nos mueve cada día.",
+    "h2Italic": "cada día.",
+    "misionLabel": "Misión",
+    "mision": "Llevar la calidad y la esencia uruguaya al mundo.",
+    "visionLabel": "Visión",
+    "vision": "Ser reconocidos por nuestra empatía, seriedad y confianza, construyendo relaciones estratégicas y duraderas.",
+    "valores": [
+      { "word": "Aprendizaje", "desc": "Cada ciclo productivo como oportunidad de mejorar." },
+      { "word": "Crecimiento", "desc": "Personal, profesional y como organización." },
+      { "word": "Esfuerzo", "desc": "El trabajo sostenido como única garantía." },
+      { "word": "Adaptabilidad", "desc": "26 años requieren saber cambiar a tiempo." },
+      { "word": "Compromiso", "desc": "Con el producto, el equipo y el cliente." },
+      { "word": "Empatía", "desc": "Entender al otro es parte del negocio." }
+    ]
+  },
+  "product": {
+    "label": "Evidencia de capacidad",
+    "h2": "La carne uruguaya, en detalle.",
+    "h2Italic": "en detalle.",
+    "subtitle": "Fotografía de producto, instalaciones y logística.",
+    "spec1Cat": "Cortes disponibles",
+    "spec1Title": "Tipos de corte",
+    "spec1Text": "Cortes estándar internacionales y cortes uruguayos tradicionales.",
+    "spec1Pending": "[ A CONFIRMAR CON CLIENTE ]",
+    "spec2Cat": "Presentación",
+    "spec2Title": "Formatos de despacho",
+    "spec2Text": "Fresco · Congelado · Vacuum packed · Boxed beef",
+    "spec2Pending": "[ A CONFIRMAR ]",
+    "spec3Cat": "Calidad",
+    "spec3Title": "Certificaciones",
+    "spec3Text": "HACCP · Habilitación UE · China GACC · Halal · Kosher",
+    "spec3Pending": "[ VERIFICAR CON CLIENTE ]"
+  },
+  "chain": {
+    "label": "Integración vertical",
+    "h2": "De la tierra a la mesa, sin intermediarios.",
+    "h2Italic": "sin intermediarios.",
+    "steps": [
+      { "n": "01", "title": "Producción ganadera", "desc": "Campos propios en Uruguay" },
+      { "n": "02", "title": "Procesamiento frigorífico", "desc": "Control de calidad propio" },
+      { "n": "03", "title": "Venta mayorista", "desc": "Importadores y distribuidores" },
+      { "n": "04", "title": "Venta minorista", "desc": "Carnicerías y supermercados" },
+      { "n": "05", "title": "E-commerce", "desc": "Alcance nacional directo" },
+      { "n": "06", "title": "Restaurante La Hacienda", "desc": "Experiencia gastronómica" }
+    ]
+  },
+  "why": {
+    "label": "Diferenciadores",
+    "h2": "Lo que nos diferencia.",
+    "items": [
+      { "n": "01", "title": "Integración total", "text": "Producimos, procesamos y comercializamos. Control real en cada etapa de la cadena." },
+      { "n": "02", "title": "Calidad constante", "text": "Sin intermediarios que alteren el resultado. Conocemos el producto desde el origen." },
+      { "n": "03", "title": "Escala con cercanía", "text": "Capacidad industrial, trato humano. Somos ambas cosas, no una ni la otra." },
+      { "n": "04", "title": "Visión internacional", "text": "Evolucionando hacia mercados globales con estándares alineados a la exigencia externa." }
+    ]
+  },
+  "contact": {
+    "label": "Contacto comercial",
+    "h2": "Hablemos de negocios a largo plazo.",
+    "h2Italic": "a largo plazo.",
+    "lead": "Si representás una empresa importadora, distribuidora o del sector alimenticio, te invitamos a conocernos en profundidad.",
+    "locationLabel": "Ubicación",
+    "location": "Empalme Olmos, Canelones, Uruguay",
+    "emailLabel": "Email",
+    "email": "[A CONFIRMAR CON CLIENTE]",
+    "linkedinLabel": "LinkedIn",
+    "linkedin": "/grupo-saturno",
+    "fieldName": "Nombre",
+    "fieldCompany": "Empresa",
+    "fieldCountry": "País",
+    "fieldEmail": "Email",
+    "fieldMessage": "Mensaje",
+    "fieldNamePlaceholder": "Tu nombre",
+    "fieldCompanyPlaceholder": "Razón social",
+    "fieldCountryPlaceholder": "País de origen",
+    "fieldEmailPlaceholder": "correo@empresa.com",
+    "fieldMessagePlaceholder": "¿En qué podemos ayudarte?",
+    "submit": "Enviar consulta →"
+  },
+  "footer": {
+    "desc": "Empresa uruguaya con 26 años de trayectoria en producción, procesamiento y comercialización de carne.",
+    "navTitle": "Navegación",
+    "unitsTitle": "Unidades",
+    "legalTitle": "Legal",
+    "legal": "Aviso legal",
+    "privacy": "Privacidad",
+    "copyright": "© 2026 Grupo Saturno · Empalme Olmos, Uruguay"
+  },
+  "meta": {
+    "homeTitle": "Grupo Saturno — Producción y Procesamiento Cárnico | Uruguay",
+    "homeDesc": "26 años de trayectoria en ganadería, procesamiento frigorífico y comercialización internacional. Empalme Olmos, Uruguay.",
+    "floridaTitle": "Frigorífico Florida — Grupo Saturno",
+    "floridaDesc": "[A CONFIRMAR CON CLIENTE]",
+    "saturnoTitle": "Frigorífico Saturno — Grupo Saturno",
+    "saturnoDesc": "Núcleo productivo del Grupo Saturno. Procesamiento integrado con trazabilidad desde el origen."
+  }
+}

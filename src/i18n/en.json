@@ -1,0 +1,145 @@
+{
+  "nav": {
+    "group": "Group",
+    "units": "Business Units",
+    "history": "Our History",
+    "contact": "Contact",
+    "ctaContact": "Commercial Contact"
+  },
+  "lang": {
+    "es": "ES",
+    "en": "EN",
+    "zh": "中文"
+  },
+  "hero": {
+    "kicker": "Empalme Olmos, Uruguay · Est. 1998",
+    "h1": "26 years bringing Uruguayan quality to the world.",
+    "h1Italic": "to the world.",
+    "lead": "Grupo Saturno integrates cattle production, meat processing, and commercialization. A reliable partner for those who understand that quality is built at every link in the chain.",
+    "ctaPrimary": "Explore our business units",
+    "ctaSecondary": "Contact us"
+  },
+  "units": {
+    "unit1Number": "Unit 01",
+    "unit1Title": "Frigorífico Florida",
+    "unit1Desc": "[CONTENT TO BE CONFIRMED WITH CLIENT] — Specialised processing with a focus on export and premium domestic market.",
+    "unit1Cta": "Learn about Frigorífico Florida",
+    "unit2Number": "Unit 02",
+    "unit2Title": "Frigorífico Saturno",
+    "unit2Desc": "Integrated production and processing with full traceability from origin. Core of the group.",
+    "unit2Cta": "Learn about Frigorífico Saturno"
+  },
+  "about": {
+    "label": "The Group",
+    "h2": "One group, one complete chain.",
+    "h2Italic": "one complete chain.",
+    "body": "Grupo Saturno is a Uruguayan company with 26 years of experience in the production, processing, and commercialization of beef. From our fields in Empalme Olmos to tables around the world, every step takes place under the same standard: consistency, traceability, and human commitment.",
+    "stat1Number": "26",
+    "stat1Unit": "years",
+    "stat1Desc": "of experience",
+    "stat2Number": "100%",
+    "stat2Unit": "traceability",
+    "stat2Desc": "from origin to final product",
+    "stat3Number": "—",
+    "stat3Unit": "markets",
+    "stat3Desc": "export markets [TO BE CONFIRMED]"
+  },
+  "mvv": {
+    "label": "Purpose",
+    "h2": "What drives us every day.",
+    "h2Italic": "every day.",
+    "misionLabel": "Mission",
+    "mision": "Bringing Uruguayan quality and essence to the world.",
+    "visionLabel": "Vision",
+    "vision": "To be recognised for our empathy, integrity, and reliability, building strategic and lasting relationships.",
+    "valores": [
+      { "word": "Learning", "desc": "Every production cycle as an opportunity to improve." },
+      { "word": "Growth", "desc": "Personal, professional, and organisational." },
+      { "word": "Commitment", "desc": "Sustained effort as the only true guarantee." },
+      { "word": "Adaptability", "desc": "26 years demand knowing when to change course." },
+      { "word": "Dedication", "desc": "To the product, the team, and the client." },
+      { "word": "Empathy", "desc": "Understanding others is integral to doing business." }
+    ]
+  },
+  "product": {
+    "label": "Proof of capacity",
+    "h2": "Uruguayan beef, in detail.",
+    "h2Italic": "in detail.",
+    "subtitle": "Product photography, facilities, and logistics.",
+    "spec1Cat": "Available cuts",
+    "spec1Title": "Cut types",
+    "spec1Text": "International standard cuts and traditional Uruguayan cuts.",
+    "spec1Pending": "[ TO BE CONFIRMED WITH CLIENT ]",
+    "spec2Cat": "Presentation",
+    "spec2Title": "Dispatch formats",
+    "spec2Text": "Fresh · Frozen · Vacuum packed · Boxed beef",
+    "spec2Pending": "[ TO BE CONFIRMED ]",
+    "spec3Cat": "Quality",
+    "spec3Title": "Certifications",
+    "spec3Text": "HACCP · EU Approval · China GACC · Halal · Kosher",
+    "spec3Pending": "[ TO BE VERIFIED WITH CLIENT ]"
+  },
+  "chain": {
+    "label": "Vertical integration",
+    "h2": "From the land to the table, without intermediaries.",
+    "h2Italic": "without intermediaries.",
+    "steps": [
+      { "n": "01", "title": "Cattle production", "desc": "Own fields in Uruguay" },
+      { "n": "02", "title": "Meat processing", "desc": "In-house quality control" },
+      { "n": "03", "title": "Wholesale distribution", "desc": "Importers and distributors" },
+      { "n": "04", "title": "Retail distribution", "desc": "Butcher shops and supermarkets" },
+      { "n": "05", "title": "E-commerce", "desc": "Direct national reach" },
+      { "n": "06", "title": "Restaurante La Hacienda", "desc": "Gastronomic experience" }
+    ]
+  },
+  "why": {
+    "label": "Differentiators",
+    "h2": "What sets us apart.",
+    "items": [
+      { "n": "01", "title": "Full integration", "text": "We produce, process, and commercialise. Real control at every stage of the chain." },
+      { "n": "02", "title": "Consistent quality", "text": "No intermediaries to compromise the result. We know the product from its very origin." },
+      { "n": "03", "title": "Scale with proximity", "text": "Industrial capacity, human treatment. We are both — not one or the other." },
+      { "n": "04", "title": "International outlook", "text": "Evolving towards global markets with standards aligned to external requirements." }
+    ]
+  },
+  "contact": {
+    "label": "Commercial contact",
+    "h2": "Let us discuss a long-term partnership.",
+    "h2Italic": "a long-term partnership.",
+    "lead": "If you represent an importing company, distributor, or food sector business, we invite you to learn more about us.",
+    "locationLabel": "Location",
+    "location": "Empalme Olmos, Canelones, Uruguay",
+    "emailLabel": "Email",
+    "email": "[TO BE CONFIRMED WITH CLIENT]",
+    "linkedinLabel": "LinkedIn",
+    "linkedin": "/grupo-saturno",
+    "fieldName": "Name",
+    "fieldCompany": "Company",
+    "fieldCountry": "Country",
+    "fieldEmail": "Email",
+    "fieldMessage": "Message",
+    "fieldNamePlaceholder": "Your name",
+    "fieldCompanyPlaceholder": "Company name",
+    "fieldCountryPlaceholder": "Country of origin",
+    "fieldEmailPlaceholder": "mail@company.com",
+    "fieldMessagePlaceholder": "How can we assist you?",
+    "submit": "Send enquiry →"
+  },
+  "footer": {
+    "desc": "A Uruguayan company with 26 years of experience in the production, processing, and commercialization of beef.",
+    "navTitle": "Navigation",
+    "unitsTitle": "Units",
+    "legalTitle": "Legal",
+    "legal": "Legal notice",
+    "privacy": "Privacy",
+    "copyright": "© 2026 Grupo Saturno · Empalme Olmos, Uruguay"
+  },
+  "meta": {
+    "homeTitle": "Grupo Saturno — Beef Production & Processing | Uruguay",
+    "homeDesc": "26 years of experience in cattle farming, meat processing, and international commercialization. Empalme Olmos, Uruguay.",
+    "floridaTitle": "Frigorífico Florida — Grupo Saturno",
+    "floridaDesc": "[TO BE CONFIRMED WITH CLIENT]",
+    "saturnoTitle": "Frigorífico Saturno — Grupo Saturno",
+    "saturnoDesc": "Core production unit of Grupo Saturno. Integrated processing with full traceability from origin."
+  }
+}
