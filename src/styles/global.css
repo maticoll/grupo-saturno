@@ -1,17 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Cormorant Garamond */
+/* Fonts first — @import must precede all other rules */
 @import '@fontsource/cormorant-garamond/300.css';
 @import '@fontsource/cormorant-garamond/400.css';
 @import '@fontsource/cormorant-garamond/300-italic.css';
 @import '@fontsource/cormorant-garamond/400-italic.css';
-
-/* Inter */
 @import '@fontsource/inter/300.css';
 @import '@fontsource/inter/400.css';
 @import '@fontsource/inter/500.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   html { font-family: theme('fontFamily.sans'); color: theme('colors.carbon'); }
