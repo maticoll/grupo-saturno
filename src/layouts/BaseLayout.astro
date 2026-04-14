@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { getLangFromUrl, useTranslations, languages } from '../i18n/index';
+import { getLangFromUrl, languages } from '../i18n/index';
 
 export interface Props {
   title: string;
@@ -10,7 +10,6 @@ export interface Props {
 
 const { title, description, image = '/og-default.jpg' } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const hreflangs = languages.map(l => ({
