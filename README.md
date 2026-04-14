@@ -1,43 +1,58 @@
-# Astro Starter Kit: Minimal
+# Grupo Saturno — Landing Page
 
-```sh
-npm create astro@latest -- --template minimal
+Landing page institucional trilingüe para [GrupoSaturno.com.uy](https://gruposaturno.com.uy).
+
+## Stack
+
+- **Framework:** Astro 4 (output estático)
+- **Estilos:** Tailwind CSS v3
+- **Interactividad:** Alpine.js
+- **i18n:** Astro i18n nativo — rutas `/es/`, `/en/`, `/zh/`
+- **Tipografía:** Cormorant Garamond + Inter + Noto SC (zh)
+- **Formulario:** Formspree (endpoint pendiente de configurar)
+
+## Correr en local
+
+```bash
+npm install
+npm run dev       # → http://localhost:4321
+npm run build     # build de producción
+npm run preview   # preview del build
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Estructura de carpetas
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```
+src/
+  components/     # Componentes reutilizables
+    sections/     # Secciones de la landing (Hero, Díptico, etc.)
+    ui/           # Átomos UI (Button, SectionLabel)
+  layouts/        # BaseLayout y SubLandingLayout
+  pages/          # Rutas — [lang]/index.astro, [lang]/FrigorificoXxx.astro
+  i18n/           # Diccionarios ES/EN/ZH + helper functions
+  styles/         # global.css (design tokens, scroll-reveal)
+public/
+  images/         # Imágenes del sitio
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Editar textos
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Todos los textos están en `src/i18n/es.json`, `en.json`, `zh.json`.
+No hay texto hardcodeado en los componentes.
 
-Any static assets, like images, can be placed in the `public/` directory.
+⚠️ El archivo `zh.json` requiere revisión por hablante nativo antes del lanzamiento.
 
-## 🧞 Commands
+## Editar imágenes
 
-All commands are run from the root of the project, from a terminal:
+Reemplazar los archivos en `public/images/` con los que provea el cliente.
+Ver `ASSETS-TODO.md` para la lista de imágenes pendientes.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Pendientes antes del lanzamiento
 
-## 👀 Want to learn more?
+Ver `CONTENT-TODO.md` para textos a confirmar con el cliente.
+Ver `ASSETS-TODO.md` para imágenes a proveer.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Deploy
+
+Compatible con Vercel, Netlify y Cloudflare Pages.
+Output: carpeta `dist/` con HTML estático puro.
