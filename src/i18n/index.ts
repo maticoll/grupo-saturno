@@ -9,8 +9,8 @@ import zhTranslations from './zh.json';
 
 const translations = {
   es: esTranslations,
-  en: enTranslations as typeof esTranslations,
-  zh: zhTranslations as typeof esTranslations,
+  en: enTranslations,
+  zh: zhTranslations,
 } satisfies Record<Lang, typeof esTranslations>;
 
 export function getLangFromUrl(url: URL): Lang {
