@@ -1,0 +1,18 @@
+---
+export interface Props {
+  variant?: 'primary' | 'ghost' | 'ghost-dark';
+  href?: string;
+  class?: string;
+}
+const { variant = 'primary', href, class: cls } = Astro.props;
+const base = 'inline-flex items-center gap-3 font-sans text-[0.72rem] font-medium tracking-[0.12em] uppercase transition-all duration-300 ease-out px-8 py-3.5';
+const variants = {
+  primary: 'bg-burgundy text-white hover:bg-burgundy-light',
+  ghost: 'border border-white/30 text-white/70 hover:border-white/60 hover:text-white',
+  'ghost-dark': 'border border-burgundy text-burgundy hover:bg-burgundy hover:text-white',
+};
+const Tag = href ? 'a' : 'button';
+---
+<Tag href={href} class={`${base} ${variants[variant]} ${cls ?? ''}`}>
+  <slot />
+</Tag>

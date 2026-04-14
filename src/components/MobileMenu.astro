@@ -1,0 +1,91 @@
+---
+import LanguageSelector from './LanguageSelector.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/index';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+<div
+  x-data="{ open: false }"
+  @keydown.escape.window="open = false"
+  class="lg:hidden"
+>
+  <!-- Hamburger button -->
+  <button
+    @click="open = true"
+    class="p-2 text-carbon hover:text-burgundy transition-colors"
+    aria-label="Abrir menú"
+    :aria-expanded="open.toString()"
+  >
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <line x1="3" y1="6" x2="21" y2="6" />
+      <line x1="3" y1="12" x2="21" y2="12" />
+      <line x1="3" y1="18" x2="21" y2="18" />
+    </svg>
+  </button>
+
+  <!-- Overlay -->
+  <div
+    x-show="open"
+    x-transition:enter="transition-opacity duration-300"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100"
+    x-transition:leave="transition-opacity duration-200"
+    x-transition:leave-start="opacity-100"
+    x-transition:leave-end="opacity-0"
+    @click="open = false"
+    class="fixed inset-0 bg-carbon/60 z-40"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Drawer -->
+  <div
+    x-show="open"
+    x-transition:enter="transition-transform duration-300 ease-out"
+    x-transition:enter-start="translate-x-full"
+    x-transition:enter-end="translate-x-0"
+    x-transition:leave="transition-transform duration-200 ease-in"
+    x-transition:leave-start="translate-x-0"
+    x-transition:leave-end="translate-x-full"
+    class="fixed top-0 right-0 bottom-0 w-72 bg-cream z-50 flex flex-col p-8 shadow-2xl"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Menú de navegación"
+  >
+    <!-- Cerrar -->
+    <button @click="open = false" class="self-end p-1 text-warm-gray hover:text-carbon mb-8" aria-label="Cerrar menú">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
+      </svg>
+    </button>
+
+    <!-- Selector de idioma arriba -->
+    <div class="mb-8 pb-8 border-b border-burgundy/10">
+      <LanguageSelector />
+    </div>
+
+    <!-- Nav links -->
+    <nav class="flex flex-col gap-6" aria-label="Navegación mobile">
+      <a href={`/${lang}/#grupo`} @click="open = false"
+        class="font-sans text-[0.8rem] tracking-[0.1em] uppercase text-carbon/70 hover:text-carbon transition-colors">
+        {t('nav.group')}
+      </a>
+      <a href={`/${lang}/#unidades`} @click="open = false"
+        class="font-sans text-[0.8rem] tracking-[0.1em] uppercase text-carbon/70 hover:text-carbon transition-colors">
+        {t('nav.units')}
+      </a>
+      <a href={`/${lang}/#trayectoria`} @click="open = false"
+        class="font-sans text-[0.8rem] tracking-[0.1em] uppercase text-carbon/70 hover:text-carbon transition-colors">
+        {t('nav.history')}
+      </a>
+    </nav>
+
+    <!-- CTA al fondo -->
+    <div class="mt-auto">
+      <a href={`/${lang}/#contacto`} @click="open = false"
+        class="block w-full text-center font-sans text-[0.72rem] font-medium tracking-[0.1em] uppercase
+               bg-burgundy text-white px-4 py-3 hover:bg-burgundy-light transition-colors">
+        {t('nav.ctaContact')}
+      </a>
+    </div>
+  </div>
+</div>

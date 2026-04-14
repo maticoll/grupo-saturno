@@ -1,17 +1,24 @@
 ---
-
+// Client-side redirect based on navigator.language
+// Static site — no server-side Accept-Language
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex" />
+  <script>
+    const lang = navigator.language?.toLowerCase() ?? 'es';
+    if (lang.startsWith('zh')) {
+      window.location.replace('/zh/');
+    } else if (lang.startsWith('en')) {
+      window.location.replace('/en/');
+    } else {
+      window.location.replace('/es/');
+    }
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=/es/" />
+  </noscript>
+</head>
+<body></body>
 </html>

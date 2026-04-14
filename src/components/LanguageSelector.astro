@@ -1,0 +1,29 @@
+---
+import { getLangFromUrl } from '../i18n/index';
+const lang = getLangFromUrl(Astro.url);
+const currentPath = Astro.url.pathname.replace(/^\/(es|en|zh)/, '') || '/';
+
+const langs = [
+  { code: 'es', label: 'ES' },
+  { code: 'en', label: 'EN' },
+  { code: 'zh', label: '中文' },
+];
+---
+<div class="flex items-center gap-2 pl-4 border-l border-warm-gray/30
+            font-sans text-[0.65rem] tracking-[0.1em]">
+  {langs.map(({ code, label }, i) => (
+    <>
+      {i > 0 && <span class="text-warm-gray/30" aria-hidden="true">·</span>}
+      <a
+        href={`/${code}${currentPath}`}
+        class={`transition-colors ${lang === code
+          ? 'text-burgundy font-medium'
+          : 'text-warm-gray hover:text-carbon'}`}
+        aria-current={lang === code ? 'true' : undefined}
+        hreflang={code === 'zh' ? 'zh-CN' : code}
+      >
+        {label}
+      </a>
+    </>
+  ))}
+</div>
