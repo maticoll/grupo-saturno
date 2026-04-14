@@ -1,0 +1,88 @@
+---
+import { getLangFromUrl, useTranslations } from '../../i18n/index';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+<section id="unidades" class="grid grid-cols-1 lg:grid-cols-2 min-h-[72vh]">
+
+  <!-- Unidad 01: Frigorífico Florida -->
+  <!-- PLACEHOLDER: foto planta Florida, tono azulado-industrial, 16:9 horizontal -->
+  <a href={`/${lang}/FrigorificoFlorida`}
+    class="group relative flex items-end overflow-hidden cursor-pointer min-h-[50vh] lg:min-h-0"
+    aria-label={`Conocer ${t('units.unit1Title')}`}>
+
+    <div class="absolute inset-0 bg-gradient-to-br from-[#2a3a50] via-[#1a2535] to-[#101820]
+                transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+      aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-carbon/92 via-carbon/50 to-carbon/15"
+      aria-hidden="true"></div>
+
+    <!-- Separador vertical (solo desktop) -->
+    <div class="absolute top-[10%] right-0 bottom-[10%] w-px
+                bg-gradient-to-b from-transparent via-cream/15 to-transparent hidden lg:block"
+      aria-hidden="true"></div>
+
+    <div class="relative z-10 p-10 lg:p-14 w-full
+                transition-all duration-300 ease-out">
+      <p class="font-sans text-[0.6rem] tracking-[0.25em] uppercase text-burgundy mb-5 flex items-center gap-3">
+        <span class="w-5 h-px bg-burgundy inline-block" aria-hidden="true"></span>
+        {t('units.unit1Number')}
+      </p>
+      <h2 class="font-serif text-[clamp(2rem,3.5vw,3.2rem)] font-light leading-[1.0] tracking-[-0.02em] text-white mb-4">
+        {t('units.unit1Title')}
+      </h2>
+      <p class="font-sans text-[0.78rem] font-light text-white/55 leading-[1.7] max-w-sm mb-8">
+        {t('units.unit1Desc')}
+      </p>
+      <span class="inline-flex items-center gap-3 font-sans text-[0.68rem] tracking-[0.12em] uppercase
+                   text-white/70 border border-white/20 px-5 py-2.5
+                   transition-all duration-200 ease-out
+                   group-hover:text-white group-hover:border-white/50 group-hover:bg-burgundy/30">
+        {t('units.unit1Cta')}
+        <span class="transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true">→</span>
+      </span>
+    </div>
+  </a>
+
+  <!-- Unidad 02: Frigorífico Saturno -->
+  <a href={`/${lang}/FrigorificoSaturno`}
+    class="group relative flex items-end overflow-hidden cursor-pointer min-h-[50vh] lg:min-h-0"
+    aria-label={`Conocer ${t('units.unit2Title')}`}>
+
+    <img
+      src="/images/saturno-exterior.jpg"
+      alt=""
+      class="absolute inset-0 w-full h-full object-cover
+             transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+      loading="lazy"
+      aria-hidden="true"
+    />
+    <div class="absolute inset-0 bg-gradient-to-br from-[#4a3020]/60 via-[#301f12]/70 to-[#1e130a]/80"
+      aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-carbon/92 via-carbon/50 to-carbon/15"
+      aria-hidden="true"></div>
+
+    <div class="relative z-10 p-10 lg:p-14 w-full
+                transition-all duration-300 ease-out">
+      <p class="font-sans text-[0.6rem] tracking-[0.25em] uppercase text-burgundy mb-5 flex items-center gap-3">
+        <span class="w-5 h-px bg-burgundy inline-block" aria-hidden="true"></span>
+        {t('units.unit2Number')}
+      </p>
+      <h2 class="font-serif text-[clamp(2rem,3.5vw,3.2rem)] font-light leading-[1.0] tracking-[-0.02em] text-white mb-4">
+        {t('units.unit2Title')}
+      </h2>
+      <p class="font-sans text-[0.78rem] font-light text-white/55 leading-[1.7] max-w-sm mb-8">
+        {t('units.unit2Desc')}
+      </p>
+      <span class="inline-flex items-center gap-3 font-sans text-[0.68rem] tracking-[0.12em] uppercase
+                   text-white/70 border border-white/20 px-5 py-2.5
+                   transition-all duration-200 ease-out
+                   group-hover:text-white group-hover:border-white/50 group-hover:bg-burgundy/30">
+        {t('units.unit2Cta')}
+        <span class="transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true">→</span>
+      </span>
+    </div>
+  </a>
+
+</section>
