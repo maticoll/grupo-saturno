@@ -7,13 +7,11 @@ import esTranslations from './es.json';
 import enTranslations from './en.json';
 import zhTranslations from './zh.json';
 
-type Translations = typeof esTranslations;
-
-const translations: Record<Lang, Translations> = {
-  es: esTranslations as Translations,
-  en: enTranslations as Translations,
-  zh: zhTranslations as Translations,
-};
+const translations = {
+  es: esTranslations,
+  en: enTranslations as typeof esTranslations,
+  zh: zhTranslations as typeof esTranslations,
+} satisfies Record<Lang, typeof esTranslations>;
 
 export function getLangFromUrl(url: URL): Lang {
   const [, lang] = url.pathname.split('/');
@@ -21,6 +19,10 @@ export function getLangFromUrl(url: URL): Lang {
   return defaultLang;
 }
 
+/**
+ * Returns a translation function for the given locale.
+ * For array/object keys, returns a JSON-serialised string — caller must JSON.parse().
+ */
 export function useTranslations(lang: Lang) {
   return function t(key: string): string {
     const keys = key.split('.');
