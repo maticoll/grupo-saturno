@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import Hero from '../../components/sections/Hero.astro';
 import { getLangFromUrl, useTranslations, languages } from '../../i18n/index';
 import type { Lang } from '../../i18n/index';
 
@@ -15,7 +16,7 @@ const t = useTranslations(lang);
 <BaseLayout title={t('meta.homeTitle')} description={t('meta.homeDesc')}>
   <Header />
   <main>
-    <p style="padding: 2rem; color: #1A1A1A;">Landing en construcción — {lang}</p>
+    <Hero />
   </main>
   <Footer />
 </BaseLayout>

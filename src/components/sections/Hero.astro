@@ -1,0 +1,47 @@
+---
+import Button from '../ui/Button.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/index';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+<section class="relative h-[92vh] min-h-[600px] flex items-end overflow-hidden">
+  <!-- PLACEHOLDER: foto cenital campo uruguayo, luz natural, ganado, 16:9 mínimo 1920x1080 -->
+  <!-- Reemplazar con <Image> cuando el cliente provea la foto -->
+  <div class="absolute inset-0 bg-gradient-to-br from-[#2a3520] via-[#1e2818] to-[#1A1A1A]"
+    aria-hidden="true"></div>
+
+  <!-- Overlay cinematográfico -->
+  <div class="absolute inset-0 bg-gradient-to-t from-carbon/85 via-carbon/30 to-carbon/10"
+    aria-hidden="true"></div>
+
+  <!-- Contenido -->
+  <div class="relative z-10 w-full max-w-[1440px] mx-auto px-8 lg:px-20 pb-20">
+    <div class="max-w-4xl">
+      <p class="font-sans text-[0.65rem] tracking-[0.25em] uppercase text-white/50 mb-6 flex items-center gap-3">
+        <span class="w-6 h-px bg-burgundy inline-block" aria-hidden="true"></span>
+        {t('hero.kicker')}
+      </p>
+
+      <h1 class="font-serif text-[clamp(2.8rem,6vw,5.5rem)] font-light leading-[1.0] tracking-[-0.02em] text-white mb-6">
+        {t('hero.h1').replace(t('hero.h1Italic'), '')}
+        <em class="italic text-white/75">{t('hero.h1Italic')}</em>
+      </h1>
+
+      <p class="font-sans text-[0.9rem] font-light leading-[1.75] text-white/60 max-w-xl mb-10">
+        {t('hero.lead')}
+      </p>
+
+      <div class="flex flex-wrap gap-4 items-center">
+        <Button variant="primary" href="#unidades">{t('hero.ctaPrimary')}</Button>
+        <Button variant="ghost" href="#contacto">{t('hero.ctaSecondary')}</Button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll cue -->
+  <div class="absolute bottom-8 right-12 font-sans text-[0.6rem] tracking-[0.15em] uppercase text-white/30"
+    style="writing-mode: vertical-rl" aria-hidden="true">
+    Scroll
+  </div>
+</section>
