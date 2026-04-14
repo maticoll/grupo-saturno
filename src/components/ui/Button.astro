@@ -11,8 +11,8 @@ const variants = {
   ghost: 'border border-white/30 text-white/70 hover:border-white/60 hover:text-white',
   'ghost-dark': 'border border-burgundy text-burgundy hover:bg-burgundy hover:text-white',
 };
-const Tag = href ? 'a' : 'button';
 ---
-<Tag href={href} class={`${base} ${variants[variant]} ${cls ?? ''}`}>
-  <slot />
-</Tag>
+{href
+  ? <a href={href} class={`${base} ${variants[variant]} ${cls ?? ''}`}><slot /></a>
+  : <button class={`${base} ${variants[variant]} ${cls ?? ''}`}><slot /></button>
+}

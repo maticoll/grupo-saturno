@@ -6,8 +6,13 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 <header
-  x-data="{ scrolled: false }"
-  x-init="window.addEventListener('scroll', () => { scrolled = window.scrollY > 20 })"
+  x-data="{ scrolled: false, _handler: null }"
+  x-init="
+    scrolled = window.scrollY > 20;
+    _handler = () => { scrolled = window.scrollY > 20 };
+    window.addEventListener('scroll', _handler, { passive: true });
+  "
+  x-destroy="window.removeEventListener('scroll', _handler)"
   :class="scrolled ? 'bg-cream/95 backdrop-blur-md shadow-sm' : 'bg-transparent'"
   class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-out"
 >

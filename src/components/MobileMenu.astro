@@ -11,6 +11,7 @@ const t = useTranslations(lang);
 >
   <!-- Hamburger button -->
   <button
+    x-ref="trigger"
     @click="open = true"
     class="p-2 text-carbon hover:text-burgundy transition-colors"
     aria-label="Abrir menú"
@@ -46,13 +47,14 @@ const t = useTranslations(lang);
     x-transition:leave="transition-transform duration-200 ease-in"
     x-transition:leave-start="translate-x-0"
     x-transition:leave-end="translate-x-full"
+    x-effect="if (open) $nextTick(() => $refs.closeBtn.focus())"
     class="fixed top-0 right-0 bottom-0 w-72 bg-cream z-50 flex flex-col p-8 shadow-2xl"
     role="dialog"
     aria-modal="true"
     aria-label="Menú de navegación"
   >
     <!-- Cerrar -->
-    <button @click="open = false" class="self-end p-1 text-warm-gray hover:text-carbon mb-8" aria-label="Cerrar menú">
+    <button x-ref="closeBtn" @click="open = false; $nextTick(() => $refs.trigger.focus())" class="self-end p-1 text-warm-gray hover:text-carbon mb-8" aria-label="Cerrar menú">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
         <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
       </svg>
