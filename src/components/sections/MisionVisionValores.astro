@@ -1,0 +1,44 @@
+---
+import SectionLabel from '../ui/SectionLabel.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/index';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const valores = JSON.parse(t('mvv.valores'));
+---
+<section class="bg-carbon py-28 px-8 lg:px-20">
+  <div class="max-w-[1440px] mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 pb-20 mb-20 border-b border-white/[0.08]">
+      <div class="scroll-reveal">
+        <SectionLabel class="mb-6">{t('mvv.label')}</SectionLabel>
+        <h2 class="font-serif text-[clamp(2.2rem,3vw,3.2rem)] font-light leading-[1.05] tracking-[-0.025em] text-white">
+          {t('mvv.h2').split(t('mvv.h2Italic'))[0]}
+          <em class="italic text-white/55">{t('mvv.h2Italic')}</em>
+        </h2>
+      </div>
+      <div class="scroll-reveal" style="transition-delay: 100ms">
+        <p class="font-sans text-[0.6rem] tracking-[0.2em] uppercase text-burgundy mb-4">{t('mvv.misionLabel')}</p>
+        <p class="font-serif text-[1.2rem] font-light italic leading-[1.55] text-white/75">
+          "{t('mvv.mision')}"
+        </p>
+      </div>
+      <div class="scroll-reveal" style="transition-delay: 200ms">
+        <p class="font-sans text-[0.6rem] tracking-[0.2em] uppercase text-burgundy mb-4">{t('mvv.visionLabel')}</p>
+        <p class="font-serif text-[1.2rem] font-light italic leading-[1.55] text-white/75">
+          "{t('mvv.vision')}"
+        </p>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 lg:grid-cols-6 gap-0 scroll-reveal">
+      {valores.map((v: {word: string, desc: string}, i: number) => (
+        <div class={`px-6 py-8 ${i < valores.length - 1 ? 'lg:border-r border-white/[0.06]' : ''}`}>
+          <span class="font-serif text-[1.5rem] font-light text-white tracking-[-0.01em] block mb-3">
+            {v.word}
+          </span>
+          <p class="font-sans text-[0.68rem] font-light text-white/35 leading-[1.6]">
+            {v.desc}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

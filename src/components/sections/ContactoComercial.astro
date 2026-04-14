@@ -1,0 +1,69 @@
+---
+import SectionLabel from '../ui/SectionLabel.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/index';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+<section id="contacto" class="bg-[#141410] py-28 px-8 lg:px-20">
+  <div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
+    <div class="scroll-reveal">
+      <SectionLabel class="mb-6">{t('contact.label')}</SectionLabel>
+      <h2 class="font-serif text-[clamp(2rem,2.8vw,3rem)] font-light leading-[1.05] tracking-[-0.025em] text-white mb-6">
+        {t('contact.h2').split(t('contact.h2Italic'))[0]}
+        <em class="italic text-white/55">{t('contact.h2Italic')}</em>
+      </h2>
+      <p class="font-sans text-[0.82rem] font-light text-white/45 leading-[1.8] mb-10">
+        {t('contact.lead')}
+      </p>
+      <div class="font-sans text-[0.72rem] text-white/30 leading-loose">
+        <p><strong class="text-white/50">{t('contact.locationLabel')}</strong><br />{t('contact.location')}</p>
+        <p class="mt-3"><strong class="text-white/50">{t('contact.emailLabel')}</strong><br />{t('contact.email')}</p>
+        <p class="mt-3"><strong class="text-white/50">{t('contact.linkedinLabel')}</strong><br />{t('contact.linkedin')}</p>
+      </div>
+    </div>
+
+    <form
+      x-data="{ submitted: false }"
+      @submit.prevent="submitted = true; $el.submit()"
+      action="https://formspree.io/f/PLACEHOLDER"
+      method="POST"
+      class="scroll-reveal"
+      style="transition-delay: 100ms"
+    >
+      <div class="grid grid-cols-2 gap-px bg-white/[0.06] mb-px">
+        {['Name', 'Company', 'Country', 'Email'].map((field) => (
+          <div class="bg-white/[0.03] px-5 py-4">
+            <label class="font-sans text-[0.6rem] tracking-[0.15em] uppercase text-white/25 block mb-2">
+              {t(`contact.field${field}`)}
+            </label>
+            <input
+              type={field === 'Email' ? 'email' : 'text'}
+              name={field.toLowerCase()}
+              required
+              placeholder={t(`contact.field${field}Placeholder`)}
+              class="font-sans text-[0.8rem] font-light text-white/50 bg-transparent border-none outline-none w-full border-b border-white/[0.08] pb-1 placeholder:text-white/20"
+            />
+          </div>
+        ))}
+      </div>
+      <div class="bg-white/[0.03] px-5 py-4 mb-px">
+        <label class="font-sans text-[0.6rem] tracking-[0.15em] uppercase text-white/25 block mb-2">
+          {t('contact.fieldMessage')}
+        </label>
+        <textarea
+          name="message"
+          rows="4"
+          required
+          placeholder={t('contact.fieldMessagePlaceholder')}
+          class="font-sans text-[0.8rem] font-light text-white/50 bg-transparent border-none outline-none w-full border-b border-white/[0.08] pb-1 placeholder:text-white/20 resize-none"
+        ></textarea>
+      </div>
+      <button
+        type="submit"
+        class="w-full bg-burgundy text-white font-sans text-[0.72rem] font-medium tracking-[0.12em] uppercase py-4 mt-4 hover:bg-burgundy-light transition-colors duration-200"
+      >
+        {t('contact.submit')}
+      </button>
+    </form>
+  </div>
+</section>

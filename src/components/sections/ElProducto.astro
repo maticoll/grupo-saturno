@@ -1,0 +1,73 @@
+---
+import SectionLabel from '../ui/SectionLabel.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/index';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+<section class="bg-cream py-28 px-8 lg:px-20">
+  <div class="max-w-[1440px] mx-auto">
+    <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 scroll-reveal">
+      <div>
+        <SectionLabel class="mb-4">{t('product.label')}</SectionLabel>
+        <h2 class="font-serif text-[clamp(2rem,2.8vw,2.8rem)] font-light tracking-[-0.025em] text-carbon leading-[1.05]">
+          {t('product.h2').split(t('product.h2Italic'))[0]}
+          <em class="italic">{t('product.h2Italic')}</em>
+        </h2>
+      </div>
+      <p class="font-sans text-[0.78rem] font-light text-warm-gray leading-[1.7] max-w-sm lg:text-right mt-4 lg:mt-0">
+        {t('product.subtitle')}
+      </p>
+    </div>
+
+    <!-- Galería editorial -->
+    <div class="grid gap-1 mb-16 scroll-reveal"
+      style="grid-template-columns: 1.4fr 1fr 1fr; grid-template-rows: 280px 200px">
+      <div class="row-span-2 relative overflow-hidden group">
+        <!-- PLACEHOLDER: corte vacuno premium, luz de estudio, fondo neutro, vertical -->
+        <div class="absolute inset-0 bg-gradient-to-br from-[#5a3a2a] via-[#3a2518] to-[#241810]
+                    transition-transform duration-700 group-hover:scale-[1.04]"></div>
+        <div class="absolute bottom-0 left-0 right-0 px-5 py-4
+                    bg-gradient-to-t from-carbon/70 to-transparent">
+          <span class="font-sans text-[0.6rem] tracking-[0.15em] uppercase text-white/50">
+            Producto final · Cortes premium
+          </span>
+        </div>
+      </div>
+      {[
+        { bg: 'from-[#3a3530] to-[#181510]', cap: 'Instalaciones · Procesamiento' },
+        { bg: 'from-[#3d5a30] to-[#1a2a10]', cap: 'Origen · Campo propio' },
+        { bg: 'from-[#2a3a4a] to-[#101820]', cap: 'Presentación · Vacuum / Boxed beef' },
+        { bg: 'from-[#3a3020] to-[#181508]', cap: 'Logística · Exportación' },
+      ].map(({ bg, cap }) => (
+        <div class="relative overflow-hidden group">
+          <div class={`absolute inset-0 bg-gradient-to-br ${bg}
+                      transition-transform duration-700 group-hover:scale-[1.04]`}></div>
+          <div class="absolute bottom-0 left-0 right-0 px-4 py-3
+                      bg-gradient-to-t from-carbon/70 to-transparent">
+            <span class="font-sans text-[0.6rem] tracking-[0.15em] uppercase text-white/50">{cap}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Ficha técnica -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-px bg-burgundy/10 scroll-reveal">
+      {[1,2,3].map(n => (
+        <div class="bg-cream p-9">
+          <p class="font-sans text-[0.58rem] tracking-[0.2em] uppercase text-burgundy mb-3">
+            {t(`product.spec${n}Cat`)}
+          </p>
+          <h3 class="font-serif text-[1rem] font-medium text-carbon mb-2">
+            {t(`product.spec${n}Title`)}
+          </h3>
+          <p class="font-sans text-[0.72rem] font-light text-[#666] leading-[1.7]">
+            {t(`product.spec${n}Text`)}
+          </p>
+          <span class="inline-block mt-3 bg-burgundy/[0.08] text-burgundy font-sans text-[0.6rem] px-2 py-1">
+            {t(`product.spec${n}Pending`)}
+          </span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

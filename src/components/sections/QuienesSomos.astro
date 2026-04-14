@@ -1,0 +1,37 @@
+---
+import SectionLabel from '../ui/SectionLabel.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/index';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+<section id="grupo" class="bg-cream py-28 px-8 lg:px-20">
+  <div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.6fr] gap-20 items-start">
+    <div class="scroll-reveal">
+      <SectionLabel class="mb-6">{t('about.label')}</SectionLabel>
+      <h2 class="font-serif text-[clamp(2.2rem,3.5vw,3.2rem)] font-light leading-[1.05] tracking-[-0.025em] text-carbon">
+        {t('about.h2').split(t('about.h2Italic'))[0]}
+        <em class="italic">{t('about.h2Italic')}</em>
+      </h2>
+    </div>
+    <div class="scroll-reveal" style="transition-delay: 100ms">
+      <p class="font-sans text-[0.88rem] font-light text-[#444] leading-[1.85] mb-12">
+        {t('about.body')}
+      </p>
+      <div class="grid grid-cols-3 gap-8 border-t border-burgundy/15 pt-8">
+        {[1,2,3].map(n => (
+          <div>
+            <div class="font-serif text-[3rem] font-light leading-none text-burgundy tracking-[-0.03em] mb-1">
+              {t(`about.stat${n}Number`)}
+            </div>
+            <div class="font-sans text-[0.65rem] tracking-[0.1em] uppercase text-warm-gray">
+              {t(`about.stat${n}Unit`)}
+            </div>
+            <div class="font-sans text-[0.72rem] text-[#666] mt-1">
+              {t(`about.stat${n}Desc`)}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

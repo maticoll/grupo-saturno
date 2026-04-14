@@ -1,0 +1,30 @@
+---
+import SectionLabel from '../ui/SectionLabel.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/index';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const items = JSON.parse(t('why.items'));
+---
+<section class="bg-off-white py-28 px-8 lg:px-20">
+  <div class="max-w-[1440px] mx-auto">
+    <SectionLabel class="mb-4 scroll-reveal">{t('why.label')}</SectionLabel>
+    <h2 class="font-serif text-[clamp(2rem,2.8vw,2.8rem)] font-light tracking-[-0.025em] text-carbon mb-14 scroll-reveal">
+      {t('why.h2')}
+    </h2>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-px bg-burgundy/10">
+      {items.map((item: {n: string, title: string, text: string}, i: number) => (
+        <div class="bg-off-white p-10 scroll-reveal" style={`transition-delay: ${i * 80}ms`}>
+          <div class="font-serif text-[2.5rem] font-light text-burgundy/15 leading-none mb-5 tracking-[-0.05em]">
+            {item.n}
+          </div>
+          <h3 class="font-serif text-[1.3rem] font-medium text-carbon mb-3 leading-[1.2]">
+            {item.title}
+          </h3>
+          <p class="font-sans text-[0.78rem] font-light text-[#555] leading-[1.75]">
+            {item.text}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

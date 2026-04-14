@@ -4,6 +4,12 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import Hero from '../../components/sections/Hero.astro';
 import DipticoUnidades from '../../components/sections/DipticoUnidades.astro';
+import QuienesSomos from '../../components/sections/QuienesSomos.astro';
+import MisionVisionValores from '../../components/sections/MisionVisionValores.astro';
+import ElProducto from '../../components/sections/ElProducto.astro';
+import CadenaValor from '../../components/sections/CadenaValor.astro';
+import PorQueSaturno from '../../components/sections/PorQueSaturno.astro';
+import ContactoComercial from '../../components/sections/ContactoComercial.astro';
 import { getLangFromUrl, useTranslations, languages } from '../../i18n/index';
 import type { Lang } from '../../i18n/index';
 
@@ -19,6 +25,12 @@ const t = useTranslations(lang);
   <main>
     <Hero />
     <DipticoUnidades />
+    <QuienesSomos />
+    <MisionVisionValores />
+    <ElProducto />
+    <CadenaValor />
+    <PorQueSaturno />
+    <ContactoComercial />
   </main>
   <Footer />
 </BaseLayout>
