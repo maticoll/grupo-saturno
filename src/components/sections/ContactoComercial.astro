@@ -22,6 +22,7 @@ const t = useTranslations(lang);
       </div>
     </div>
 
+    {/* TODO: Replace PLACEHOLDER with the real Formspree form ID before go-live */}
     <form
       x-data="{ submitted: false }"
       @submit.prevent="submitted = true; $el.submit()"
@@ -33,10 +34,11 @@ const t = useTranslations(lang);
       <div class="grid grid-cols-2 gap-px bg-white/[0.06] mb-px">
         {['Name', 'Company', 'Country', 'Email'].map((field) => (
           <div class="bg-white/[0.03] px-5 py-4">
-            <label class="font-sans text-[0.6rem] tracking-[0.15em] uppercase text-white/25 block mb-2">
+            <label for={`contact-${field.toLowerCase()}`} class="font-sans text-[0.6rem] tracking-[0.15em] uppercase text-white/25 block mb-2">
               {t(`contact.field${field}`)}
             </label>
             <input
+              id={`contact-${field.toLowerCase()}`}
               type={field === 'Email' ? 'email' : 'text'}
               name={field.toLowerCase()}
               required
@@ -47,10 +49,11 @@ const t = useTranslations(lang);
         ))}
       </div>
       <div class="bg-white/[0.03] px-5 py-4 mb-px">
-        <label class="font-sans text-[0.6rem] tracking-[0.15em] uppercase text-white/25 block mb-2">
+        <label for="contact-message" class="font-sans text-[0.6rem] tracking-[0.15em] uppercase text-white/25 block mb-2">
           {t('contact.fieldMessage')}
         </label>
         <textarea
+          id="contact-message"
           name="message"
           rows="4"
           required

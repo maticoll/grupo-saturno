@@ -3,7 +3,7 @@ import SectionLabel from '../ui/SectionLabel.astro';
 import { getLangFromUrl, useTranslations } from '../../i18n/index';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const steps = JSON.parse(t('chain.steps'));
+const steps = JSON.parse(t('chain.steps')) as Array<{n: string; title: string; desc: string}>;
 ---
 <section id="trayectoria" class="bg-cream py-28 px-8 lg:px-20">
   <div class="max-w-[1440px] mx-auto">
@@ -12,7 +12,7 @@ const steps = JSON.parse(t('chain.steps'));
       {t('chain.h2').split(t('chain.h2Italic'))[0]}
       <em class="italic">{t('chain.h2Italic')}</em>
     </h2>
-    <div class="relative grid grid-cols-2 lg:grid-cols-6 gap-8 scroll-reveal">
+    <div class="relative grid grid-cols-1 lg:grid-cols-6 gap-8 scroll-reveal">
       <div class="absolute top-[22px] left-[8%] right-[8%] h-px
                   bg-gradient-to-r from-transparent via-burgundy/25 to-transparent
                   hidden lg:block" aria-hidden="true"></div>

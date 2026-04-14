@@ -3,7 +3,7 @@ import SectionLabel from '../ui/SectionLabel.astro';
 import { getLangFromUrl, useTranslations } from '../../i18n/index';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const items = JSON.parse(t('why.items'));
+const items = JSON.parse(t('why.items')) as Array<{n: string; title: string; text: string}>;
 ---
 <section class="bg-off-white py-28 px-8 lg:px-20">
   <div class="max-w-[1440px] mx-auto">

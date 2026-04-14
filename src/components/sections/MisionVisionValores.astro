@@ -3,7 +3,7 @@ import SectionLabel from '../ui/SectionLabel.astro';
 import { getLangFromUrl, useTranslations } from '../../i18n/index';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const valores = JSON.parse(t('mvv.valores'));
+const valores = JSON.parse(t('mvv.valores')) as Array<{word: string; desc: string}>;
 ---
 <section class="bg-carbon py-28 px-8 lg:px-20">
   <div class="max-w-[1440px] mx-auto">
