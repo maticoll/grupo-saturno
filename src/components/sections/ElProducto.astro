@@ -22,29 +22,38 @@ const t = useTranslations(lang);
     <!-- Galería editorial -->
     <div class="grid gap-1 mb-16 scroll-reveal"
       style="grid-template-columns: 1.4fr 1fr 1fr; grid-template-rows: 280px 200px">
+      <!-- Imagen principal grande: corte premium -->
       <div class="row-span-2 relative overflow-hidden group">
-        <!-- PLACEHOLDER: corte vacuno premium, luz de estudio, fondo neutro, vertical -->
-        <div class="absolute inset-0 bg-gradient-to-br from-[#5a3a2a] via-[#3a2518] to-[#241810]
-                    transition-transform duration-700 group-hover:scale-[1.04]"></div>
-        <div class="absolute bottom-0 left-0 right-0 px-5 py-4
-                    bg-gradient-to-t from-carbon/70 to-transparent">
-          <span class="font-sans text-[0.6rem] tracking-[0.15em] uppercase text-white/50">
+        <img
+          src="/images/producto/producto-corte-02.jpg"
+          alt="Corte vacuno premium Frigorífico Saturno"
+          class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+          loading="lazy"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-carbon/60 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 px-5 py-4">
+          <span class="font-sans text-[0.6rem] tracking-[0.15em] uppercase text-white/70">
             Producto final · Cortes premium
           </span>
         </div>
       </div>
+      <!-- 4 imágenes secundarias -->
       {[
-        { bg: 'from-[#3a3530] to-[#181510]', cap: 'Instalaciones · Procesamiento' },
-        { bg: 'from-[#3d5a30] to-[#1a2a10]', cap: 'Origen · Campo propio' },
-        { bg: 'from-[#2a3a4a] to-[#101820]', cap: 'Presentación · Vacuum / Boxed beef' },
-        { bg: 'from-[#3a3020] to-[#181508]', cap: 'Logística · Exportación' },
-      ].map(({ bg, cap }) => (
+        { src: '/images/planta/planta-proceso-01.jpg', cap: 'Instalaciones · Procesamiento' },
+        { src: '/images/planta/planta-exterior-02.jpg', cap: 'Origen · Campo propio' },
+        { src: '/images/producto/producto-corte-04.jpg', cap: 'Presentación · Vacuum / Boxed beef' },
+        { src: '/images/planta/planta-proceso-02.jpg', cap: 'Logística · Exportación' },
+      ].map(({ src, cap }) => (
         <div class="relative overflow-hidden group">
-          <div class={`absolute inset-0 bg-gradient-to-br ${bg}
-                      transition-transform duration-700 group-hover:scale-[1.04]`}></div>
-          <div class="absolute bottom-0 left-0 right-0 px-4 py-3
-                      bg-gradient-to-t from-carbon/70 to-transparent">
-            <span class="font-sans text-[0.6rem] tracking-[0.15em] uppercase text-white/50">{cap}</span>
+          <img
+            src={src}
+            alt={cap}
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-carbon/60 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 px-4 py-3">
+            <span class="font-sans text-[0.6rem] tracking-[0.15em] uppercase text-white/70">{cap}</span>
           </div>
         </div>
       ))}

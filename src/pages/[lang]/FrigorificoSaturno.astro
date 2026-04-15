@@ -16,10 +16,15 @@ const t = useTranslations(lang);
   description={t('meta.saturnoDesc')}
   unitName="Frigorífico Saturno"
 >
-  <!-- Hero — tono cálido-tierra -->
-  <!-- PLACEHOLDER: foto exterior Frigorífico Saturno -->
+  <!-- Hero — Frigorífico Saturno -->
   <section class="relative h-[70vh] min-h-[500px] flex items-end overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-[#4a3020] via-[#301f12] to-[#1e130a]" aria-hidden="true"></div>
+    <img
+      src="/images/planta/planta-exterior-05.jpg"
+      alt="Planta industrial Frigorífico Saturno, Ruta 8 Km 38, Empalme Olmos"
+      class="absolute inset-0 w-full h-full object-cover object-center"
+      loading="eager"
+      decoding="async"
+    />
     <div class="absolute inset-0 bg-gradient-to-t from-carbon/90 via-carbon/40 to-carbon/10" aria-hidden="true"></div>
     <div class="relative z-10 max-w-[1440px] mx-auto px-8 lg:px-20 pb-16 w-full">
       <p class="font-sans text-[0.6rem] tracking-[0.22em] uppercase text-burgundy mb-4 flex items-center gap-3">
@@ -49,10 +54,15 @@ const t = useTranslations(lang);
           "Desde el inicio la razón de ser Frigorífico Saturno: <strong class="font-medium text-carbon">ADN Uruguayo.</strong>"
         </p>
       </div>
-      <!-- PLACEHOLDER: galería instalaciones Saturno (3 fotos) -->
       <div class="grid grid-cols-3 gap-2">
-        {[1,2,3].map(_ => (
-          <div class="h-40 bg-gradient-to-br from-[#4a3020] to-[#1e130a] rounded-sm" aria-hidden="true"></div>
+        {[
+          { src: '/images/planta/planta-exterior-01.jpg', alt: 'Exterior planta Saturno' },
+          { src: '/images/planta/planta-exterior-06.jpg', alt: 'Planta Saturno campo' },
+          { src: '/images/planta/planta-proceso-01.jpg', alt: 'Proceso interno Saturno' },
+        ].map(({ src, alt }) => (
+          <div class="h-40 overflow-hidden rounded-sm">
+            <img src={src} alt={alt} class="w-full h-full object-cover" loading="lazy" />
+          </div>
         ))}
       </div>
     </div>

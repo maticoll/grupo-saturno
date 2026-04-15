@@ -7,13 +7,18 @@ const t = useTranslations(lang);
 <section id="unidades" class="group/dip grid grid-cols-1 lg:grid-cols-2 min-h-[72vh]">
 
   <!-- Unidad 01: Frigorífico Florida -->
-  <!-- PLACEHOLDER: foto planta Florida, tono azulado-industrial, 16:9 horizontal -->
   <a href={`/${lang}/FrigorificoFlorida`}
     class="group relative flex items-end overflow-hidden cursor-pointer min-h-[50vh] lg:min-h-0 lg:self-stretch transition-opacity duration-300 group-has-[[href*='FrigorificoSaturno']:hover]/dip:opacity-75"
     aria-label={t('units.unit1Cta')}>
 
-    <div class="absolute inset-0 bg-gradient-to-br from-[#2a3a50] via-[#1a2535] to-[#101820]
-                transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+    <img
+      src="/images/planta/planta-exterior-03.jpg"
+      alt="Planta Frigorífico Florida"
+      class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+      loading="lazy"
+      aria-hidden="true"
+    />
+    <div class="absolute inset-0 bg-gradient-to-br from-[#2a3a50]/60 via-[#1a2535]/70 to-[#101820]/80"
       aria-hidden="true"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-carbon/92 via-carbon/50 to-carbon/15"
       aria-hidden="true"></div>
@@ -51,10 +56,9 @@ const t = useTranslations(lang);
     aria-label={t('units.unit2Cta')}>
 
     <img
-      src="/images/saturno-exterior.jpg"
-      alt=""
-      class="absolute inset-0 w-full h-full object-cover
-             transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+      src="/images/planta/planta-exterior-01.jpg"
+      alt="Planta Frigorífico Saturno, Ruta 8 Km 38, Empalme Olmos"
+      class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
       loading="lazy"
       aria-hidden="true"
     />

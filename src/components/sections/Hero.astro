@@ -6,10 +6,13 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 <section class="relative h-[92vh] min-h-[600px] flex items-end overflow-hidden">
-  <!-- PLACEHOLDER: foto cenital campo uruguayo, luz natural, ganado, 16:9 mínimo 1920x1080 -->
-  <!-- Reemplazar con <Image> cuando el cliente provea la foto -->
-  <div class="absolute inset-0 bg-gradient-to-br from-[#2a3520] via-[#1e2818] to-[#1A1A1A]"
-    aria-hidden="true"></div>
+  <img
+    src="/images/hero/hero-campo-planta.jpg"
+    alt="Campo y planta Frigorífico Saturno, Empalme Olmos, Uruguay"
+    class="absolute inset-0 w-full h-full object-cover object-center"
+    loading="eager"
+    decoding="async"
+  />
 
   <!-- Overlay cinematográfico -->
   <div class="absolute inset-0 bg-gradient-to-t from-carbon/85 via-carbon/30 to-carbon/10"

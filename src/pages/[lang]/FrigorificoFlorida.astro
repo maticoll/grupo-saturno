@@ -16,10 +16,16 @@ const t = useTranslations(lang);
   description={t('meta.floridaDesc')}
   unitName="Frigorífico Florida"
 >
-  <!-- Hero — tono azulado-industrial -->
-  <!-- PLACEHOLDER: foto exterior Frigorífico Florida -->
+  <!-- Hero — Frigorífico Florida -->
   <section class="relative h-[70vh] min-h-[500px] flex items-end overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-[#2a3a50] via-[#1a2535] to-[#101820]" aria-hidden="true"></div>
+    <img
+      src="/images/planta/planta-exterior-04.jpg"
+      alt="Planta industrial Frigorífico Florida, Grupo Saturno"
+      class="absolute inset-0 w-full h-full object-cover object-center"
+      loading="eager"
+      decoding="async"
+    />
+    <div class="absolute inset-0 bg-gradient-to-br from-[#2a3a50]/50 via-[#1a2535]/60 to-[#101820]/70" aria-hidden="true"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-carbon/90 via-carbon/40 to-carbon/10" aria-hidden="true"></div>
     <div class="relative z-10 max-w-[1440px] mx-auto px-8 lg:px-20 pb-16 w-full">
       <p class="font-sans text-[0.6rem] tracking-[0.22em] uppercase text-burgundy mb-4 flex items-center gap-3">
@@ -48,10 +54,15 @@ const t = useTranslations(lang);
           [ CONTENIDO A DEFINIR CON CLIENTE ]
         </p>
       </div>
-      <!-- PLACEHOLDER: galería de instalaciones Florida (3 fotos) -->
       <div class="grid grid-cols-3 gap-2">
-        {[1,2,3].map(_ => (
-          <div class="h-40 bg-gradient-to-br from-[#2a3a50] to-[#101820] rounded-sm" aria-hidden="true"></div>
+        {[
+          { src: '/images/planta/planta-exterior-02.jpg', alt: 'Instalaciones Frigorífico Florida' },
+          { src: '/images/planta/planta-exterior-06.jpg', alt: 'Planta Florida exterior' },
+          { src: '/images/planta/planta-proceso-02.jpg', alt: 'Proceso interno Florida' },
+        ].map(({ src, alt }) => (
+          <div class="h-40 overflow-hidden rounded-sm">
+            <img src={src} alt={alt} class="w-full h-full object-cover" loading="lazy" />
+          </div>
         ))}
       </div>
     </div>
