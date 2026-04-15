@@ -32,7 +32,7 @@ const t = useTranslations(lang);
     </div>
   </section>
 
-  <!-- Capacidades -->
+  <!-- Presentación -->
   <section class="bg-off-white py-24 px-8 lg:px-20">
     <div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
       <div>
@@ -40,9 +40,13 @@ const t = useTranslations(lang);
         <h2 class="font-serif text-[clamp(1.8rem,2.5vw,2.5rem)] font-light tracking-[-0.025em] text-carbon mb-6">
           Núcleo productivo del grupo
         </h2>
+        <p class="font-sans text-[0.85rem] font-light text-[#555] leading-[1.8] mb-4">
+          Fundado en 1998, Frigorífico Saturno es una empresa 100% nacional con planta industrial
+          inaugurada en 2009, ubicada en Ruta 8 Km 38, Empalme Olmos, Canelones. Producción y
+          procesamiento integrados con trazabilidad desde el origen.
+        </p>
         <p class="font-sans text-[0.85rem] font-light text-[#555] leading-[1.8]">
-          Producción y procesamiento integrados con trazabilidad desde el origen.
-          80% de la facturación del grupo.
+          "Desde el inicio la razón de ser Frigorífico Saturno: <strong class="font-medium text-carbon">ADN Uruguayo.</strong>"
         </p>
       </div>
       <!-- PLACEHOLDER: galería instalaciones Saturno (3 fotos) -->
@@ -50,6 +54,215 @@ const t = useTranslations(lang);
         {[1,2,3].map(_ => (
           <div class="h-40 bg-gradient-to-br from-[#4a3020] to-[#1e130a] rounded-sm" aria-hidden="true"></div>
         ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="bg-carbon py-20 px-8 lg:px-20">
+    <div class="max-w-[1440px] mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-4">
+        {[
+          { value: '+20', label: 'Años de trayectoria' },
+          { value: '2.183', label: 'm² planta industrial' },
+          { value: '5.000+', label: 'Toneladas / año' },
+          { value: '100', label: 'Empleados nacionales' },
+          { value: '15', label: 'Vehículos de distribución' },
+          { value: '8+', label: 'Departamentos cubiertos' },
+        ].map(stat => (
+          <div class="text-center">
+            <p class="font-serif text-[clamp(2rem,3vw,3rem)] font-light text-white leading-none mb-2">{stat.value}</p>
+            <p class="font-sans text-[0.65rem] tracking-[0.15em] uppercase text-[#aaa]">{stat.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Distribución -->
+  <section class="bg-white py-24 px-8 lg:px-20">
+    <div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <div>
+        <SectionLabel class="mb-4">Distribución</SectionLabel>
+        <h2 class="font-serif text-[clamp(1.8rem,2.5vw,2.5rem)] font-light tracking-[-0.025em] text-carbon mb-6">
+          Cobertura nacional propia
+        </h2>
+        <p class="font-sans text-[0.85rem] font-light text-[#555] leading-[1.8] mb-8">
+          Flota de 15 vehículos con equipamiento de frío de última generación que garantiza
+          la cadena de frío desde la planta hasta el punto de entrega.
+        </p>
+        <div class="space-y-4">
+          <div class="flex items-start gap-4 border-l-2 border-burgundy pl-4">
+            <div>
+              <p class="font-sans text-[0.75rem] font-medium tracking-[0.1em] uppercase text-carbon mb-1">Zona Metropolitana</p>
+              <p class="font-sans text-[0.8rem] font-light text-[#555]">Distribución diaria</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 border-l-2 border-[#c8a87a] pl-4">
+            <div>
+              <p class="font-sans text-[0.75rem] font-medium tracking-[0.1em] uppercase text-carbon mb-1">Interior del país</p>
+              <p class="font-sans text-[0.8rem] font-light text-[#555]">
+                Artigas · Salto · Paysandú · Río Negro · Soriano · Colonia · Flores · San José
+              </p>
+              <p class="font-sans text-[0.75rem] font-light text-[#888] mt-1">Frecuencia semanal</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-off-white rounded-sm p-8">
+        <p class="font-sans text-[0.65rem] tracking-[0.18em] uppercase text-[#888] mb-6">Capacidad instalada</p>
+        <ul class="space-y-5">
+          {[
+            'Planta Industrial Ciclo II — 2.183 m²',
+            'Procesamiento de más de 5.000 toneladas anuales',
+            '100 empleados de mano de obra nacional',
+            'Trazabilidad desde el productor hasta el cliente',
+          ].map(item => (
+            <li class="flex items-start gap-3">
+              <span class="w-1 h-1 rounded-full bg-burgundy mt-[0.45rem] shrink-0" aria-hidden="true"></span>
+              <span class="font-sans text-[0.82rem] font-light text-[#444] leading-[1.7]">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Líneas de producto -->
+  <section class="bg-off-white py-24 px-8 lg:px-20">
+    <div class="max-w-[1440px] mx-auto">
+      <div class="mb-14">
+        <SectionLabel class="mb-4">Línea de Productos</SectionLabel>
+        <h2 class="font-serif text-[clamp(1.8rem,2.5vw,2.5rem)] font-light tracking-[-0.025em] text-carbon">
+          Calidad de exportación, disponible localmente
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Saturno Premium -->
+        <div class="bg-white p-10 border-t-2 border-burgundy">
+          <p class="font-sans text-[0.65rem] tracking-[0.18em] uppercase text-burgundy mb-4">Saturno Premium</p>
+          <h3 class="font-serif text-[1.4rem] font-light text-carbon mb-4">Una línea de excelencia</h3>
+          <p class="font-sans text-[0.82rem] font-light text-[#555] leading-[1.8] mb-6">
+            Las carnes que Uruguay exporta a los mercados más exigentes del mundo,
+            ahora disponibles para el consumidor uruguayo.
+          </p>
+          <ul class="space-y-3">
+            {[
+              'Desafío profesional de la propia estructura',
+              'Máxima calidad para el consumidor local',
+              'Estándares de exportación en el mercado interno',
+            ].map(item => (
+              <li class="flex items-start gap-3">
+                <span class="w-1 h-1 rounded-full bg-burgundy mt-[0.45rem] shrink-0" aria-hidden="true"></span>
+                <span class="font-sans text-[0.8rem] font-light text-[#555] leading-[1.7]">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <!-- Premium Store -->
+        <div class="bg-white p-10 border-t-2 border-[#c8a87a]">
+          <p class="font-sans text-[0.65rem] tracking-[0.18em] uppercase text-[#8a6a3a] mb-4">Premium Store</p>
+          <h3 class="font-serif text-[1.4rem] font-light text-carbon mb-4">Cortes a medida</h3>
+          <p class="font-sans text-[0.82rem] font-light text-[#555] leading-[1.8] mb-6">
+            Infraestructura específica para la preparación de cortes <em>tailor-made</em> según
+            requerimiento del cliente. Atención preferencial a chefs y restaurantes.
+          </p>
+          <ul class="space-y-3">
+            {[
+              'Ancho de corte, tenor graso y terminación personalizados',
+              'Terneza y curas de sabor a elección',
+              'Asesoramiento comercial y servicio de delivery',
+            ].map(item => (
+              <li class="flex items-start gap-3">
+                <span class="w-1 h-1 rounded-full bg-[#c8a87a] mt-[0.45rem] shrink-0" aria-hidden="true"></span>
+                <span class="font-sans text-[0.8rem] font-light text-[#555] leading-[1.7]">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pilares estratégicos -->
+  <section class="bg-carbon py-24 px-8 lg:px-20">
+    <div class="max-w-[1440px] mx-auto">
+      <div class="mb-14">
+        <SectionLabel class="mb-4">Pilares Estratégicos</SectionLabel>
+        <h2 class="font-serif text-[clamp(1.8rem,2.5vw,2.5rem)] font-light tracking-[-0.025em] text-white">
+          Los seis ejes que nos definen
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { num: '01', title: 'El Productor', desc: 'Proveedor originario con quien compartimos criterios, bonanzas y avatares de la industria.' },
+          { num: '02', title: 'El Cliente', desc: 'Gran objetivo. Enfoque en el mercado local con la mayor calidad disponible.' },
+          { num: '03', title: 'El Trabajador', desc: 'Mejor ámbito laboral, alta capacitación y máximo compromiso del equipo.' },
+          { num: '04', title: 'El Entorno Social', desc: 'Buenos servidores en el radio comarcal y en todo el país.' },
+          { num: '05', title: 'El Conocimiento', desc: 'Mayor responsabilidad y capacitación constante como motor de crecimiento.' },
+          { num: '06', title: 'Economía Saludable', desc: 'Rentabilidad que se convierte en inversión, desarrollo y planes a ejecutar.' },
+        ].map(pilar => (
+          <div class="border border-white/10 p-8 hover:border-burgundy/60 transition-colors duration-300">
+            <p class="font-sans text-[0.65rem] tracking-[0.18em] uppercase text-burgundy mb-4">{pilar.num}</p>
+            <h3 class="font-serif text-[1.1rem] font-light text-white mb-3">{pilar.title}</h3>
+            <p class="font-sans text-[0.8rem] font-light text-[#aaa] leading-[1.7]">{pilar.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ADN Uruguayo -->
+  <section class="bg-white py-24 px-8 lg:px-20">
+    <div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <SectionLabel class="mb-4">Identidad</SectionLabel>
+        <h2 class="font-serif text-[clamp(1.8rem,2.5vw,2.5rem)] font-light tracking-[-0.025em] text-carbon mb-6">
+          ADN Uruguayo
+        </h2>
+        <p class="font-sans text-[0.85rem] font-light text-[#555] leading-[1.8] mb-6">
+          Empresa 100% nacional en capital, fuentes de trabajo y mercado. Arraigada profundamente
+          en los valores, usos y costumbres uruguayos.
+        </p>
+        <blockquote class="border-l-2 border-burgundy pl-6 my-8">
+          <p class="font-serif text-[1.1rem] font-light text-carbon italic leading-[1.6]">
+            "Ese Uruguay, el del sueño del pibe, el que está en la ilusión de cada uruguayo."
+          </p>
+        </blockquote>
+        <p class="font-sans text-[0.85rem] font-light text-[#555] leading-[1.8]">
+          Con una Planta de Faena (Ciclo I) en fase de anteproyecto, Frigorífico Saturno avanza
+          hacia la autonomía total en el proceso de gestión industrial.
+        </p>
+      </div>
+      <div class="space-y-4">
+        {[
+          'Capital, fuentes de trabajo y mercado 100% nacionales',
+          'Calidad de exportación disponible para el consumidor local',
+          'Trazabilidad completa desde el productor al cliente',
+          'Servicio personalizado para chefs y distribuidores',
+          'Presencia regional en 8+ departamentos',
+          'Proyecto de expansión Ciclo I en marcha',
+        ].map(item => (
+          <div class="flex items-center gap-4 py-4 border-b border-[#eee]">
+            <span class="w-2 h-2 rounded-full bg-burgundy shrink-0" aria-hidden="true"></span>
+            <span class="font-sans text-[0.82rem] font-light text-[#444]">{item}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section class="bg-off-white py-16 px-8 lg:px-20">
+    <div class="max-w-[1440px] mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 border border-[#ddd] p-10">
+      <div>
+        <p class="font-sans text-[0.65rem] tracking-[0.18em] uppercase text-[#888] mb-2">Contacto directo</p>
+        <p class="font-serif text-[1.2rem] font-light text-carbon">Frigorífico Saturno</p>
+        <p class="font-sans text-[0.82rem] font-light text-[#555] mt-1">Ruta 8 KM 38 · Empalme Olmos, Canelones</p>
+      </div>
+      <div class="flex flex-col sm:items-end gap-2">
+        <a href="tel:+59822956494" class="font-sans text-[0.82rem] font-light text-carbon hover:text-burgundy transition-colors">+598 2295 6494</a>
+        <a href="mailto:administracion@frigorificosaturno.com" class="font-sans text-[0.82rem] font-light text-carbon hover:text-burgundy transition-colors">administracion@frigorificosaturno.com</a>
       </div>
     </div>
   </section>
