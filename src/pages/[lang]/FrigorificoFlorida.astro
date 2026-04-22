@@ -19,13 +19,12 @@ const t = useTranslations(lang);
   <!-- Hero — Frigorífico Florida -->
   <section class="relative h-[70vh] min-h-[500px] flex items-end overflow-hidden">
     <img
-      src="/images/planta/planta-exterior-04.jpg"
+      src="/images/florida/florida-hero.jpg"
       alt="Planta industrial Frigorífico Florida, Grupo Saturno"
       class="absolute inset-0 w-full h-full object-cover object-center"
       loading="eager"
       decoding="async"
     />
-    <div class="absolute inset-0 bg-gradient-to-br from-[#2a3a50]/50 via-[#1a2535]/60 to-[#101820]/70" aria-hidden="true"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-carbon/90 via-carbon/40 to-carbon/10" aria-hidden="true"></div>
     <div class="relative z-10 max-w-[1440px] mx-auto px-8 lg:px-20 pb-16 w-full">
       <p class="font-sans text-[0.6rem] tracking-[0.22em] uppercase text-burgundy mb-4 flex items-center gap-3">
@@ -35,6 +34,22 @@ const t = useTranslations(lang);
       <h1 class="font-serif text-[clamp(2.5rem,5vw,4.5rem)] font-light leading-[1.0] tracking-[-0.02em] text-white">
         Frigorífico Florida
       </h1>
+    </div>
+  </section>
+
+  <!-- Galería de instalaciones -->
+  <section class="bg-carbon py-2">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-0.5">
+      {[
+        { src: '/images/florida/florida-exterior-01.jpg', alt: 'Exterior Frigorífico Florida' },
+        { src: '/images/florida/florida-proceso-01.jpg',  alt: 'Proceso interno Florida' },
+        { src: '/images/florida/florida-instalacion-01.jpg', alt: 'Instalaciones Florida' },
+        { src: '/images/florida/florida-producto-01.jpg', alt: 'Producto Frigorífico Florida' },
+      ].map(({ src, alt }) => (
+        <div class="aspect-[4/3] overflow-hidden">
+          <img src={src} alt={alt} class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" loading="lazy" />
+        </div>
+      ))}
     </div>
   </section>
 
@@ -56,9 +71,9 @@ const t = useTranslations(lang);
       </div>
       <div class="grid grid-cols-3 gap-2">
         {[
-          { src: '/images/planta/planta-exterior-02.jpg', alt: 'Instalaciones Frigorífico Florida' },
-          { src: '/images/planta/planta-exterior-06.jpg', alt: 'Planta Florida exterior' },
-          { src: '/images/planta/planta-proceso-02.jpg', alt: 'Proceso interno Florida' },
+          { src: '/images/florida/florida-exterior-02.jpg', alt: 'Instalaciones Frigorífico Florida' },
+          { src: '/images/florida/florida-proceso-02.jpg',  alt: 'Proceso Florida' },
+          { src: '/images/florida/florida-instalacion-02.jpg', alt: 'Instalación Florida' },
         ].map(({ src, alt }) => (
           <div class="h-40 overflow-hidden rounded-sm">
             <img src={src} alt={alt} class="w-full h-full object-cover" loading="lazy" />
