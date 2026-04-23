@@ -8,12 +8,13 @@ export interface Props {
   title: string;
   description: string;
   unitName: string;
+  image?: string;
 }
 
-const { title, description, unitName } = Astro.props;
+const { title, description, unitName, image } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 ---
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} image={image}>
   <Header />
   <!-- Breadcrumb -->
   <nav aria-label="Breadcrumb"

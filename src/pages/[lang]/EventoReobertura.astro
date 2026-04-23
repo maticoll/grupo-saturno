@@ -1,0 +1,156 @@
+---
+import SubLandingLayout from '../../layouts/SubLandingLayout.astro';
+import SectionLabel from '../../components/ui/SectionLabel.astro';
+import ContactoComercial from '../../components/sections/ContactoComercial.astro';
+import { getLangFromUrl, useTranslations, languages } from '../../i18n/index';
+
+export function getStaticPaths() {
+  return languages.map(lang => ({ params: { lang } }));
+}
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const fotos = [
+  { src: '/images/florida/florida-hero.jpg',                    alt: 'Ceremonia apertura — Establecimiento Florida' },
+  { src: '/images/reapertura/reapertura-ceremonia-01.jpg',      alt: 'Acto de apertura oficial' },
+  { src: '/images/reapertura/reapertura-ceremonia-02.jpg',      alt: 'Discurso inaugural' },
+  { src: '/images/reapertura/reapertura-exterior-01.jpg',       alt: 'Vista exterior Establecimiento Florida' },
+  { src: '/images/reapertura/reapertura-exterior-02.jpg',       alt: 'Acceso principal Florida' },
+  { src: '/images/reapertura/reapertura-autoridades-01.jpg',    alt: 'Autoridades presentes en la reapertura' },
+  { src: '/images/reapertura/reapertura-autoridades-02.jpg',    alt: 'Delegación oficial Grupo Saturno' },
+  { src: '/images/reapertura/reapertura-instalaciones-01.jpg',  alt: 'Instalaciones Frigorífico Florida' },
+  { src: '/images/reapertura/reapertura-instalaciones-02.jpg',  alt: 'Interior planta Florida' },
+  { src: '/images/reapertura/reapertura-detalle-01.jpg',        alt: 'Detalle del evento' },
+  { src: '/images/reapertura/reapertura-detalle-02.jpg',        alt: 'Momento ceremonial' },
+  { src: '/images/reapertura/reapertura-galeria-01.jpg',        alt: 'Galería reapertura Florida' },
+  { src: '/images/reapertura/reapertura-galeria-02.jpg',        alt: 'Celebración Grupo Saturno Florida' },
+  { src: '/images/florida/florida-exterior-02.jpg',             alt: 'Fachada Establecimiento Florida' },
+];
+---
+<SubLandingLayout
+  title={t('meta.reoaberturaTitle')}
+  description={t('meta.reoaberturaDesc')}
+  image="/images/reapertura/reapertura-exterior-01.jpg"
+  unitName="Evento Reapertura Florida"
+>
+
+  <!-- JSON-LD Event -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Reapertura Frigorífico Florida — Grupo Saturno",
+    "startDate": "2026-04-16",
+    "location": {
+      "@type": "Place",
+      "name": "Establecimiento Florida 365",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Florida",
+        "addressRegion": "Florida",
+        "addressCountry": "UY"
+      }
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "Grupo Saturno",
+      "url": "https://gruposaturno.com.uy"
+    },
+    "description": "Ceremonia de reapertura del Establecimiento Florida de Grupo Saturno, con presencia de autoridades departamentales y nacionales."
+  }).replace(/<\//g, '<\\/')} />
+
+  <!-- Hero -->
+  <section class="relative h-[65vh] min-h-[460px] flex items-end overflow-hidden">
+    <img
+      src="/images/reapertura/reapertura-exterior-01.jpg"
+      alt="Establecimiento Florida — reapertura abril 2026"
+      class="absolute inset-0 w-full h-full object-cover object-center"
+      loading="eager"
+      decoding="async"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-carbon/90 via-carbon/40 to-carbon/10" aria-hidden="true"></div>
+    <div class="relative z-10 max-w-[1440px] mx-auto px-8 lg:px-20 pb-16 w-full">
+      <p class="font-sans text-[0.6rem] tracking-[0.22em] uppercase text-burgundy mb-4 flex items-center gap-3">
+        <span class="w-5 h-px bg-burgundy inline-block" aria-hidden="true"></span>
+        {t('reapertura.kicker')}
+      </p>
+      <h1 class="font-serif text-[clamp(2rem,4.5vw,4rem)] font-light leading-[1.0] tracking-[-0.02em] text-white">
+        {t('reapertura.h1')}
+      </h1>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="bg-off-white py-20 px-8 lg:px-20">
+    <div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <div class="lg:col-span-7">
+        <SectionLabel class="mb-4">{t('reapertura.label')}</SectionLabel>
+        <p class="font-sans text-[0.88rem] font-light text-[#555] leading-[1.85] max-w-xl">
+          {t('reapertura.lead')}
+        </p>
+      </div>
+      <div class="lg:col-span-5 flex flex-col justify-center gap-4">
+        <div class="border-l-2 border-burgundy pl-5">
+          <p class="font-sans text-[0.62rem] tracking-[0.18em] uppercase text-burgundy mb-1">Fecha</p>
+          <p class="font-sans text-[0.85rem] text-carbon font-light">16 de abril de 2026</p>
+        </div>
+        <div class="border-l-2 border-burgundy/30 pl-5">
+          <p class="font-sans text-[0.62rem] tracking-[0.18em] uppercase text-burgundy mb-1">Lugar</p>
+          <p class="font-sans text-[0.85rem] text-carbon font-light">Florida, República Oriental del Uruguay</p>
+        </div>
+        <div class="border-l-2 border-burgundy/30 pl-5">
+          <p class="font-sans text-[0.62rem] tracking-[0.18em] uppercase text-burgundy mb-1">Organizador</p>
+          <p class="font-sans text-[0.85rem] text-carbon font-light">Grupo Saturno</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galería masonry -->
+  <section class="bg-carbon py-4 px-1">
+    <div class="max-w-[1440px] mx-auto mb-6 px-8 lg:px-20 pt-10">
+      <SectionLabel class="text-white/60 mb-2">{t('reapertura.galleryLabel')}</SectionLabel>
+    </div>
+    <div class="columns-1 sm:columns-2 lg:columns-3 gap-1 px-1">
+      {fotos.map(({ src, alt }, i) => (
+        <div class="break-inside-avoid mb-1 overflow-hidden group">
+          <img
+            src={src}
+            alt={alt}
+            class="w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+            loading={i < 3 ? 'eager' : 'lazy'}
+          />
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Volver + CTA -->
+  <section class="bg-off-white py-20 px-8 lg:px-20">
+    <div class="max-w-[1440px] mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+      <a
+        href={`/${lang}/FrigorificoFlorida`}
+        class="font-sans text-[0.72rem] tracking-[0.12em] uppercase text-burgundy hover:underline flex items-center gap-2"
+      >
+        {t('reapertura.backLink')}
+      </a>
+      <div class="max-w-md">
+        <h2 class="font-serif text-[1.4rem] font-light text-carbon mb-3 tracking-[-0.02em]">
+          {t('reapertura.ctaTitle')}
+        </h2>
+        <p class="font-sans text-[0.78rem] font-light text-[#666] leading-[1.7] mb-5">
+          {t('reapertura.ctaText')}
+        </p>
+        <a
+          href={`/${lang}/FrigorificoFlorida`}
+          class="inline-flex items-center gap-2 font-sans text-[0.68rem] tracking-[0.12em] uppercase bg-burgundy text-white px-6 py-3 hover:bg-burgundy/90 transition-colors"
+        >
+          {t('reapertura.ctaButton')} →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <ContactoComercial />
+
+</SubLandingLayout>

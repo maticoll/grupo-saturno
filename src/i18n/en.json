@@ -22,7 +22,7 @@
   "units": {
     "unit1Number": "Unit 01",
     "unit1Title": "Frigorífico Florida",
-    "unit1Desc": "[CONTENT TO BE CONFIRMED WITH CLIENT] — Specialised processing with a focus on export and premium domestic market.",
+    "unit1Desc": "Establecimiento Florida — Specialised processing with an export focus. Strategic unit of the group in the Florida department.",
     "unit1Cta": "Learn about Frigorífico Florida",
     "unit2Number": "Unit 02",
     "unit2Title": "Frigorífico Saturno",
@@ -53,12 +53,30 @@
     "visionLabel": "Vision",
     "vision": "To be recognised for our empathy, integrity, and reliability, building strategic and lasting relationships.",
     "valores": [
-      { "word": "Learning", "desc": "Every production cycle as an opportunity to improve." },
-      { "word": "Growth", "desc": "Personal, professional, and organisational." },
-      { "word": "Effort", "desc": "Sustained effort as the only true guarantee." },
-      { "word": "Adaptability", "desc": "26 years demand knowing when to change course." },
-      { "word": "Commitment", "desc": "To the product, the team, and the client." },
-      { "word": "Empathy", "desc": "Understanding others is integral to doing business." }
+      {
+        "word": "Learning",
+        "desc": "Every production cycle as an opportunity to improve."
+      },
+      {
+        "word": "Growth",
+        "desc": "Personal, professional, and organisational."
+      },
+      {
+        "word": "Effort",
+        "desc": "Sustained effort as the only true guarantee."
+      },
+      {
+        "word": "Adaptability",
+        "desc": "26 years demand knowing when to change course."
+      },
+      {
+        "word": "Commitment",
+        "desc": "To the product, the team, and the client."
+      },
+      {
+        "word": "Empathy",
+        "desc": "Understanding others is integral to doing business."
+      }
     ]
   },
   "product": {
@@ -84,22 +102,62 @@
     "h2": "From the land to the table, without intermediaries.",
     "h2Italic": "without intermediaries.",
     "steps": [
-      { "n": "01", "title": "Cattle production", "desc": "Own fields in Uruguay" },
-      { "n": "02", "title": "Meat processing", "desc": "In-house quality control" },
-      { "n": "03", "title": "Wholesale distribution", "desc": "Importers and distributors" },
-      { "n": "04", "title": "Retail distribution", "desc": "Butcher shops and supermarkets" },
-      { "n": "05", "title": "E-commerce", "desc": "Direct national reach" },
-      { "n": "06", "title": "Restaurante La Hacienda", "desc": "Gastronomic experience" }
+      {
+        "n": "01",
+        "title": "Cattle production",
+        "desc": "Own fields in Uruguay"
+      },
+      {
+        "n": "02",
+        "title": "Meat processing",
+        "desc": "In-house quality control"
+      },
+      {
+        "n": "03",
+        "title": "Wholesale distribution",
+        "desc": "Importers and distributors"
+      },
+      {
+        "n": "04",
+        "title": "Retail distribution",
+        "desc": "Butcher shops and supermarkets"
+      },
+      {
+        "n": "05",
+        "title": "E-commerce",
+        "desc": "Direct national reach"
+      },
+      {
+        "n": "06",
+        "title": "Restaurante La Hacienda",
+        "desc": "Gastronomic experience"
+      }
     ]
   },
   "why": {
     "label": "Differentiators",
     "h2": "What sets us apart.",
     "items": [
-      { "n": "01", "title": "Full integration", "text": "We produce, process, and commercialise. Real control at every stage of the chain." },
-      { "n": "02", "title": "Consistent quality", "text": "No intermediaries to compromise the result. We know the product from its very origin." },
-      { "n": "03", "title": "Scale with proximity", "text": "Industrial capacity, human treatment. We are both — not one or the other." },
-      { "n": "04", "title": "International outlook", "text": "Evolving towards global markets with standards aligned to external requirements." }
+      {
+        "n": "01",
+        "title": "Full integration",
+        "text": "We produce, process, and commercialise. Real control at every stage of the chain."
+      },
+      {
+        "n": "02",
+        "title": "Consistent quality",
+        "text": "No intermediaries to compromise the result. We know the product from its very origin."
+      },
+      {
+        "n": "03",
+        "title": "Scale with proximity",
+        "text": "Industrial capacity, human treatment. We are both — not one or the other."
+      },
+      {
+        "n": "04",
+        "title": "International outlook",
+        "text": "Evolving towards global markets with standards aligned to external requirements."
+      }
     ]
   },
   "contact": {
@@ -137,9 +195,22 @@
   "meta": {
     "homeTitle": "Grupo Saturno — Beef Production & Processing | Uruguay",
     "homeDesc": "26 years of experience in cattle farming, meat processing, and international commercialization. Empalme Olmos, Uruguay.",
-    "floridaTitle": "Frigorífico Florida — Grupo Saturno",
-    "floridaDesc": "[TO BE CONFIRMED WITH CLIENT]",
+    "floridaTitle": "Frigorífico Florida — Grupo Saturno | Meat Processing Uruguay",
+    "floridaDesc": "Florida Plant, Business Unit 01 of Grupo Saturno. Meat processing facility in Florida, Uruguay. Specialised processing, export capacity, and full traceability.",
     "saturnoTitle": "Frigorífico Saturno — Grupo Saturno",
-    "saturnoDesc": "Core production unit of Grupo Saturno. Integrated processing with full traceability from origin."
+    "saturnoDesc": "Core production unit of Grupo Saturno. Integrated processing with full traceability from origin.",
+    "reoaberturaTitle": "Florida Plant Reopening — April 2026 · Grupo Saturno",
+    "reoaberturaDesc": "Photographic record of the reopening ceremony of Establecimiento Florida, Grupo Saturno. A milestone in our industrial history, April 2026."
+  },
+  "reapertura": {
+    "label": "Historic event",
+    "h1": "Frigorífico Florida Reopening",
+    "kicker": "April 2026 · Florida, Uruguay",
+    "lead": "On 16 April 2026, Grupo Saturno celebrated the reopening of Establecimiento Florida with a ceremony bringing together authorities, staff, and strategic partners. A key step in the group's growth.",
+    "galleryLabel": "Event gallery",
+    "backLink": "← Back to Frigorífico Florida",
+    "ctaTitle": "Learn more about Frigorífico Florida",
+    "ctaText": "Discover the production capacity, processes, and commercial offering of Establecimiento Florida.",
+    "ctaButton": "View Frigorífico Florida"
   }
 }

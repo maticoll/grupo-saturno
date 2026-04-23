@@ -24,6 +24,10 @@ const hreflangs = languages.map(l => ({
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Grupo Saturno" />
+  <meta name="geo.region" content="UY-CA" />
+  <meta name="geo.placename" content="Empalme Olmos, Canelones, Uruguay" />
   <link rel="canonical" href={canonicalURL} />
 
   {hreflangs.map(({ lang: l, href }) => (
@@ -44,20 +48,32 @@ const hreflangs = languages.map(l => ({
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={new URL(image, Astro.site).href} />
 
-  <!-- Schema.org Organization (only on home pages) -->
+  <!-- Schema.org Organization -->
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Grupo Saturno",
     "url": "https://gruposaturno.com.uy",
+    "logo": "https://gruposaturno.com.uy/favicon.svg",
+    "sameAs": [
+      "https://www.linkedin.com/company/grupo-saturno",
+      "https://frigorificosaturno.com.uy"
+    ],
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Ruta 8 Km 38",
       "addressLocality": "Empalme Olmos",
       "addressRegion": "Canelones",
       "addressCountry": "UY"
     },
     "foundingDate": "1998",
-    "description": "Empresa uruguaya de producción, procesamiento y comercialización cárnica."
+    "numberOfEmployees": { "@type": "QuantitativeValue", "minValue": 50 },
+    "areaServed": ["UY", "CN", "BR", "AR", "US", "EU"],
+    "description": "Empresa uruguaya con 26 años de trayectoria en producción ganadera, procesamiento frigorífico y comercialización internacional de carne vacuna.",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Cortes vacunos premium — exportación e importación"
+    }
   }).replace(/<\//g, '<\\/')} />
 
   <!-- Preload fuentes críticas -->

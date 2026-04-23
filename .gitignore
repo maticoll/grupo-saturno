@@ -25,3 +25,11 @@ pnpm-debug.log*
 public/videos/*.mp4
 public/videos/*.wmv
 assets/
+
+# Archivos originales pesados (no subir al repo)
+disfotografia_*.zip
+wetransfer_*.zip
+Adelanto*.mp4
+compress-images.py
+test-results/
+.superpowers/

@@ -22,7 +22,7 @@
   "units": {
     "unit1Number": "Unidad 01",
     "unit1Title": "Frigorífico Florida",
-    "unit1Desc": "[CONTENIDO A CONFIRMAR CON CLIENTE] — Procesamiento especializado con foco en exportación y mercado interno premium.",
+    "unit1Desc": "Establecimiento Florida — Procesamiento especializado con foco en exportación. Unidad estratégica del grupo en el departamento de Florida.",
     "unit1Cta": "Conocer Frigorífico Florida",
     "unit2Number": "Unidad 02",
     "unit2Title": "Frigorífico Saturno",
@@ -53,12 +53,30 @@
     "visionLabel": "Visión",
     "vision": "Ser reconocidos por nuestra empatía, seriedad y confianza, construyendo relaciones estratégicas y duraderas.",
     "valores": [
-      { "word": "Aprendizaje", "desc": "Cada ciclo productivo como oportunidad de mejorar." },
-      { "word": "Crecimiento", "desc": "Personal, profesional y como organización." },
-      { "word": "Esfuerzo", "desc": "El trabajo sostenido como única garantía." },
-      { "word": "Adaptabilidad", "desc": "26 años requieren saber cambiar a tiempo." },
-      { "word": "Compromiso", "desc": "Con el producto, el equipo y el cliente." },
-      { "word": "Empatía", "desc": "Entender al otro es parte del negocio." }
+      {
+        "word": "Aprendizaje",
+        "desc": "Cada ciclo productivo como oportunidad de mejorar."
+      },
+      {
+        "word": "Crecimiento",
+        "desc": "Personal, profesional y como organización."
+      },
+      {
+        "word": "Esfuerzo",
+        "desc": "El trabajo sostenido como única garantía."
+      },
+      {
+        "word": "Adaptabilidad",
+        "desc": "26 años requieren saber cambiar a tiempo."
+      },
+      {
+        "word": "Compromiso",
+        "desc": "Con el producto, el equipo y el cliente."
+      },
+      {
+        "word": "Empatía",
+        "desc": "Entender al otro es parte del negocio."
+      }
     ]
   },
   "product": {
@@ -84,22 +102,62 @@
     "h2": "De la tierra a la mesa, sin intermediarios.",
     "h2Italic": "sin intermediarios.",
     "steps": [
-      { "n": "01", "title": "Producción ganadera", "desc": "Campos propios en Uruguay" },
-      { "n": "02", "title": "Procesamiento frigorífico", "desc": "Control de calidad propio" },
-      { "n": "03", "title": "Venta mayorista", "desc": "Importadores y distribuidores" },
-      { "n": "04", "title": "Venta minorista", "desc": "Carnicerías y supermercados" },
-      { "n": "05", "title": "E-commerce", "desc": "Alcance nacional directo" },
-      { "n": "06", "title": "Restaurante La Hacienda", "desc": "Experiencia gastronómica" }
+      {
+        "n": "01",
+        "title": "Producción ganadera",
+        "desc": "Campos propios en Uruguay"
+      },
+      {
+        "n": "02",
+        "title": "Procesamiento frigorífico",
+        "desc": "Control de calidad propio"
+      },
+      {
+        "n": "03",
+        "title": "Venta mayorista",
+        "desc": "Importadores y distribuidores"
+      },
+      {
+        "n": "04",
+        "title": "Venta minorista",
+        "desc": "Carnicerías y supermercados"
+      },
+      {
+        "n": "05",
+        "title": "E-commerce",
+        "desc": "Alcance nacional directo"
+      },
+      {
+        "n": "06",
+        "title": "Restaurante La Hacienda",
+        "desc": "Experiencia gastronómica"
+      }
     ]
   },
   "why": {
     "label": "Diferenciadores",
     "h2": "Lo que nos diferencia.",
     "items": [
-      { "n": "01", "title": "Integración total", "text": "Producimos, procesamos y comercializamos. Control real en cada etapa de la cadena." },
-      { "n": "02", "title": "Calidad constante", "text": "Sin intermediarios que alteren el resultado. Conocemos el producto desde el origen." },
-      { "n": "03", "title": "Escala con cercanía", "text": "Capacidad industrial, trato humano. Somos ambas cosas, no una ni la otra." },
-      { "n": "04", "title": "Visión internacional", "text": "Evolucionando hacia mercados globales con estándares alineados a la exigencia externa." }
+      {
+        "n": "01",
+        "title": "Integración total",
+        "text": "Producimos, procesamos y comercializamos. Control real en cada etapa de la cadena."
+      },
+      {
+        "n": "02",
+        "title": "Calidad constante",
+        "text": "Sin intermediarios que alteren el resultado. Conocemos el producto desde el origen."
+      },
+      {
+        "n": "03",
+        "title": "Escala con cercanía",
+        "text": "Capacidad industrial, trato humano. Somos ambas cosas, no una ni la otra."
+      },
+      {
+        "n": "04",
+        "title": "Visión internacional",
+        "text": "Evolucionando hacia mercados globales con estándares alineados a la exigencia externa."
+      }
     ]
   },
   "contact": {
@@ -137,9 +195,22 @@
   "meta": {
     "homeTitle": "Grupo Saturno — Producción y Procesamiento Cárnico | Uruguay",
     "homeDesc": "26 años de trayectoria en ganadería, procesamiento frigorífico y comercialización internacional. Empalme Olmos, Uruguay.",
-    "floridaTitle": "Frigorífico Florida — Grupo Saturno",
-    "floridaDesc": "[A CONFIRMAR CON CLIENTE]",
+    "floridaTitle": "Frigorífico Florida — Grupo Saturno | Procesamiento Cárnico Uruguay",
+    "floridaDesc": "Establecimiento Florida, Unidad 01 de Grupo Saturno. Planta frigorífica en Florida, Uruguay. Procesamiento especializado, exportación y trazabilidad completa.",
     "saturnoTitle": "Frigorífico Saturno — Grupo Saturno",
-    "saturnoDesc": "Núcleo productivo del Grupo Saturno. Procesamiento integrado con trazabilidad desde el origen."
+    "saturnoDesc": "Núcleo productivo del Grupo Saturno. Procesamiento integrado con trazabilidad desde el origen.",
+    "reoaberturaTitle": "Reapertura Frigorífico Florida — Abril 2026 · Grupo Saturno",
+    "reoaberturaDesc": "Registro fotográfico de la ceremonia de reapertura del Establecimiento Florida, Grupo Saturno. Un hito en nuestra historia industrial, abril 2026."
+  },
+  "reapertura": {
+    "label": "Evento histórico",
+    "h1": "Reapertura Frigorífico Florida",
+    "kicker": "Abril 2026 · Florida, Uruguay",
+    "lead": "El 16 de abril de 2026, Grupo Saturno celebró la reapertura del Establecimiento Florida con una ceremonia que reunió a autoridades, colaboradores y socios estratégicos. Un paso clave en el crecimiento del grupo.",
+    "galleryLabel": "Galería del evento",
+    "backLink": "← Volver a Frigorífico Florida",
+    "ctaTitle": "Querés saber más sobre Frigorífico Florida",
+    "ctaText": "Conocé las capacidades productivas, procesos y oferta comercial del Establecimiento Florida.",
+    "ctaButton": "Ver Frigorífico Florida"
   }
 }
