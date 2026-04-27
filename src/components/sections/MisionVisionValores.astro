@@ -30,11 +30,11 @@ const valores = JSON.parse(t('mvv.valores')) as Array<{word: string; desc: strin
     </div>
     <div class="grid grid-cols-2 lg:grid-cols-6 gap-0 scroll-reveal">
       {valores.map((v: {word: string, desc: string}, i: number) => (
-        <div class={`px-6 py-8 ${i < valores.length - 1 ? 'lg:border-r border-white/[0.06]' : ''}`}>
+        <div class={`px-6 py-8 cursor-default transition-all duration-200 hover:bg-white/[0.05] border border-transparent hover:border-white/[0.1] ${i < valores.length - 1 ? 'lg:border-r-0' : ''}`}>
           <span class="font-serif text-[1.5rem] font-light text-white tracking-[-0.01em] block mb-3">
             {v.word}
           </span>
-          <p class="font-sans text-[0.68rem] font-light text-white/35 leading-[1.6]">
+          <p class="font-sans text-[0.68rem] font-light text-white/35 leading-[1.6] group-hover:text-white/60 transition-colors duration-200">
             {v.desc}
           </p>
         </div>

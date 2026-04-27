@@ -22,12 +22,13 @@ const t = useTranslations(lang);
     <!-- Galería editorial -->
     <div class="grid gap-1 mb-16 scroll-reveal"
       style="grid-template-columns: 1.4fr 1fr 1fr; grid-template-rows: 280px 200px">
-      <!-- Imagen principal grande: corte premium -->
+
+      <!-- Imagen principal: cortes premium -->
       <div class="row-span-2 relative overflow-hidden group">
         <img
-          src="/images/producto/producto-corte-02.jpg"
-          alt="Corte vacuno premium Frigorífico Saturno"
-          class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+          src="/images/corte-producto.jpg"
+          alt="Cortes vacunos premium — Grupo Saturno"
+          class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.04]"
           loading="lazy"
         />
         <div class="absolute inset-0 bg-gradient-to-t from-carbon/60 to-transparent"></div>
@@ -37,26 +38,63 @@ const t = useTranslations(lang);
           </span>
         </div>
       </div>
-      <!-- 4 imágenes secundarias -->
-      {[
-        { src: '/images/planta/planta-proceso-01.jpg', cap: 'Instalaciones · Procesamiento' },
-        { src: '/images/planta/planta-exterior-02.jpg', cap: 'Origen · Campo propio' },
-        { src: '/images/producto/producto-corte-04.jpg', cap: 'Presentación · Vacuum / Boxed beef' },
-        { src: '/images/planta/planta-proceso-02.jpg', cap: 'Logística · Exportación' },
-      ].map(({ src, cap }) => (
-        <div class="relative overflow-hidden group">
-          <img
-            src={src}
-            alt={cap}
-            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-            loading="lazy"
-          />
-          <div class="absolute inset-0 bg-gradient-to-t from-carbon/60 to-transparent"></div>
-          <div class="absolute bottom-0 left-0 right-0 px-4 py-3">
-            <span class="font-sans text-[0.6rem] tracking-[0.15em] uppercase text-white/70">{cap}</span>
-          </div>
+
+      <!-- Instalaciones -->
+      <div class="relative overflow-hidden group">
+        <img
+          src="/images/planta/planta-exterior-02.jpg"
+          alt="Instalaciones Frigorífico Saturno"
+          class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+          loading="lazy"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-carbon/60 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 px-4 py-3">
+          <span class="font-sans text-[0.6rem] tracking-[0.15em] uppercase text-white/70">Instalaciones · Procesamiento</span>
         </div>
-      ))}
+      </div>
+
+      <!-- Origen -->
+      <div class="relative overflow-hidden group">
+        <img
+          src="/images/planta/planta-proceso-02.jpg"
+          alt="Origen · Campo propio Frigorífico Saturno, Uruguay"
+          class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+          loading="lazy"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-carbon/60 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 px-4 py-3">
+          <span class="font-sans text-[0.6rem] tracking-[0.15em] uppercase text-white/70">Origen · Campo propio</span>
+        </div>
+      </div>
+
+      <!-- Presentación -->
+      <div class="relative overflow-hidden group">
+        <img
+          src="/images/producto/producto-corte-04.jpg"
+          alt="Presentación — cortes al vacío Saturno Premium"
+          class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.04]"
+          loading="lazy"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-carbon/60 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 px-4 py-3">
+          <span class="font-sans text-[0.6rem] tracking-[0.15em] uppercase text-white/70">Presentación · Vacuum / Boxed beef</span>
+        </div>
+      </div>
+
+      <!-- Logística -->
+      <div class="relative overflow-hidden group">
+        <img
+          src="/images/carga-contenedor.jpg"
+          alt="Logística — flota refrigerada Grupo Saturno"
+          class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+          loading="lazy"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-carbon/60 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 px-4 py-3">
+          <span class="font-sans text-[0.6rem] tracking-[0.15em] uppercase text-white/70">Logística · Exportación</span>
+        </div>
+      </div>
+
     </div>
 
     <!-- Ficha técnica -->
