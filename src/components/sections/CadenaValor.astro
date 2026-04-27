@@ -6,20 +6,33 @@ const t = useTranslations(lang);
 <section id="trayectoria" class="bg-carbon overflow-hidden">
   <div class="max-w-[1440px] mx-auto">
 
-    <div class="grid grid-cols-1 lg:grid-cols-[1fr_1fr_420px]">
+    <div class="grid grid-cols-1 lg:grid-cols-2">
 
-      <!-- Columna izquierda: statement -->
-      <div class="px-8 lg:px-20 py-24 lg:py-28">
-        <p class="font-sans text-[0.6rem] tracking-[0.22em] uppercase text-burgundy mb-8 scroll-reveal">
-          {t('chain.label')}
-        </p>
-        <h2 class="font-serif text-[clamp(2.2rem,3vw,3.4rem)] font-light leading-[1.05] tracking-[-0.03em] text-white scroll-reveal">
-          {t('chain.h2')}<br />
-          <em class="italic text-white/40">{t('chain.h2Italic')}</em>
-        </h2>
+      <!-- Columna izquierda: headline + imagen -->
+      <div class="flex flex-col">
+        <div class="px-8 lg:px-20 pt-24 lg:pt-28 pb-10 scroll-reveal">
+          <p class="font-sans text-[0.6rem] tracking-[0.22em] uppercase text-burgundy mb-8">
+            {t('chain.label')}
+          </p>
+          <h2 class="font-serif text-[clamp(2.2rem,3vw,3.6rem)] font-light leading-[1.05] tracking-[-0.03em] text-white">
+            {t('chain.h2')}<br />
+            <em class="italic text-white/40">{t('chain.h2Italic')}</em>
+          </h2>
+        </div>
+
+        <!-- Imagen debajo del título -->
+        <div class="relative h-72 lg:h-full min-h-[280px] overflow-hidden lg:border-t border-white/[0.06]">
+          <img
+            src="/images/florida/florida-proceso-01.jpg"
+            alt="Interior Establecimiento Florida 365 — planta de faena Grupo Saturno"
+            class="absolute inset-0 w-full h-full object-cover object-center"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-carbon/50 to-transparent"></div>
+        </div>
       </div>
 
-      <!-- Columna central: texto -->
+      <!-- Columna derecha: texto -->
       <div class="px-8 lg:px-16 py-24 lg:py-28 lg:border-l border-white/[0.06] scroll-reveal" style="transition-delay:80ms">
         <p class="font-sans text-[0.83rem] font-light text-white/50 leading-[1.95] mb-6">
           {t('chain.body1')}
@@ -34,18 +47,6 @@ const t = useTranslations(lang);
             </span>
           ))}
         </div>
-      </div>
-
-      <!-- Columna derecha: imagen -->
-      <div class="relative h-72 lg:h-auto lg:border-l border-white/[0.06] overflow-hidden">
-        <img
-          src="/images/florida/florida-proceso-01.jpg"
-          alt="Interior Establecimiento Florida 365 — planta de faena Grupo Saturno"
-          class="absolute inset-0 w-full h-full object-cover object-center"
-          loading="lazy"
-        />
-        <div class="absolute inset-0 bg-gradient-to-r from-carbon/60 to-carbon/10 lg:block hidden"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-carbon/50 to-transparent lg:hidden"></div>
       </div>
 
     </div>
