@@ -22,24 +22,24 @@
   "units": {
     "unit1Number": "Unit 01",
     "unit1Title": "Frigorífico Florida",
-    "unit1Desc": "Establecimiento Florida 365 — Slaughter and export plant approved for China, the United States, and the European Union. Operational capacity of 300 cattle per day.",
+    "unit1Desc": "Establecimiento Florida 365 — Slaughter and export plant approved for China, the United States, and the European Union. Capacity of 300 head of cattle per day.",
     "unit1Cta": "Learn about Frigorífico Florida",
     "unit2Number": "Unit 02",
     "unit2Title": "Frigorífico Saturno",
-    "unit2Desc": "Meat processing, distribution, and commercialisation with over 26 years of uninterrupted history. More than 5,000 tonnes processed per year from Empalme Olmos, Canelones.",
+    "unit2Desc": "Integrated production and processing with full traceability from origin. Core of the group.",
     "unit2Cta": "Learn about Frigorífico Saturno"
   },
   "about": {
     "label": "The Group",
     "h2": "One group, one complete chain.",
     "h2Italic": "one complete chain.",
-    "body": "Grupo Saturno is a 100% Uruguayan company with over 26 years in the meat industry. We operate two plants — Frigorífico Saturno in Empalme Olmos and Establecimiento Florida 365 — with active approvals to export to China, the United States, and the European Union. We control every link in the chain: slaughter, deboning, vacuum packing, and final distribution. No intermediaries between us and the product.",
+    "body": "Grupo Saturno is a 100% Uruguayan company with over 26 years in the meat industry. We operate two own plants — Frigorífico Saturno in Empalme Olmos and Establecimiento Florida 365 — with active approvals to export to China (GACC), the United States (USDA), and the European Union. Every animal is individually identified from birth, under the world's most rigorous traceability system. From slaughter to shipment, without intermediaries.",
     "stat1Number": "26",
     "stat1Unit": "years",
-    "stat1Desc": "of uninterrupted history",
+    "stat1Desc": "of experience",
     "stat2Number": "100%",
     "stat2Unit": "traceability",
-    "stat2Desc": "individual, from birth",
+    "stat2Desc": "from origin to final product",
     "stat3Number": "3",
     "stat3Unit": "markets",
     "stat3Desc": "China · USA · European Union"
@@ -93,46 +93,19 @@
     "spec2Text": "Fresh · Frozen · Vacuum packed · Boxed beef",
     "spec2Pending": "",
     "spec3Cat": "Quality",
-    "spec3Title": "Active export approvals",
+    "spec3Title": "Active approvals",
     "spec3Text": "China (GACC) · United States (USDA) · European Union · HACCP",
     "spec3Pending": ""
   },
   "chain": {
-    "label": "Vertical integration",
-    "h2": "From the land to the table, without intermediaries.",
-    "h2Italic": "without intermediaries.",
-    "steps": [
-      {
-        "n": "01",
-        "title": "Cattle production",
-        "desc": "Own fields in Uruguay"
-      },
-      {
-        "n": "02",
-        "title": "Meat processing",
-        "desc": "In-house quality control"
-      },
-      {
-        "n": "03",
-        "title": "Wholesale distribution",
-        "desc": "Importers and distributors"
-      },
-      {
-        "n": "04",
-        "title": "Retail distribution",
-        "desc": "Butcher shops and supermarkets"
-      },
-      {
-        "n": "05",
-        "title": "E-commerce",
-        "desc": "Direct national reach"
-      },
-      {
-        "n": "06",
-        "title": "Restaurante La Hacienda",
-        "desc": "Gastronomic experience"
-      }
-    ]
+    "label": "How we work",
+    "h2": "One supplier.",
+    "h2Italic": "The entire chain.",
+    "body1": "Our cattle graze on our own fields in Uruguay. Slaughter takes place at Establecimiento Florida 365. Processing, deboning and vacuum packing happen at our plant in Empalme Olmos. We coordinate distribution ourselves. The importer does not negotiate with a trader — they negotiate directly with the people who have known the animal since birth.",
+    "body2": "That is what vertical integration means in practice. Not as a marketing concept, but as something that changes the price, the control and the traceability of every kilo that leaves our plants.",
+    "fact1": "Own slaughter plant",
+    "fact2": "Own processing plant",
+    "fact3": "No traders or brokers"
   },
   "why": {
     "label": "Differentiators",
@@ -141,22 +114,22 @@
       {
         "n": "01",
         "title": "From slaughter to shipment — inside the group",
-        "text": "Florida 365 handles slaughter, Empalme Olmos handles processing, and our own fleet manages distribution. Every kilo that leaves our facilities carries our name at every stage. That level of vertical control is rare in Uruguay and in the region."
+        "text": "Establecimiento Florida 365 is our own slaughter plant. We produce, process, and export without handing control to third parties. One point of contact, real traceability at every stage."
       },
       {
         "n": "02",
         "title": "Approved for the world's most demanding markets",
-        "text": "Establecimiento Florida 365 holds active export approvals for China, the United States, and the European Union. Three markets, three distinct sanitary frameworks — one supplier that meets all three."
+        "text": "We hold active export approvals for China (GACC), the United States (USDA), and the European Union. These are not targets — they are current certifications. If your market is one of them, we already meet its requirements."
       },
       {
         "n": "03",
-        "title": "The most rigorous traceability on the planet",
-        "text": "Uruguay is the only country in the world where 100% of the cattle herd is individually registered and electronically tracked from birth. Every cut we export carries a verifiable, certified record of origin."
+        "title": "The most rigorous traceability system on the planet",
+        "text": "Uruguay is the only country in the world where 100% of the bovine herd is individually identified electronically from birth, by law. Every animal we process has a complete, verifiable history."
       },
       {
         "n": "04",
         "title": "Grass-fed Uruguayan beef: the world's best, with scientific backing",
-        "text": "Angus and Hereford cattle raised on natural pastures, free of growth hormones. The scientific journal Meat Sciences declared Uruguay the world's top beef-producing country. Our product is that beef."
+        "text": "A study published in Meat Sciences (Netherlands) concludes that Uruguay scientifically produces the best beef in the world. No growth hormones, on natural pastures year-round."
       }
     ]
   },
@@ -204,13 +177,13 @@
   },
   "reapertura": {
     "label": "Historic event",
-    "h1": "Frigífico Florida Reopening",
+    "h1": "Frigorífico Florida Reopening",
     "kicker": "April 2026 · Florida, Uruguay",
-    "lead": "On 16 April 2026, Grupo Saturno celebrated the reopening of Establecimiento Florida with a ceremony bringing together authorities, staff, and strategic partners. A key step in the group’s growth.",
+    "lead": "On 16 April 2026, Grupo Saturno celebrated the reopening of Establecimiento Florida with a ceremony bringing together authorities, staff, and strategic partners. A key step in the group's growth.",
     "galleryLabel": "Event gallery",
-    "backLink": "← Back to Frigífico Florida",
-    "ctaTitle": "Learn more about Frigífico Florida",
+    "backLink": "← Back to Frigorífico Florida",
+    "ctaTitle": "Learn more about Frigorífico Florida",
     "ctaText": "Discover the production capacity, processes, and commercial offering of Establecimiento Florida.",
-    "ctaButton": "View Frigífico Florida"
+    "ctaButton": "View Frigorífico Florida"
   }
 }

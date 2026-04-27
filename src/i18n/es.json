@@ -26,20 +26,20 @@
     "unit1Cta": "Conocer Frigorífico Florida",
     "unit2Number": "Unidad 02",
     "unit2Title": "Frigorífico Saturno",
-    "unit2Desc": "Industrialización, distribución y comercialización con más de 26 años de trayectoria. Más de 5.000 toneladas procesadas al año desde Empalme Olmos, Canelones.",
+    "unit2Desc": "Producción y procesamiento integrados con trazabilidad desde el origen. Núcleo del grupo.",
     "unit2Cta": "Conocer Frigorífico Saturno"
   },
   "about": {
     "label": "El Grupo",
     "h2": "Un grupo, una cadena completa.",
     "h2Italic": "una cadena completa.",
-    "body": "Grupo Saturno es una empresa 100% uruguaya con más de 26 años en la industria cárnica. Operamos dos plantas propias —Frigorífico Saturno en Empalme Olmos y el Establecimiento Florida 365— con habilitaciones vigentes para exportar a China, Estados Unidos y la Unión Europea. Controlamos cada etapa de la cadena: la faena, el desosado, el envasado y la distribución final. Sin intermediarios que alteren el producto.",
+    "body": "Grupo Saturno es una empresa 100% uruguaya con más de 26 años en la industria cárnica. Operamos dos plantas propias —Frigorífico Saturno en Empalme Olmos y el Establecimiento Florida 365— con habilitaciones vigentes para exportar a China (GACC), Estados Unidos (USDA) y la Unión Europea. Cada animal está identificado individualmente desde su nacimiento, en el sistema de trazabilidad más riguroso del mundo. De la faena al contenedor, sin intermediarios.",
     "stat1Number": "26",
     "stat1Unit": "años",
-    "stat1Desc": "de trayectoria ininterrumpida",
+    "stat1Desc": "de trayectoria",
     "stat2Number": "100%",
     "stat2Unit": "trazabilidad",
-    "stat2Desc": "individual desde el nacimiento",
+    "stat2Desc": "origen al producto final",
     "stat3Number": "3",
     "stat3Unit": "mercados",
     "stat3Desc": "China · EE.UU. · Unión Europea"
@@ -86,7 +86,7 @@
     "subtitle": "Fotografía de producto, instalaciones y logística.",
     "spec1Cat": "Cortes disponibles",
     "spec1Title": "Tipos de corte",
-    "spec1Text": "Bife Ancho · Bife Angosto · Lomo · Cuadril · Colita de Cuadril · Vacío · Cortes tailor-made a especificación del comprador.",
+    "spec1Text": "Bife Ancho (Ribeye) · Bife Angosto (Striploin) · Lomo (Tenderloin) · Cuadril (Rump) · Colita de Cuadril (Tri-tip) · Vacío (Flank) · Cortes tailor-made a especificación del comprador.",
     "spec1Pending": "",
     "spec2Cat": "Presentación",
     "spec2Title": "Formatos de despacho",
@@ -98,41 +98,14 @@
     "spec3Pending": ""
   },
   "chain": {
-    "label": "Integración vertical",
-    "h2": "De la tierra a la mesa, sin intermediarios.",
-    "h2Italic": "sin intermediarios.",
-    "steps": [
-      {
-        "n": "01",
-        "title": "Producción ganadera",
-        "desc": "Campos propios en Uruguay"
-      },
-      {
-        "n": "02",
-        "title": "Procesamiento frigorífico",
-        "desc": "Control de calidad propio"
-      },
-      {
-        "n": "03",
-        "title": "Venta mayorista",
-        "desc": "Importadores y distribuidores"
-      },
-      {
-        "n": "04",
-        "title": "Venta minorista",
-        "desc": "Carnicerías y supermercados"
-      },
-      {
-        "n": "05",
-        "title": "E-commerce",
-        "desc": "Alcance nacional directo"
-      },
-      {
-        "n": "06",
-        "title": "Restaurante La Hacienda",
-        "desc": "Experiencia gastronómica"
-      }
-    ]
+    "label": "Cómo trabajamos",
+    "h2": "Un proveedor.",
+    "h2Italic": "Toda la cadena.",
+    "body1": "Nuestro ganado pasta en campos propios en Uruguay. La faena ocurre en el Establecimiento Florida 365. El procesamiento, el desosado y el envasado al vacío suceden en nuestra planta de Empalme Olmos. La distribución la coordinamos nosotros. El importador no negocia con un trader — negocia directamente con quien conoce el animal desde su nacimiento.",
+    "body2": "Eso es lo que significa integración vertical en la práctica. No como concepto de marketing, sino como algo que cambia el precio, el control y la trazabilidad de cada kilo que sale de nuestras plantas.",
+    "fact1": "Faena propia",
+    "fact2": "Procesamiento propio",
+    "fact3": "Sin traders ni brokers"
   },
   "why": {
     "label": "Diferenciadores",
@@ -140,23 +113,23 @@
     "items": [
       {
         "n": "01",
-        "title": "De la faena al contenedor, sin salir del grupo",
-        "text": "Faena en Florida 365, procesamiento en Empalme Olmos, distribución con flota propia. Cada kilo que despachamos tiene nuestra firma en cada etapa. Eso no es común en Uruguay ni en la región."
+        "title": "De la faena al contenedor, dentro del grupo",
+        "text": "El Establecimiento Florida 365 es nuestra planta de faena propia. Producimos, procesamos y exportamos sin ceder el control a terceros. Un solo interlocutor, trazabilidad real en cada etapa."
       },
       {
         "n": "02",
-        "title": "Habilitados para los mercados más exigentes del mundo",
-        "text": "El Establecimiento Florida 365 tiene autorización vigente para exportar a China, Estados Unidos y la Unión Europea. Tres mercados, tres estándares sanitarios distintos, un solo proveedor que los cumple todos."
+        "title": "Tres mercados, tres estándares. Un solo proveedor.",
+        "text": "Habilitados para exportar a China (GACC), Estados Unidos (USDA) y la Unión Europea. No es un objetivo: son aprobaciones activas. Si tu mercado es uno de ellos, ya cumplimos sus exigencias."
       },
       {
         "n": "03",
-        "title": "La trazabilidad más rigurosa del planeta",
-        "text": "Uruguay es el único país del mundo donde el 100% del rodeo bovino está identificado electrónicamente desde el nacimiento. Cada corte que sale de nuestras plantas tiene historia comprobable y certificada."
+        "title": "El sistema de trazabilidad más riguroso del planeta",
+        "text": "Uruguay es el único país del mundo donde el 100% del rodeo bovino está identificado electrónicamente desde el nacimiento, por ley. Cada animal que faenamos tiene historia completa y verificable."
       },
       {
         "n": "04",
         "title": "Carne uruguaya a pasto: la mejor del mundo, con respaldo científico",
-        "text": "Ganado Angus y Hereford criado en pasturas naturales, sin hormonas de crecimiento. La revista científica Meat Sciences designó a Uruguay como el país que produce la mejor carne del mundo. Nuestro producto es esa carne."
+        "text": "Un estudio publicado en la revista Meat Sciences (Países Bajos) concluye que Uruguay produce científicamente la mejor carne del mundo. Sin hormonas de crecimiento, en pasturas naturales todo el año."
       }
     ]
   },
@@ -199,18 +172,18 @@
     "floridaDesc": "Establecimiento Florida, Unidad 01 de Grupo Saturno. Planta frigorífica en Florida, Uruguay. Procesamiento especializado, exportación y trazabilidad completa.",
     "saturnoTitle": "Frigorífico Saturno — Grupo Saturno",
     "saturnoDesc": "Núcleo productivo del Grupo Saturno. Procesamiento integrado con trazabilidad desde el origen.",
-    "reoaberturaTitle": "Reapertura Frigífico Florida — Abril 2026 · Grupo Saturno",
+    "reoaberturaTitle": "Reapertura Frigorífico Florida — Abril 2026 · Grupo Saturno",
     "reoaberturaDesc": "Registro fotográfico de la ceremonia de reapertura del Establecimiento Florida, Grupo Saturno. Un hito en nuestra historia industrial, abril 2026."
   },
   "reapertura": {
     "label": "Evento histórico",
-    "h1": "Reapertura Frigífico Florida",
+    "h1": "Reapertura Frigorífico Florida",
     "kicker": "Abril 2026 · Florida, Uruguay",
     "lead": "El 16 de abril de 2026, Grupo Saturno celebró la reapertura del Establecimiento Florida con una ceremonia que reunió a autoridades, colaboradores y socios estratégicos. Un paso clave en el crecimiento del grupo.",
     "galleryLabel": "Galería del evento",
-    "backLink": "← Volver a Frigífico Florida",
-    "ctaTitle": "Querés saber más sobre Frigífico Florida",
+    "backLink": "← Volver a Frigorífico Florida",
+    "ctaTitle": "Querés saber más sobre Frigorífico Florida",
     "ctaText": "Conocé las capacidades productivas, procesos y oferta comercial del Establecimiento Florida.",
-    "ctaButton": "Ver Frigífico Florida"
+    "ctaButton": "Ver Frigorífico Florida"
   }
 }

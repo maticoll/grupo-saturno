@@ -1,34 +1,43 @@
 ---
-import SectionLabel from '../ui/SectionLabel.astro';
 import { getLangFromUrl, useTranslations } from '../../i18n/index';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const steps = JSON.parse(t('chain.steps')) as Array<{n: string; title: string; desc: string}>;
 ---
-<section id="trayectoria" class="bg-cream py-28 px-8 lg:px-20">
+<section id="trayectoria" class="bg-carbon py-28 px-8 lg:px-20">
   <div class="max-w-[1440px] mx-auto">
-    <SectionLabel class="mb-4 scroll-reveal">{t('chain.label')}</SectionLabel>
-    <h2 class="font-serif text-[clamp(2rem,2.8vw,2.8rem)] font-light tracking-[-0.025em] text-carbon mb-16 scroll-reveal">
-      {t('chain.h2').split(t('chain.h2Italic'))[0]}
-      <em class="italic">{t('chain.h2Italic')}</em>
-    </h2>
-    <div class="relative grid grid-cols-1 lg:grid-cols-6 gap-8 scroll-reveal">
-      <div class="absolute top-[22px] left-[8%] right-[8%] h-px
-                  bg-gradient-to-r from-transparent via-burgundy/25 to-transparent
-                  hidden lg:block" aria-hidden="true"></div>
-      {steps.map((s: {n: string, title: string, desc: string}) => (
-        <div class="flex flex-col items-center text-center relative z-10">
-          <div class="w-11 h-11 rounded-full border border-burgundy/30 bg-cream flex items-center justify-center mb-5">
-            <span class="font-serif text-[0.9rem] text-burgundy">{s.n}</span>
-          </div>
-          <h3 class="font-serif text-[0.95rem] font-medium text-carbon mb-2 leading-[1.2]">
-            {s.title}
-          </h3>
-          <p class="font-sans text-[0.65rem] font-light text-warm-gray leading-[1.5]">
-            {s.desc}
-          </p>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-start scroll-reveal">
+
+      <!-- Izquierda: statement -->
+      <div>
+        <p class="font-sans text-[0.6rem] tracking-[0.22em] uppercase text-burgundy mb-8">
+          {t('chain.label')}
+        </p>
+        <h2 class="font-serif text-[clamp(2.2rem,3.5vw,3.8rem)] font-light leading-[1.05] tracking-[-0.03em] text-white">
+          {t('chain.h2')}<br />
+          <em class="italic text-white/45">{t('chain.h2Italic')}</em>
+        </h2>
+      </div>
+
+      <!-- Derecha: explicación -->
+      <div class="lg:pt-20">
+        <p class="font-sans text-[0.85rem] font-light text-white/55 leading-[1.9] mb-6">
+          {t('chain.body1')}
+        </p>
+        <p class="font-sans text-[0.85rem] font-light text-white/55 leading-[1.9]">
+          {t('chain.body2')}
+        </p>
+
+        <!-- Línea de hechos -->
+        <div class="mt-14 pt-10 border-t border-white/[0.07] flex flex-wrap gap-x-8 gap-y-4">
+          {[t('chain.fact1'), t('chain.fact2'), t('chain.fact3')].map(fact => (
+            <span class="font-sans text-[0.65rem] tracking-[0.14em] uppercase text-burgundy">
+              {fact}
+            </span>
+          ))}
         </div>
-      ))}
+      </div>
+
     </div>
   </div>
 </section>
