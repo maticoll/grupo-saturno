@@ -72,9 +72,11 @@ const t = useTranslations(lang);
           <p class="font-sans text-[0.72rem] font-light text-[#666] leading-[1.7]">
             {t(`product.spec${n}Text`)}
           </p>
-          <span class="inline-block mt-3 bg-burgundy/[0.08] text-burgundy font-sans text-[0.6rem] px-2 py-1">
-            {t(`product.spec${n}Pending`)}
-          </span>
+          {t(`product.spec${n}Pending`) && (
+            <span class="inline-block mt-3 bg-burgundy/[0.08] text-burgundy font-sans text-[0.6rem] px-2 py-1">
+              {t(`product.spec${n}Pending`)}
+            </span>
+          )}
         </div>
       ))}
     </div>

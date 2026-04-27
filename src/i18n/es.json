@@ -22,27 +22,27 @@
   "units": {
     "unit1Number": "Unidad 01",
     "unit1Title": "Frigorífico Florida",
-    "unit1Desc": "Establecimiento Florida — Procesamiento especializado con foco en exportación. Unidad estratégica del grupo en el departamento de Florida.",
+    "unit1Desc": "Establecimiento Florida 365 — Planta de faena y exportación habilitada para China, Estados Unidos y la Unión Europea. 300 vacunos por día de capacidad operativa.",
     "unit1Cta": "Conocer Frigorífico Florida",
     "unit2Number": "Unidad 02",
     "unit2Title": "Frigorífico Saturno",
-    "unit2Desc": "Producción y procesamiento integrados con trazabilidad desde el origen. Núcleo del grupo.",
+    "unit2Desc": "Industrialización, distribución y comercialización con más de 26 años de trayectoria. Más de 5.000 toneladas procesadas al año desde Empalme Olmos, Canelones.",
     "unit2Cta": "Conocer Frigorífico Saturno"
   },
   "about": {
     "label": "El Grupo",
     "h2": "Un grupo, una cadena completa.",
     "h2Italic": "una cadena completa.",
-    "body": "Grupo Saturno es una empresa uruguaya con 26 años de trayectoria dedicada a la producción, procesamiento y comercialización de carne. Desde nuestros campos en Empalme Olmos hasta mesas en todo el mundo, cada etapa ocurre bajo el mismo estándar: consistencia, trazabilidad y compromiso humano.",
+    "body": "Grupo Saturno es una empresa 100% uruguaya con más de 26 años en la industria cárnica. Operamos dos plantas propias —Frigorífico Saturno en Empalme Olmos y el Establecimiento Florida 365— con habilitaciones vigentes para exportar a China, Estados Unidos y la Unión Europea. Controlamos cada etapa de la cadena: la faena, el desosado, el envasado y la distribución final. Sin intermediarios que alteren el producto.",
     "stat1Number": "26",
     "stat1Unit": "años",
-    "stat1Desc": "de trayectoria",
+    "stat1Desc": "de trayectoria ininterrumpida",
     "stat2Number": "100%",
     "stat2Unit": "trazabilidad",
-    "stat2Desc": "origen al producto final",
-    "stat3Number": "—",
+    "stat2Desc": "individual desde el nacimiento",
+    "stat3Number": "3",
     "stat3Unit": "mercados",
-    "stat3Desc": "de exportación [A CONFIRMAR]"
+    "stat3Desc": "China · EE.UU. · Unión Europea"
   },
   "mvv": {
     "label": "Propósito",
@@ -86,16 +86,16 @@
     "subtitle": "Fotografía de producto, instalaciones y logística.",
     "spec1Cat": "Cortes disponibles",
     "spec1Title": "Tipos de corte",
-    "spec1Text": "Cortes estándar internacionales y cortes uruguayos tradicionales.",
-    "spec1Pending": "[ A CONFIRMAR CON CLIENTE ]",
+    "spec1Text": "Bife Ancho · Bife Angosto · Lomo · Cuadril · Colita de Cuadril · Vacío · Cortes tailor-made a especificación del comprador.",
+    "spec1Pending": "",
     "spec2Cat": "Presentación",
     "spec2Title": "Formatos de despacho",
     "spec2Text": "Fresco · Congelado · Vacuum packed · Boxed beef",
-    "spec2Pending": "[ A CONFIRMAR ]",
+    "spec2Pending": "",
     "spec3Cat": "Calidad",
-    "spec3Title": "Certificaciones",
-    "spec3Text": "HACCP · Habilitación UE · China GACC · Halal · Kosher",
-    "spec3Pending": "[ VERIFICAR CON CLIENTE ]"
+    "spec3Title": "Habilitaciones vigentes",
+    "spec3Text": "China (GACC) · Estados Unidos (USDA) · Unión Europea · HACCP",
+    "spec3Pending": ""
   },
   "chain": {
     "label": "Integración vertical",
@@ -140,23 +140,23 @@
     "items": [
       {
         "n": "01",
-        "title": "Integración total",
-        "text": "Producimos, procesamos y comercializamos. Control real en cada etapa de la cadena."
+        "title": "De la faena al contenedor, sin salir del grupo",
+        "text": "Faena en Florida 365, procesamiento en Empalme Olmos, distribución con flota propia. Cada kilo que despachamos tiene nuestra firma en cada etapa. Eso no es común en Uruguay ni en la región."
       },
       {
         "n": "02",
-        "title": "Calidad constante",
-        "text": "Sin intermediarios que alteren el resultado. Conocemos el producto desde el origen."
+        "title": "Habilitados para los mercados más exigentes del mundo",
+        "text": "El Establecimiento Florida 365 tiene autorización vigente para exportar a China, Estados Unidos y la Unión Europea. Tres mercados, tres estándares sanitarios distintos, un solo proveedor que los cumple todos."
       },
       {
         "n": "03",
-        "title": "Escala con cercanía",
-        "text": "Capacidad industrial, trato humano. Somos ambas cosas, no una ni la otra."
+        "title": "La trazabilidad más rigurosa del planeta",
+        "text": "Uruguay es el único país del mundo donde el 100% del rodeo bovino está identificado electrónicamente desde el nacimiento. Cada corte que sale de nuestras plantas tiene historia comprobable y certificada."
       },
       {
         "n": "04",
-        "title": "Visión internacional",
-        "text": "Evolucionando hacia mercados globales con estándares alineados a la exigencia externa."
+        "title": "Carne uruguaya a pasto: la mejor del mundo, con respaldo científico",
+        "text": "Ganado Angus y Hereford criado en pasturas naturales, sin hormonas de crecimiento. La revista científica Meat Sciences designó a Uruguay como el país que produce la mejor carne del mundo. Nuestro producto es esa carne."
       }
     ]
   },
@@ -199,18 +199,18 @@
     "floridaDesc": "Establecimiento Florida, Unidad 01 de Grupo Saturno. Planta frigorífica en Florida, Uruguay. Procesamiento especializado, exportación y trazabilidad completa.",
     "saturnoTitle": "Frigorífico Saturno — Grupo Saturno",
     "saturnoDesc": "Núcleo productivo del Grupo Saturno. Procesamiento integrado con trazabilidad desde el origen.",
-    "reoaberturaTitle": "Reapertura Frigorífico Florida — Abril 2026 · Grupo Saturno",
+    "reoaberturaTitle": "Reapertura Frigífico Florida — Abril 2026 · Grupo Saturno",
     "reoaberturaDesc": "Registro fotográfico de la ceremonia de reapertura del Establecimiento Florida, Grupo Saturno. Un hito en nuestra historia industrial, abril 2026."
   },
   "reapertura": {
     "label": "Evento histórico",
-    "h1": "Reapertura Frigorífico Florida",
+    "h1": "Reapertura Frigífico Florida",
     "kicker": "Abril 2026 · Florida, Uruguay",
     "lead": "El 16 de abril de 2026, Grupo Saturno celebró la reapertura del Establecimiento Florida con una ceremonia que reunió a autoridades, colaboradores y socios estratégicos. Un paso clave en el crecimiento del grupo.",
     "galleryLabel": "Galería del evento",
-    "backLink": "← Volver a Frigorífico Florida",
-    "ctaTitle": "Querés saber más sobre Frigorífico Florida",
+    "backLink": "← Volver a Frigífico Florida",
+    "ctaTitle": "Querés saber más sobre Frigífico Florida",
     "ctaText": "Conocé las capacidades productivas, procesos y oferta comercial del Establecimiento Florida.",
-    "ctaButton": "Ver Frigorífico Florida"
+    "ctaButton": "Ver Frigífico Florida"
   }
 }

@@ -22,27 +22,27 @@
   "units": {
     "unit1Number": "Unit 01",
     "unit1Title": "Frigorífico Florida",
-    "unit1Desc": "Establecimiento Florida — Specialised processing with an export focus. Strategic unit of the group in the Florida department.",
+    "unit1Desc": "Establecimiento Florida 365 — Slaughter and export plant approved for China, the United States, and the European Union. Operational capacity of 300 cattle per day.",
     "unit1Cta": "Learn about Frigorífico Florida",
     "unit2Number": "Unit 02",
     "unit2Title": "Frigorífico Saturno",
-    "unit2Desc": "Integrated production and processing with full traceability from origin. Core of the group.",
+    "unit2Desc": "Meat processing, distribution, and commercialisation with over 26 years of uninterrupted history. More than 5,000 tonnes processed per year from Empalme Olmos, Canelones.",
     "unit2Cta": "Learn about Frigorífico Saturno"
   },
   "about": {
     "label": "The Group",
     "h2": "One group, one complete chain.",
     "h2Italic": "one complete chain.",
-    "body": "Grupo Saturno is a Uruguayan company with 26 years of experience in the production, processing, and commercialization of beef. From our fields in Empalme Olmos to tables around the world, every step takes place under the same standard: consistency, traceability, and human commitment.",
+    "body": "Grupo Saturno is a 100% Uruguayan company with over 26 years in the meat industry. We operate two plants — Frigorífico Saturno in Empalme Olmos and Establecimiento Florida 365 — with active approvals to export to China, the United States, and the European Union. We control every link in the chain: slaughter, deboning, vacuum packing, and final distribution. No intermediaries between us and the product.",
     "stat1Number": "26",
     "stat1Unit": "years",
-    "stat1Desc": "of experience",
+    "stat1Desc": "of uninterrupted history",
     "stat2Number": "100%",
     "stat2Unit": "traceability",
-    "stat2Desc": "from origin to final product",
-    "stat3Number": "—",
+    "stat2Desc": "individual, from birth",
+    "stat3Number": "3",
     "stat3Unit": "markets",
-    "stat3Desc": "export markets [TO BE CONFIRMED]"
+    "stat3Desc": "China · USA · European Union"
   },
   "mvv": {
     "label": "Purpose",
@@ -86,16 +86,16 @@
     "subtitle": "Product photography, facilities, and logistics.",
     "spec1Cat": "Available cuts",
     "spec1Title": "Cut types",
-    "spec1Text": "International standard cuts and traditional Uruguayan cuts.",
-    "spec1Pending": "[ TO BE CONFIRMED WITH CLIENT ]",
+    "spec1Text": "Ribeye · Striploin · Tenderloin · Rump · Tri-tip · Flank Steak · Custom tailor-made cuts to buyer specification.",
+    "spec1Pending": "",
     "spec2Cat": "Presentation",
     "spec2Title": "Dispatch formats",
     "spec2Text": "Fresh · Frozen · Vacuum packed · Boxed beef",
-    "spec2Pending": "[ TO BE CONFIRMED ]",
+    "spec2Pending": "",
     "spec3Cat": "Quality",
-    "spec3Title": "Certifications",
-    "spec3Text": "HACCP · EU Approval · China GACC · Halal · Kosher",
-    "spec3Pending": "[ TO BE VERIFIED WITH CLIENT ]"
+    "spec3Title": "Active export approvals",
+    "spec3Text": "China (GACC) · United States (USDA) · European Union · HACCP",
+    "spec3Pending": ""
   },
   "chain": {
     "label": "Vertical integration",
@@ -140,23 +140,23 @@
     "items": [
       {
         "n": "01",
-        "title": "Full integration",
-        "text": "We produce, process, and commercialise. Real control at every stage of the chain."
+        "title": "From slaughter to shipment — inside the group",
+        "text": "Florida 365 handles slaughter, Empalme Olmos handles processing, and our own fleet manages distribution. Every kilo that leaves our facilities carries our name at every stage. That level of vertical control is rare in Uruguay and in the region."
       },
       {
         "n": "02",
-        "title": "Consistent quality",
-        "text": "No intermediaries to compromise the result. We know the product from its very origin."
+        "title": "Approved for the world's most demanding markets",
+        "text": "Establecimiento Florida 365 holds active export approvals for China, the United States, and the European Union. Three markets, three distinct sanitary frameworks — one supplier that meets all three."
       },
       {
         "n": "03",
-        "title": "Scale with proximity",
-        "text": "Industrial capacity, human treatment. We are both — not one or the other."
+        "title": "The most rigorous traceability on the planet",
+        "text": "Uruguay is the only country in the world where 100% of the cattle herd is individually registered and electronically tracked from birth. Every cut we export carries a verifiable, certified record of origin."
       },
       {
         "n": "04",
-        "title": "International outlook",
-        "text": "Evolving towards global markets with standards aligned to external requirements."
+        "title": "Grass-fed Uruguayan beef: the world's best, with scientific backing",
+        "text": "Angus and Hereford cattle raised on natural pastures, free of growth hormones. The scientific journal Meat Sciences declared Uruguay the world's top beef-producing country. Our product is that beef."
       }
     ]
   },
@@ -204,13 +204,13 @@
   },
   "reapertura": {
     "label": "Historic event",
-    "h1": "Frigorífico Florida Reopening",
+    "h1": "Frigífico Florida Reopening",
     "kicker": "April 2026 · Florida, Uruguay",
-    "lead": "On 16 April 2026, Grupo Saturno celebrated the reopening of Establecimiento Florida with a ceremony bringing together authorities, staff, and strategic partners. A key step in the group's growth.",
+    "lead": "On 16 April 2026, Grupo Saturno celebrated the reopening of Establecimiento Florida with a ceremony bringing together authorities, staff, and strategic partners. A key step in the group’s growth.",
     "galleryLabel": "Event gallery",
-    "backLink": "← Back to Frigorífico Florida",
-    "ctaTitle": "Learn more about Frigorífico Florida",
+    "backLink": "← Back to Frigífico Florida",
+    "ctaTitle": "Learn more about Frigífico Florida",
     "ctaText": "Discover the production capacity, processes, and commercial offering of Establecimiento Florida.",
-    "ctaButton": "View Frigorífico Florida"
+    "ctaButton": "View Frigífico Florida"
   }
 }

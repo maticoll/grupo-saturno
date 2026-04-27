@@ -151,23 +151,26 @@ const t = useTranslations(lang);
         <!-- Saturno Premium -->
         <div class="bg-white p-10 border-t-2 border-burgundy">
           <p class="font-sans text-[0.65rem] tracking-[0.18em] uppercase text-burgundy mb-4">Saturno Premium</p>
-          <h3 class="font-serif text-[1.4rem] font-light text-carbon mb-4">Una línea de excelencia</h3>
-          <p class="font-sans text-[0.82rem] font-light text-[#555] leading-[1.8] mb-6">
-            Las carnes que Uruguay exporta a los mercados más exigentes del mundo,
-            ahora disponibles para el consumidor uruguayo.
+          <h3 class="font-serif text-[1.4rem] font-light text-carbon mb-4">Cortes de exportación, disponibles localmente</h3>
+          <p class="font-sans text-[0.82rem] font-light text-[#555] leading-[1.8] mb-5">
+            Animales jóvenes, bien conformados, de razas Angus y Hereford, pastoreados a pradera y suplementados con ración equilibrada. El resultado es consistente: terneza, marmoleado y sabor que cumplen los estándares de los mercados más exigentes del mundo.
           </p>
-          <ul class="space-y-3">
+          <p class="font-sans text-[0.7rem] font-medium tracking-[0.12em] uppercase text-[#888] mb-3">Cortes disponibles</p>
+          <div class="grid grid-cols-2 gap-x-4 gap-y-2">
             {[
-              'Desafío profesional de la propia estructura',
-              'Máxima calidad para el consumidor local',
-              'Estándares de exportación en el mercado interno',
-            ].map(item => (
-              <li class="flex items-start gap-3">
-                <span class="w-1 h-1 rounded-full bg-burgundy mt-[0.45rem] shrink-0" aria-hidden="true"></span>
-                <span class="font-sans text-[0.8rem] font-light text-[#555] leading-[1.7]">{item}</span>
-              </li>
+              'Bife Ancho (Ribeye)',
+              'Bife Angosto (Striploin)',
+              'Lomo (Tenderloin)',
+              'Cuadril (Rump)',
+              'Colita de Cuadril (Tri-tip)',
+              'Vacío (Flank)',
+            ].map(corte => (
+              <div class="flex items-center gap-2 py-1 border-b border-[#f0f0f0]">
+                <span class="w-1 h-1 rounded-full bg-burgundy shrink-0" aria-hidden="true"></span>
+                <span class="font-sans text-[0.75rem] font-light text-[#444]">{corte}</span>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
         <!-- Premium Store -->
         <div class="bg-white p-10 border-t-2 border-[#c8a87a]">
@@ -240,18 +243,17 @@ const t = useTranslations(lang);
           </p>
         </blockquote>
         <p class="font-sans text-[0.85rem] font-light text-[#555] leading-[1.8]">
-          Con una Planta de Faena (Ciclo I) en fase de anteproyecto, Frigorífico Saturno avanza
-          hacia la autonomía total en el proceso de gestión industrial.
+          Con la incorporación del Establecimiento Florida 365 en 2026, Frigorífico Saturno completó su integración vertical. El grupo controla hoy la cadena completa: de la faena al producto final, sin depender de terceros en ninguna etapa crítica.
         </p>
       </div>
       <div class="space-y-4">
         {[
           'Capital, fuentes de trabajo y mercado 100% nacionales',
           'Calidad de exportación disponible para el consumidor local',
-          'Trazabilidad completa desde el productor al cliente',
-          'Servicio personalizado para chefs y distribuidores',
-          'Presencia regional en 8+ departamentos',
-          'Proyecto de expansión Ciclo I en marcha',
+          'Trazabilidad individual: cada animal registrado desde el nacimiento',
+          'Servicio tailor-made para importadores, chefs y distribuidores',
+          'Flota propia de 15 vehículos · 8+ departamentos cubiertos',
+          'Habilitaciones vigentes para China, EE.UU. y Unión Europea',
         ].map(item => (
           <div class="flex items-center gap-4 py-4 border-b border-[#eee]">
             <span class="w-2 h-2 rounded-full bg-burgundy shrink-0" aria-hidden="true"></span>
