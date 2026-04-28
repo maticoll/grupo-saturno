@@ -1,11 +1,49 @@
-/* Fonts first — @import must precede all other rules */
-@import '@fontsource/cormorant-garamond/300.css';
-@import '@fontsource/cormorant-garamond/400.css';
-@import '@fontsource/cormorant-garamond/300-italic.css';
-@import '@fontsource/cormorant-garamond/400-italic.css';
-@import '@fontsource/inter/300.css';
-@import '@fontsource/inter/400.css';
-@import '@fontsource/inter/500.css';
+@import '@fontsource/outfit/300.css';
+@import '@fontsource/outfit/400.css';
+@import '@fontsource/outfit/500.css';
+
+@font-face {
+  font-family: 'ITC Blair';
+  src: url('/fonts/ITCBlair-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ITC Blair';
+  src: url('/fonts/ITCBlair-LightItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ITC Blair';
+  src: url('/fonts/ITCBlair-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ITC Blair';
+  src: url('/fonts/ITCBlair-MediumItalic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ITC Blair';
+  src: url('/fonts/ITCBlair-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ITC Blair';
+  src: url('/fonts/ITCBlair-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
 
 @tailwind base;
 @tailwind components;
@@ -14,12 +52,10 @@
 @layer base {
   html { font-family: theme('fontFamily.sans'); color: theme('colors.carbon'); }
   html[lang='zh'] { font-family: theme('fontFamily.sans-zh'); }
-
   *:focus-visible {
     outline: 2px solid theme('colors.burgundy.DEFAULT');
     outline-offset: 3px;
   }
-
   ::selection {
     background: theme('colors.burgundy.DEFAULT');
     color: white;

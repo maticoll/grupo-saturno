@@ -12,10 +12,10 @@ export default {
         'dark-bg': '#141410',
       },
       fontFamily: {
-        serif: ['Cormorant Garamond', 'Georgia', 'serif'],
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        'serif-zh': ['Noto Serif SC', 'Cormorant Garamond', 'serif'],
-        'sans-zh': ['Noto Sans SC', 'Inter', 'sans-serif'],
+        serif: ['ITC Blair', 'Georgia', 'serif'],
+        sans: ['Outfit', 'system-ui', 'sans-serif'],
+        'serif-zh': ['Noto Serif SC', 'ITC Blair', 'serif'],
+        'sans-zh': ['Noto Sans SC', 'Outfit', 'sans-serif'],
       },
       spacing: {
         '18': '4.5rem', '22': '5.5rem', '26': '6.5rem',
