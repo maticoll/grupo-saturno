@@ -1,42 +1,65 @@
-<svg viewBox="0 0 210 230" xmlns="http://www.w3.org/2000/svg" fill="none">
-  <!-- Left half — burgundy (frente del animal) -->
+<svg viewBox="0 0 210 235" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Mitad izquierda — borgoña (frente del animal: cabeza, pecho) -->
   <polygon
-    points="
-      105,18
-      85,8
-      60,0
-      30,10
-      8,32
-      0,68
-      6,110
-      0,148
-      18,182
-      52,202
-      85,198
-      105,202
-    "
     fill="#9B1F2D"
-  />
-  <!-- Right half — gray (lomo del animal) -->
-  <polygon
     points="
-      105,18
-      105,202
-      125,198
-      160,200
-      188,185
-      205,158
-      210,118
-      204,78
-      210,42
-      186,18
-      158,8
-      128,12
+      100,22
+      82,8
+      62,0
+      42,10
+      18,28
+      4,52
+      0,85
+      8,118
+      2,155
+      18,185
+      48,205
+      78,210
+      100,208
     "
-    fill="#969899"
   />
-  <!-- Letra G -->
-  <text x="52" y="136" font-family="Georgia, serif" font-size="58" font-weight="400" fill="white" text-anchor="middle">G</text>
-  <!-- Letra S -->
-  <text x="158" y="136" font-family="Georgia, serif" font-size="58" font-weight="400" fill="white" text-anchor="middle">S</text>
+
+  <!-- Mitad derecha — gris (lomo, anca, cuartos traseros) -->
+  <polygon
+    fill="#969899"
+    points="
+      100,22
+      100,208
+      122,208
+      152,205
+      175,192
+      195,168
+      210,135
+      208,100
+      212,62
+      190,30
+      165,12
+      138,8
+      118,14
+    "
+  />
+
+  <!-- G -->
+  <text
+    x="52" y="142"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="62"
+    font-weight="400"
+    fill="white"
+    text-anchor="middle"
+    dominant-baseline="auto"
+  >G</text>
+
+  <!-- S -->
+  <text
+    x="158" y="142"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="58"
+    font-weight="400"
+    fill="white"
+    text-anchor="middle"
+    dominant-baseline="auto"
+  >S</text>
+
 </svg>
