@@ -19,22 +19,22 @@ const t = useTranslations(lang);
       </p>
     </div>
 
-    <!-- Galería editorial -->
+    <!-- Galeria editorial -->
     <div class="grid gap-1 mb-16 scroll-reveal"
       style="grid-template-columns: 1.4fr 1fr 1fr; grid-template-rows: 280px 200px">
 
-      <!-- Imagen principal: cortes premium -->
+      <!-- Imagen principal: camara frigorifica -->
       <div class="row-span-2 relative overflow-hidden group">
         <img
-          src="/images/corte-producto.jpg"
-          alt="Cortes vacunos premium — Grupo Saturno"
+          src="/images/camara-frio-panoramica.jpg"
+          alt="Camara frigorifica Grupo Saturno - capacidad de escala, Empalme Olmos, Uruguay"
           class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.04]"
           loading="lazy"
         />
         <div class="absolute inset-0 bg-gradient-to-t from-carbon/60 to-transparent"></div>
         <div class="absolute bottom-0 left-0 right-0 px-5 py-4">
           <span class="font-sans text-[0.6rem] tracking-[0.15em] uppercase text-white/70">
-            Producto final · Cortes premium
+            Planta - Camara frigorifica
           </span>
         </div>
       </div>
@@ -43,80 +43,77 @@ const t = useTranslations(lang);
       <div class="relative overflow-hidden group">
         <img
           src="/images/planta/planta-exterior-02.jpg"
-          alt="Instalaciones Frigorífico Saturno"
+          alt="Instalaciones Frigorifico Saturno - Empalme Olmos, Uruguay"
           class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
           loading="lazy"
         />
         <div class="absolute inset-0 bg-gradient-to-t from-carbon/60 to-transparent"></div>
         <div class="absolute bottom-0 left-0 right-0 px-4 py-3">
-          <span class="font-sans text-[0.6rem] tracking-[0.15em] uppercase text-white/70">Instalaciones · Procesamiento</span>
+          <span class="font-sans text-[0.6rem] tracking-[0.15em] uppercase text-white/70">Instalaciones - Planta propia</span>
         </div>
       </div>
 
-      <!-- Origen -->
+      <!-- Linea de procesado -->
       <div class="relative overflow-hidden group">
         <img
-          src="/images/planta/planta-proceso-02.jpg"
-          alt="Origen · Campo propio Frigorífico Saturno, Uruguay"
+          src="/images/linea-procesado.jpg"
+          alt="Linea de procesado - operarios Frigorifico Florida, Grupo Saturno"
           class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
           loading="lazy"
         />
         <div class="absolute inset-0 bg-gradient-to-t from-carbon/60 to-transparent"></div>
         <div class="absolute bottom-0 left-0 right-0 px-4 py-3">
-          <span class="font-sans text-[0.6rem] tracking-[0.15em] uppercase text-white/70">Origen · Campo propio</span>
+          <span class="font-sans text-[0.6rem] tracking-[0.15em] uppercase text-white/70">Proceso - Linea de produccion</span>
         </div>
       </div>
 
-      <!-- Presentación -->
+      <!-- Presentacion al vacio -->
       <div class="relative overflow-hidden group">
         <img
-          src="/images/producto/producto-corte-04.jpg"
-          alt="Presentación — cortes al vacío Saturno Premium"
-          class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.04]"
+          src="/images/packaging-vacuum.jpg"
+          alt="Cortes vacunos envasados al vacio - Grupo Saturno, Uruguay"
+          class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.04]"
           loading="lazy"
         />
         <div class="absolute inset-0 bg-gradient-to-t from-carbon/60 to-transparent"></div>
         <div class="absolute bottom-0 left-0 right-0 px-4 py-3">
-          <span class="font-sans text-[0.6rem] tracking-[0.15em] uppercase text-white/70">Presentación · Vacuum / Boxed beef</span>
+          <span class="font-sans text-[0.6rem] tracking-[0.15em] uppercase text-white/70">Presentacion - Vacuum / Boxed beef</span>
         </div>
       </div>
 
-      <!-- Logística -->
+      <!-- Logistica -->
       <div class="relative overflow-hidden group">
         <img
           src="/images/carga-contenedor.jpg"
-          alt="Logística — flota refrigerada Grupo Saturno"
+          alt="Logistica - flota refrigerada Grupo Saturno"
           class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
           loading="lazy"
         />
         <div class="absolute inset-0 bg-gradient-to-t from-carbon/60 to-transparent"></div>
         <div class="absolute bottom-0 left-0 right-0 px-4 py-3">
-          <span class="font-sans text-[0.6rem] tracking-[0.15em] uppercase text-white/70">Logística · Exportación</span>
+          <span class="font-sans text-[0.6rem] tracking-[0.15em] uppercase text-white/70">Logistica - Exportacion</span>
         </div>
       </div>
 
     </div>
 
-    <!-- Ficha técnica -->
+    <!-- Ficha tecnica -->
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-px bg-burgundy/10 scroll-reveal">
-      {[1,2,3].map(n => (
-        <div class="bg-cream p-9">
-          <p class="font-sans text-[0.58rem] tracking-[0.2em] uppercase text-burgundy mb-3">
-            {t(`product.spec${n}Cat`)}
-          </p>
-          <h3 class="font-serif text-[1rem] font-medium text-carbon mb-2">
-            {t(`product.spec${n}Title`)}
-          </h3>
-          <p class="font-sans text-[0.72rem] font-light text-[#666] leading-[1.7]">
-            {t(`product.spec${n}Text`)}
-          </p>
-          {t(`product.spec${n}Pending`) && (
-            <span class="inline-block mt-3 bg-burgundy/[0.08] text-burgundy font-sans text-[0.6rem] px-2 py-1">
-              {t(`product.spec${n}Pending`)}
-            </span>
-          )}
-        </div>
-      ))}
+      <div class="bg-cream p-9">
+        <p class="font-sans text-[0.58rem] tracking-[0.2em] uppercase text-burgundy mb-3">{t('product.spec1Cat')}</p>
+        <h3 class="font-serif text-[1rem] font-medium text-carbon mb-2">{t('product.spec1Title')}</h3>
+        <p class="font-sans text-[0.72rem] font-light text-[#666] leading-[1.7]">{t('product.spec1Text')}</p>
+      </div>
+      <div class="bg-cream p-9">
+        <p class="font-sans text-[0.58rem] tracking-[0.2em] uppercase text-burgundy mb-3">{t('product.spec2Cat')}</p>
+        <h3 class="font-serif text-[1rem] font-medium text-carbon mb-2">{t('product.spec2Title')}</h3>
+        <p class="font-sans text-[0.72rem] font-light text-[#666] leading-[1.7]">{t('product.spec2Text')}</p>
+      </div>
+      <div class="bg-cream p-9">
+        <p class="font-sans text-[0.58rem] tracking-[0.2em] uppercase text-burgundy mb-3">{t('product.spec3Cat')}</p>
+        <h3 class="font-serif text-[1rem] font-medium text-carbon mb-2">{t('product.spec3Title')}</h3>
+        <p class="font-sans text-[0.72rem] font-light text-[#666] leading-[1.7]">{t('product.spec3Text')}</p>
+      </div>
     </div>
   </div>
 </section>

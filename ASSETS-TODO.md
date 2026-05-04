@@ -1,46 +1,42 @@
 # Assets pendientes — Grupo Saturno
 
-## Imágenes no encontradas o de calidad insuficiente
+## ✅ Imágenes disponibles (agregadas desde Drive del cliente — 2026-05-04)
 
-Estas imágenes deben ser provistas por el cliente para reemplazar los placeholders:
+| Archivo en `public/images/` | Contenido | Sección sugerida |
+|-----------------------------|-----------|-----------------|
+| `florida-cartel.jpg` | Cartel "Establecimiento Florida" en pared (close-up) | Sub-landing Florida / Hero Florida |
+| `florida-exterior.jpg` | Dos trabajadores con uniforme blanco saliendo por la entrada del Establecimiento Florida | Sub-landing Florida — imagen principal |
+| `florida-entrada.jpg` | Entrada al predio con árboles y banderas Saturno | Sub-landing Florida / Hero |
+| `camara-frio-panoramica.jpg` | Cámara frigorífica con decenas de reses colgadas, luz industrial (muy impactante) | El Producto / Instalaciones — imagen destacada |
+| `camara-frio-personal.jpg` | Persona en uniforme en cámara frigorífica con reses, da escala humana | El Producto / Instalaciones |
+| `res-colgada.jpg` | Close-up dramático de res colgada en gancho | El Producto / Galería editorial |
+| `linea-procesado.jpg` | Dos trabajadores en azul cortando, reses colgadas de fondo | El Producto / Línea de producción |
+| `linea-procesado-2.jpg` | Panorámica de línea de corte con supervisor y varios operarios | El Producto / Línea de producción |
+| `packaging-vacuum.jpg` | Dos cortes vacunos al vacío sobre cinta transportadora (muy limpia) | El Producto / Packaging |
+| `packaging-vacuum-2.jpg` | Tres cortes al vacío en cinta — variante con más producto | El Producto / Packaging |
+| `planta-maquina-vacuum.jpg` | Trabajador operando máquina de envasado al vacío | El Producto / Proceso |
+| `packaging-cajas-pallet.jpg` | Cajas en pallet con logo Beef365/Saturno | El Producto / Cadena de valor / Exportación |
+| `producto-cajas-vacuum.jpg` | Cajas abiertas mostrando producto al vacío listo para despacho | El Producto / Exportación |
+| `packaging-beef365.jpg` | Caja "Beef365 Uruguay" en cinta de embalaje | Cadena de valor / Exportación |
 
-| Placeholder en código | Descripción ideal | Sección |
-|----------------------|-------------------|---------|
-| `campo-ganado-hero.jpg` | Foto de campo uruguayo, luz natural, horizonte amplio, ganado en segundo plano. Formato 16:9, mínimo 1920×1080. | Hero |
-| `planta-procesado.jpg` | Interior de planta de procesado, personal con uniforme, luz industrial. Horizontal 16:9. | El Producto / Instalaciones |
-| `corte-producto-hero.jpg` | Corte vacuno premium en primer plano, fondo neutro gris/beige, luz de estudio. Vertical 3:4. | El Producto / Galería |
-| `packaging-vacuum.jpg` | Producto en packaging vacuum con etiqueta de trazabilidad visible. | El Producto / Ficha |
-| `carga-contenedor.jpg` | Carga de contenedor refrigerado, logística de exportación. Horizontal. | El Producto / Instalaciones |
-| `florida-exterior.jpg` | Exterior / fachada de Frigorífico Florida. | Sub-landing Florida |
-| `saturno-exterior.jpg` | Exterior / fachada de Frigorífico Saturno. | Sub-landing Saturno |
+## ⚠️ Imágenes aún pendientes (pedir al cliente)
 
-## Imágenes descargadas del sitio existente
+| Imagen | Descripción | Sección | Prioridad |
+|--------|-------------|---------|-----------|
+| `campo-ganado-hero.jpg` | Campo uruguayo, luz natural, horizonte amplio, ganado. 16:9, mín. 1920×1080 | **Hero** (imagen más importante) | 🔴 CRÍTICA |
+| `corte-producto-hero.jpg` | Corte vacuno premium en primer plano, fondo neutro, luz de estudio. Vertical 3:4 | El Producto / Galería principal | 🟡 Alta |
+| `saturno-exterior-nuevo.jpg` | Fachada / exterior del Frigorífico Saturno (el actual es la tienda Saturno Premium, no la planta) | Sub-landing Saturno | 🟡 Alta |
 
-Todas las imágenes están en `public/images/`. Fueron obtenidas de `frigorificosaturno.com.uy` y `saturnopremium.com.uy`.
+## Imágenes anteriores del sitio existente
 
 | Archivo | Contenido | Uso sugerido | Observaciones |
 |---------|-----------|--------------|---------------|
-| `planta-exterior.jpg` | Cartel "Frigorífico Saturno" en campo al atardecer | Hero / Sección Saturno | Buena calidad. 352 KB. |
-| `saturno-exterior.jpg` | Fachada tienda Saturno Premium | Sub-landing Saturno | Buena calidad. 570 KB. |
-| `saturno-cartel.jpg` | Cartel Frigorífico Saturno en poste, cielo azul | Sub-landing Saturno / señalética | Buena calidad. 308 KB. |
-| `carga-contenedor.jpg` | Camión refrigerado con branding Saturno | Sección logística / cadena de valor | Buena calidad. 352 KB. |
-| `corte-producto.jpg` | Corte de carne vacuna sobre fondo blanco con hierbas | El Producto | **Ver nota abajo.** 22 KB (pequeña). |
-| `equipo-trabajo.jpg` | Hombre cortando carne en cocina con branding Saturno | Equipo / El Producto | 56 KB. |
-
-### Notas sobre imágenes descargadas
-
-- **`corte-producto.jpg`**: La imagen tiene hierbas decorativas (menta) y fondo blanco de estudio genérico. Cumple como placeholder pero idealmente reemplazar con foto documental del propio producto, sin hierbas. Además el tamaño es pequeño (22 KB, ~200×200 px) — **reemplazar prioritariamente**.
-- **`equipo-trabajo.jpg`**: Foto del comercializador "Aldo" de Saturno Premium cortando carne. Útil pero es imagen de persona específica — confirmar con el cliente si puede usarse en el nuevo sitio.
-- No se encontraron imágenes de: campo/ganado, interior de planta de procesado, packaging vacuum, ni fachada de Frigorífico Florida.
-
-## Imágenes pendientes de cliente (prioritarias)
-
-1. **campo-ganado-hero.jpg** — campo uruguayo con ganado (falta completamente, es la imagen más importante del Hero)
-2. **planta-procesado.jpg** — interior de planta (no existe en el sitio actual)
-3. **linea-procesado.jpg** — línea de procesado específica
-4. **packaging-vacuum.jpg** — packaging con trazabilidad
-5. **florida-exterior.jpg** — fachada Frigorífico Florida (no existe en sitio actual)
-6. **corte-producto-hero.jpg** — foto de calidad superior al placeholder actual
+| `planta-exterior.jpg` | Cartel "Frigorífico Saturno" en campo al atardecer | Sección Saturno | Buena calidad. 352 KB. |
+| `saturno-exterior.jpg` | Fachada tienda Saturno Premium | Sub-landing Saturno (placeholder) | Es la tienda, no la planta — reemplazar. |
+| `saturno-cartel.jpg` | Cartel en poste, cielo azul | Sub-landing Saturno / señalética | Buena calidad. 308 KB. |
+| `carga-contenedor.jpg` | Camión refrigerado con branding Saturno | Cadena de valor / Logística | Buena calidad. 352 KB. |
+| `corte-producto.jpg` | Corte sobre fondo blanco con hierbas | El Producto (placeholder) | 22 KB — muy pequeña, reemplazar. |
+| `equipo-trabajo.jpg` | Persona cortando carne, branding Saturno | El Producto | Confirmar con cliente si puede usarse. |
 
 ## Notas generales
 - Tratamiento requerido: documental, luz natural, sin filtros extremos
