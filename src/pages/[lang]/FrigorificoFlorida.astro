@@ -37,7 +37,7 @@ const t = useTranslations(lang);
   <!-- Hero -->
   <section class="relative h-[70vh] min-h-[500px] flex items-end overflow-hidden">
     <img
-      src="/images/florida-planta-exterior.jpg"
+      src="/images/florida-exterior-principal.jpg"
       alt="Establecimiento Florida 365, Grupo Saturno — Florida, Uruguay"
       class="absolute inset-0 w-full h-full object-cover object-center"
       loading="eager"
@@ -156,6 +156,41 @@ const t = useTranslations(lang);
             <p class="font-sans text-[0.8rem] font-light text-[#555] leading-[1.75]">{text}</p>
           </div>
         ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaser Evento Reapertura -->
+  <section class="bg-carbon py-20 px-8 lg:px-20">
+    <div class="max-w-[1440px] mx-auto overflow-hidden">
+      <div class="grid grid-cols-1 lg:grid-cols-2">
+        <div class="relative h-72 lg:h-auto overflow-hidden">
+          <img
+            src="/images/reapertura/reapertura-exterior-01.jpg"
+            alt="Ceremonia de reapertura Frigorifico Florida, Grupo Saturno, marzo 2026"
+            class="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-r from-transparent to-carbon/60 hidden lg:block"></div>
+        </div>
+        <div class="bg-[#0e1215] p-10 lg:p-16 flex flex-col justify-center">
+          <p class="font-sans text-[0.58rem] tracking-[0.25em] uppercase text-burgundy mb-4 flex items-center gap-3">
+            <span class="w-5 h-px bg-burgundy inline-block" aria-hidden="true"></span>
+            Marzo 2026
+          </p>
+          <h2 class="font-serif text-[clamp(1.6rem,2.2vw,2.2rem)] font-light text-white leading-[1.1] tracking-[-0.02em] mb-5">
+            Reapertura del<br /><em class="italic text-white/70">Establecimiento Florida</em>
+          </h2>
+          <p class="font-sans text-[0.78rem] font-light text-white/50 leading-[1.75] mb-8 max-w-sm">
+            En marzo de 2026 celebramos un hito en la historia del grupo con la reapertura de la planta, reuniendo al Presidente de la Republica, autoridades, colaboradores y socios estrategicos.
+          </p>
+          <a
+            href={`/${lang}/EventoReobertura`}
+            class="inline-flex items-center gap-3 font-sans text-[0.68rem] tracking-[0.12em] uppercase text-white/70 border border-white/20 px-6 py-3 w-fit hover:text-white hover:border-white/50 hover:bg-burgundy/30 transition-all duration-200"
+          >
+            Ver galeria del evento <span aria-hidden="true">→</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
