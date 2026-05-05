@@ -10,12 +10,23 @@ export function getStaticPaths() {
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+const stats = [
+  { label: t('florida.stat1Label'), value: t('florida.stat1Value') },
+  { label: t('florida.stat2Label'), value: t('florida.stat2Value') },
+  { label: t('florida.stat3Label'), value: t('florida.stat3Value') },
+  { label: t('florida.stat4Label'), value: t('florida.stat4Value') },
+];
+
+const markets = JSON.parse(t('florida.markets')) as Array<{
+  flag: string; name: string; cert: string; stat: string; text: string;
+}>;
 ---
 <SubLandingLayout
   title={t('meta.floridaTitle')}
   description={t('meta.floridaDesc')}
-  image="/images/florida/florida-exterior-01.jpg"
-  unitName="Frigorífico Florida"
+  image="/images/florida-exterior-principal.jpg"
+  unitName={t('units.unit1Title')}
 >
 
   <!-- JSON-LD FoodEstablishment -->
@@ -47,13 +58,13 @@ const t = useTranslations(lang);
     <div class="relative z-10 max-w-[1440px] mx-auto px-8 lg:px-20 pb-16 w-full">
       <p class="font-sans text-[0.6rem] tracking-[0.22em] uppercase text-burgundy mb-4 flex items-center gap-3">
         <span class="w-5 h-px bg-burgundy inline-block" aria-hidden="true"></span>
-        Unidad 01 · Grupo Saturno
+        {t('florida.heroKicker')}
       </p>
       <h1 class="font-serif text-[clamp(2.5rem,5vw,4.5rem)] font-light leading-[1.0] tracking-[-0.02em] text-white">
-        Frigorífico Florida
+        {t('units.unit1Title')}
       </h1>
       <p class="mt-4 font-sans text-[0.8rem] font-light text-white/60 max-w-lg leading-[1.75]">
-        Establecimiento especializado en procesamiento y exportación de carne vacuna. Florida, Uruguay.
+        {t('florida.heroDesc')}
       </p>
     </div>
   </section>
@@ -62,20 +73,15 @@ const t = useTranslations(lang);
   <section class="bg-off-white py-24 px-8 lg:px-20">
     <div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
       <div>
-        <SectionLabel class="mb-4">Presentación</SectionLabel>
+        <SectionLabel class="mb-4">{t('florida.presentationLabel')}</SectionLabel>
         <h2 class="font-serif text-[clamp(1.8rem,2.5vw,2.5rem)] font-light tracking-[-0.025em] text-carbon mb-6">
-          Especialización y capacidad de escala
+          {t('florida.presentationH2')}
         </h2>
         <p class="font-sans text-[0.85rem] font-light text-[#555] leading-[1.8]">
-          El Establecimiento Florida 365 es la planta de faena propia de Grupo Saturno, adquirida en 2025 y reinaugurada en marzo de 2026. Con habilitaciones activas para exportar a China, Estados Unidos y la Unión Europea, es el eslabón que completa la integración vertical del grupo: del campo al contenedor, sin intermediarios.
+          {t('florida.presentationBody')}
         </p>
         <div class="mt-10 grid grid-cols-2 gap-px bg-burgundy/10">
-          {[
-            { label: 'Capacidad', value: '300 vacunos / día' },
-            { label: 'Empleos directos', value: '+100 trabajadores' },
-            { label: 'Exportaciones 2024', value: 'US$ 6,26 millones' },
-            { label: 'Habilitaciones', value: 'GACC · USDA · UE' },
-          ].map(({ label, value }) => (
+          {stats.map(({ label, value }) => (
             <div class="bg-off-white p-5">
               <p class="font-sans text-[0.58rem] tracking-[0.18em] uppercase text-burgundy mb-1">{label}</p>
               <p class="font-sans text-[0.82rem] font-medium text-carbon">{value}</p>
@@ -119,39 +125,17 @@ const t = useTranslations(lang);
     <div class="max-w-[1440px] mx-auto">
       <p class="font-sans text-[0.6rem] tracking-[0.22em] uppercase text-burgundy mb-4 flex items-center gap-3">
         <span class="w-5 h-px bg-burgundy inline-block" aria-hidden="true"></span>
-        Habilitaciones de exportación
+        {t('florida.marketsLabel')}
       </p>
       <h2 class="font-serif text-[clamp(1.8rem,2.5vw,2.5rem)] font-light tracking-[-0.025em] text-carbon mb-12">
-        Tres mercados. Tres estándares.<br /><em class="italic text-carbon/60">Un solo proveedor.</em>
+        {t('florida.marketsH2')}<br /><em class="italic text-carbon/60">{t('florida.marketsH2Italic')}</em>
       </h2>
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-px bg-burgundy/10">
-        {[
-          {
-            flag: '🇨🇳',
-            market: 'China',
-            cert: 'GACC — Administración General de Aduanas',
-            stat: '84% de las exportaciones 2024',
-            text: 'China es el principal destino de Florida 365. En 2024 se exportaron US$ 5,26 millones al mercado chino. La empresa participó en la Feria SIAL Shanghai y mantiene contacto activo con importadores y delegaciones comerciales chinas.',
-          },
-          {
-            flag: '🇺🇸',
-            market: 'Estados Unidos',
-            cert: 'USDA — Departamento de Agricultura',
-            stat: 'Habilitación activa',
-            text: 'El mercado norteamericano exige los protocolos sanitarios más estrictos del mundo. Florida 365 cuenta con habilitación USDA vigente, lo que permite exportar cortes premium directamente a importadores y distribuidores en EE.UU.',
-          },
-          {
-            flag: '🇪🇺',
-            market: 'Unión Europea',
-            cert: 'Habilitación UE — bienestar animal y trazabilidad',
-            stat: 'Habilitación activa',
-            text: 'Europa exige máxima trazabilidad, bienestar animal y ausencia de hormonas de crecimiento. Uruguay cumple y supera todos estos requisitos. Florida 365 está habilitado para exportar a los 27 países del bloque.',
-          },
-        ].map(({ flag, market, cert, stat, text }) => (
+        {markets.map(({ flag, name, cert, stat, text }) => (
           <div class="bg-white p-8 lg:p-10">
             <p class="text-3xl mb-4">{flag}</p>
             <p class="font-sans text-[0.58rem] tracking-[0.18em] uppercase text-burgundy mb-1">{cert}</p>
-            <h3 class="font-serif text-[1.4rem] font-light text-carbon mb-1">{market}</h3>
+            <h3 class="font-serif text-[1.4rem] font-light text-carbon mb-1">{name}</h3>
             <p class="font-sans text-[0.68rem] font-medium text-burgundy mb-4">{stat}</p>
             <p class="font-sans text-[0.8rem] font-light text-[#555] leading-[1.75]">{text}</p>
           </div>
@@ -176,19 +160,19 @@ const t = useTranslations(lang);
         <div class="bg-[#0e1215] p-10 lg:p-16 flex flex-col justify-center">
           <p class="font-sans text-[0.58rem] tracking-[0.25em] uppercase text-burgundy mb-4 flex items-center gap-3">
             <span class="w-5 h-px bg-burgundy inline-block" aria-hidden="true"></span>
-            Marzo 2026
+            {t('florida.teaserLabel')}
           </p>
           <h2 class="font-serif text-[clamp(1.6rem,2.2vw,2.2rem)] font-light text-white leading-[1.1] tracking-[-0.02em] mb-5">
-            Reapertura del<br /><em class="italic text-white/70">Establecimiento Florida</em>
+            {t('florida.teaserH2')}<br /><em class="italic text-white/70">{t('florida.teaserH2Italic')}</em>
           </h2>
           <p class="font-sans text-[0.78rem] font-light text-white/50 leading-[1.75] mb-8 max-w-sm">
-            En marzo de 2026 celebramos un hito en la historia del grupo con la reapertura de la planta, reuniendo al Presidente de la Republica, autoridades, colaboradores y socios estrategicos.
+            {t('florida.teaserBody')}
           </p>
           <a
             href={`/${lang}/EventoReobertura`}
             class="inline-flex items-center gap-3 font-sans text-[0.68rem] tracking-[0.12em] uppercase text-white/70 border border-white/20 px-6 py-3 w-fit hover:text-white hover:border-white/50 hover:bg-burgundy/30 transition-all duration-200"
           >
-            Ver galeria del evento <span aria-hidden="true">→</span>
+            {t('florida.teaserCta')} <span aria-hidden="true">→</span>
           </a>
         </div>
       </div>

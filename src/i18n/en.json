@@ -175,6 +175,134 @@
     "reoaberturaTitle": "Florida Plant Reopening — April 2026 · Grupo Saturno",
     "reoaberturaDesc": "Photographic record of the reopening ceremony of Establecimiento Florida, Grupo Saturno. A milestone in our industrial history, April 2026."
   },
+  "florida": {
+    "heroKicker": "Unit 01 · Grupo Saturno",
+    "heroDesc": "Specialised plant for beef processing and export. Florida, Uruguay.",
+    "presentationLabel": "Overview",
+    "presentationH2": "Specialisation and scale capacity",
+    "presentationBody": "Establecimiento Florida 365 is Grupo Saturno's own slaughter plant, acquired in 2025 and reopened in March 2026. With active approvals to export to China, the United States and the European Union, it is the link that completes the group's vertical integration: from field to container, without intermediaries.",
+    "stat1Label": "Capacity",
+    "stat1Value": "300 head / day",
+    "stat2Label": "Direct jobs",
+    "stat2Value": "+100 workers",
+    "stat3Label": "2024 Exports",
+    "stat3Value": "US$ 6.26 million",
+    "stat4Label": "Approvals",
+    "stat4Value": "GACC · USDA · EU",
+    "marketsLabel": "Export approvals",
+    "marketsH2": "Three markets. Three standards.",
+    "marketsH2Italic": "One supplier.",
+    "markets": [
+      {
+        "flag": "🇨🇳",
+        "name": "China",
+        "cert": "GACC — General Administration of Customs",
+        "stat": "84% of 2024 exports",
+        "text": "China is the primary destination for Florida 365. In 2024, US$ 5.26 million was exported to the Chinese market. The company participated in SIAL Shanghai and maintains active contact with Chinese importers and trade delegations."
+      },
+      {
+        "flag": "🇺🇸",
+        "name": "United States",
+        "cert": "USDA — Department of Agriculture",
+        "stat": "Active approval",
+        "text": "The North American market demands the world's strictest sanitary protocols. Florida 365 holds an active USDA approval, enabling direct export of premium cuts to importers and distributors in the US."
+      },
+      {
+        "flag": "🇪🇺",
+        "name": "European Union",
+        "cert": "EU Approval — animal welfare and traceability",
+        "stat": "Active approval",
+        "text": "Europe requires maximum traceability, animal welfare and the absence of growth hormones. Uruguay meets and exceeds all these requirements. Florida 365 is approved to export to all 27 member states."
+      }
+    ],
+    "teaserLabel": "March 2026",
+    "teaserH2": "Reopening of",
+    "teaserH2Italic": "Establecimiento Florida",
+    "teaserBody": "In March 2026 we celebrated a milestone in the group's history with the reopening of the plant, bringing together the President of the Republic, authorities, staff and strategic partners.",
+    "teaserCta": "View event gallery"
+  },
+  "saturno": {
+    "heroKicker": "Unit 02 · Grupo Saturno",
+    "presentationLabel": "Overview",
+    "presentationH2": "The productive core of the group",
+    "presentationBody1": "Founded in 1998, Frigorífico Saturno is a 100% Uruguayan company with an industrial plant opened in 2009, located at Route 8 Km 38, Empalme Olmos, Canelones. Integrated production and processing with full traceability from origin.",
+    "presentationBody2": "\"From the outset, the reason for being of Frigorífico Saturno: Uruguayan DNA.\"",
+    "stats": [
+      { "value": "+20", "label": "Years of experience" },
+      { "value": "2,183", "label": "m² industrial plant" },
+      { "value": "5,000+", "label": "Tonnes / year" },
+      { "value": "100", "label": "National employees" },
+      { "value": "15", "label": "Distribution vehicles" },
+      { "value": "8+", "label": "Departments covered" }
+    ],
+    "distLabel": "Distribution",
+    "distH2": "Nationwide own distribution",
+    "distBody": "A fleet of 15 vehicles with state-of-the-art refrigeration equipment that guarantees the cold chain from the plant to the delivery point.",
+    "distMetroLabel": "Metropolitan Area",
+    "distMetroFreq": "Daily distribution",
+    "distInteriorLabel": "Interior of the country",
+    "distInteriorDepts": "Artigas · Salto · Paysandú · Río Negro · Soriano · Colonia · Flores · San José",
+    "distInteriorFreq": "Weekly frequency",
+    "capacityLabel": "Installed capacity",
+    "capacity": [
+      "Cycle II Industrial Plant — 2,183 m²",
+      "Processing of more than 5,000 tonnes per year",
+      "100 employees — 100% national workforce",
+      "Traceability from producer to customer"
+    ],
+    "productLabel": "Product Lines",
+    "productH2": "Export quality, available locally",
+    "premiumLabel": "Saturno Premium",
+    "premiumH3": "A line of excellence",
+    "premiumBody": "The beef Uruguay exports to the world's most demanding markets, now available to the Uruguayan consumer. Angus and Hereford steers and cows, natural pasture grazing, balanced supplementation without growth hormones.",
+    "cuts": [
+      "Ribeye (Bife Ancho)",
+      "Striploin (Bife Angosto)",
+      "Tenderloin (Lomo)",
+      "Rump (Cuadril)",
+      "Tri-tip (Colita de Cuadril)",
+      "Flank (Vacío)"
+    ],
+    "premiumItems": [
+      "Professional challenge from the group's own infrastructure",
+      "Maximum quality for the local consumer",
+      "Export standards available in the domestic market"
+    ],
+    "storeLabel": "Premium Store",
+    "storeH3": "Custom cuts",
+    "storeBody": "Specific infrastructure for the preparation of tailor-made cuts to client requirements. Priority service for chefs and restaurants.",
+    "storeItems": [
+      "Custom cut width, fat content and finish",
+      "Tenderness and flavour ageing to preference",
+      "Commercial advisory and delivery service"
+    ],
+    "pilaresLabel": "Strategic Pillars",
+    "pilaresH2": "The six defining axes",
+    "pilares": [
+      { "num": "01", "title": "The Producer", "desc": "The original supplier with whom we share standards, successes and challenges of the industry." },
+      { "num": "02", "title": "The Client", "desc": "Our primary objective. Focus on the local market with the highest quality available." },
+      { "num": "03", "title": "The Worker", "desc": "A better working environment, high-level training and maximum team commitment." },
+      { "num": "04", "title": "The Social Environment", "desc": "Good service within the local area and across the whole country." },
+      { "num": "05", "title": "Knowledge", "desc": "Greater responsibility and constant training as the engine of growth." },
+      { "num": "06", "title": "Healthy Economy", "desc": "Profitability that becomes investment, development and actionable plans." }
+    ],
+    "identityLabel": "Identity",
+    "identityH2": "Uruguayan DNA",
+    "identityBody1": "A 100% national company in capital, employment and market. Deeply rooted in Uruguayan values, customs and traditions.",
+    "identityQuote": "\"That Uruguay — the one of childhood dreams, the one alive in every Uruguayan's aspirations.\"",
+    "identityBody2": "With the incorporation of Establecimiento Florida 365 in 2026, Frigorífico Saturno completed its vertical integration: cattle production, own slaughter, industrialisation and direct export to China, the United States and the European Union.",
+    "adnItems": [
+      "Capital, employment and market 100% national",
+      "Export quality available to the local consumer",
+      "Individual traceability: every animal electronically registered from birth",
+      "Tailor-made service for importers, chefs and distributors",
+      "Regional presence in 8+ departments",
+      "Active approvals to export to China, USA and European Union"
+    ],
+    "contactLabel": "Direct contact",
+    "contactName": "Frigorífico Saturno",
+    "contactAddr": "Route 8 Km 38 · Empalme Olmos, Canelones"
+  },
   "reapertura": {
     "label": "Historic event",
     "h1": "Frigorífico Florida Reopening",
