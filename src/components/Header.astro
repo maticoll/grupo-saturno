@@ -18,9 +18,15 @@ const t = useTranslations(lang);
 >
   <div class="max-w-[1440px] mx-auto px-8 lg:px-20 h-16 flex items-center justify-between">
 
-    <!-- Logo: solo wordmark por ahora -->
-    <a href={`/${lang}/`} class="font-serif text-[1.05rem] tracking-[0.1em] uppercase leading-none">
-      Grupo <span class="text-burgundy">Saturno</span>
+    <!-- Logo -->
+    <a href={`/${lang}/`} class="shrink-0" aria-label="Grupo Saturno — inicio">
+      <img
+        src="/images/logo-grupo-saturno.svg"
+        alt="Grupo Saturno"
+        class="h-12 w-auto"
+        width="154"
+        height="120"
+      />
     </a>
 
     <!-- Nav desktop -->
