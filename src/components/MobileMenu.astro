@@ -84,11 +84,11 @@ const t = useTranslations(lang);
         <div x-show="subOpen" class="flex flex-col pl-4 border-l border-burgundy/20 mb-2">
           <a href={`/${lang}/FrigorificoSaturno`} @click="open = false"
             class="font-sans text-[0.75rem] tracking-[0.06em] uppercase text-carbon/50 hover:text-carbon py-2 transition-colors">
-            Frigorifico Saturno
+            {t('units.unit2Title')}
           </a>
           <a href={`/${lang}/EstablecimientoFlorida`} @click="open = false"
             class="font-sans text-[0.75rem] tracking-[0.06em] uppercase text-carbon/50 hover:text-carbon py-2 transition-colors">
-            Establecimiento Florida 365
+            {t('units.unit1Title')}
           </a>
         </div>
       </div>

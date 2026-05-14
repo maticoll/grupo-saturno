@@ -21,9 +21,9 @@
   },
   "units": {
     "unit1Number": "Unit 01",
-    "unit1Title": "Frigorífico Florida",
+    "unit1Title": "Establecimiento Florida 365",
     "unit1Desc": "Establecimiento Florida 365 — Slaughter and export plant approved for China, the United States, and the European Union. Capacity of 300 head of cattle per day.",
-    "unit1Cta": "Learn about Frigorífico Florida",
+    "unit1Cta": "Learn about Establecimiento Florida 365",
     "unit2Number": "Unit 02",
     "unit2Title": "Frigorífico Saturno",
     "unit2Desc": "Integrated production and processing with full traceability from origin. Core of the group.",
@@ -168,7 +168,7 @@
   "meta": {
     "homeTitle": "Grupo Saturno — Beef Production & Processing | Uruguay",
     "homeDesc": "26 years of experience in cattle farming, meat processing, and international commercialization. Empalme Olmos, Uruguay.",
-    "floridaTitle": "Frigorífico Florida — Grupo Saturno | Meat Processing Uruguay",
+    "floridaTitle": "Establecimiento Florida 365 — Grupo Saturno | Meat Processing Uruguay",
     "floridaDesc": "Florida Plant, Business Unit 01 of Grupo Saturno. Meat processing facility in Florida, Uruguay. Specialised processing, export capacity, and full traceability.",
     "saturnoTitle": "Frigorífico Saturno — Grupo Saturno",
     "saturnoDesc": "Core production unit of Grupo Saturno. Integrated processing with full traceability from origin.",
@@ -197,8 +197,8 @@
         "flag": "🇨🇳",
         "name": "China",
         "cert": "GACC — General Administration of Customs",
-        "stat": "84% of 2024 exports",
-        "text": "China is the primary destination for Florida 365. In 2024, US$ 5.26 million was exported to the Chinese market. The company participated in SIAL Shanghai and maintains active contact with Chinese importers and trade delegations."
+        "stat": "Active approval",
+        "text": "Florida 365 holds an active GACC approval for the Chinese market. With the plant's reopening, the goal is to rebuild and strengthen ties with importers and trade delegations, and to develop new relationships in one of the most important markets for Uruguayan beef."
       },
       {
         "flag": "🇺🇸",
@@ -305,13 +305,23 @@
   },
   "reapertura": {
     "label": "Historic event",
-    "h1": "Frigorífico Florida Reopening",
+    "unitName": "Florida Reopening Event",
+    "h1": "Establecimiento Florida 365 Reopening",
     "kicker": "April 2026 · Florida, Uruguay",
     "lead": "On 16 April 2026, Grupo Saturno celebrated the reopening of Establecimiento Florida with a ceremony bringing together authorities, staff, and strategic partners. A key step in the group's growth.",
     "galleryLabel": "Event gallery",
-    "backLink": "← Back to Frigorífico Florida",
-    "ctaTitle": "Learn more about Frigorífico Florida",
+    "dateLabel": "Date",
+    "date": "16 April 2026",
+    "placeLabel": "Venue",
+    "place": "Florida, Oriental Republic of Uruguay",
+    "organizerLabel": "Organiser",
+    "organizer": "Grupo Saturno",
+    "backLink": "← Back to Establecimiento Florida 365",
+    "ctaTitle": "Learn more about Establecimiento Florida 365",
     "ctaText": "Discover the production capacity, processes, and commercial offering of Establecimiento Florida.",
-    "ctaButton": "View Frigorífico Florida"
+    "ctaButton": "View Establecimiento Florida 365"
+  },
+  "common": {
+    "downloadBrochure": "↓ Download Brochure"
   }
 }
