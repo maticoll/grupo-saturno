@@ -192,36 +192,36 @@ const fotosMarqueeRow3 = [
   </section>
 
   <!-- Marquee galería -->
-  <section class="bg-carbon pb-10 overflow-hidden">
+  <section class="bg-carbon pb-10">
     <div class="flex flex-col gap-1">
 
-      <!-- Fila 1: izquierda → -->
-      <div class="flex gap-1 marquee-left">
-        <div class="flex gap-1 shrink-0 marquee-track">
+      <!-- Fila 1: hacia la izquierda -->
+      <div class="marquee-clip">
+        <div class="marquee-track marquee-left">
           {[...fotosMarqueeRow1, ...fotosMarqueeRow1].map(({ src, alt }) => (
-            <div class="w-64 h-44 shrink-0 overflow-hidden">
+            <div class="marquee-item">
               <img src={src} alt={alt} class="w-full h-full object-cover" loading="lazy" />
             </div>
           ))}
         </div>
       </div>
 
-      <!-- Fila 2: derecha ← -->
-      <div class="flex gap-1 marquee-right">
-        <div class="flex gap-1 shrink-0 marquee-track">
+      <!-- Fila 2: hacia la derecha -->
+      <div class="marquee-clip">
+        <div class="marquee-track marquee-right">
           {[...fotosMarqueeRow2, ...fotosMarqueeRow2].map(({ src, alt }) => (
-            <div class="w-64 h-44 shrink-0 overflow-hidden">
+            <div class="marquee-item">
               <img src={src} alt={alt} class="w-full h-full object-cover" loading="lazy" />
             </div>
           ))}
         </div>
       </div>
 
-      <!-- Fila 3: izquierda → -->
-      <div class="flex gap-1 marquee-left">
-        <div class="flex gap-1 shrink-0 marquee-track">
+      <!-- Fila 3: hacia la izquierda -->
+      <div class="marquee-clip">
+        <div class="marquee-track marquee-left">
           {[...fotosMarqueeRow3, ...fotosMarqueeRow3].map(({ src, alt }) => (
-            <div class="w-64 h-44 shrink-0 overflow-hidden">
+            <div class="marquee-item">
               <img src={src} alt={alt} class="w-full h-full object-cover" loading="lazy" />
             </div>
           ))}
@@ -232,15 +232,26 @@ const fotosMarqueeRow3 = [
   </section>
 
   <style>
-    .marquee-left  { display: flex; }
-    .marquee-right { display: flex; }
+    .marquee-clip {
+      width: 100%;
+      overflow: hidden;
+    }
 
-    .marquee-left .marquee-track {
-      animation: scroll-left 30s linear infinite;
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      gap: 4px;
     }
-    .marquee-right .marquee-track {
-      animation: scroll-right 30s linear infinite;
+
+    .marquee-item {
+      width: 256px;
+      height: 176px;
+      flex-shrink: 0;
+      overflow: hidden;
     }
+
+    .marquee-left  { animation: scroll-left  35s linear infinite; }
+    .marquee-right { animation: scroll-right 35s linear infinite; }
 
     @keyframes scroll-left {
       from { transform: translateX(0); }
@@ -252,8 +263,7 @@ const fotosMarqueeRow3 = [
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .marquee-left .marquee-track,
-      .marquee-right .marquee-track { animation: none; }
+      .marquee-left, .marquee-right { animation: none; }
     }
   </style>
 
