@@ -151,41 +151,43 @@ const fotosMarqueeRow3 = [
     <div class="max-w-[1440px] mx-auto mb-6 px-8 lg:px-20">
       <SectionLabel class="text-white/60 mb-2">{t('reapertura.galleryLabel')}</SectionLabel>
     </div>
-    <!-- Grid editorial con tamaños alternados -->
-    <div class="grid grid-cols-3 gap-1 px-1">
-      <!-- Slot 1: grande 2 columnas — img5 (presidente hablando) -->
-      <div class="col-span-2 h-[480px] overflow-hidden group">
+    <!-- Grid editorial responsive -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 px-1">
+
+      <!-- Fila 1: presidente hablando (2/3) + intendente+presidente+luis (1/3) -->
+      <div class="col-span-1 sm:col-span-2 lg:col-span-2 h-64 sm:h-80 lg:h-[480px] overflow-hidden group">
         <img src={fotosDestacadas[4].src} alt={fotosDestacadas[4].alt}
           class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" loading="eager" />
       </div>
-      <!-- Slot 2: pequeña 1 columna — img1 (intendente+presidente+luis) -->
-      <div class="col-span-1 h-[480px] overflow-hidden group">
+      <div class="col-span-1 h-64 sm:h-80 lg:h-[480px] overflow-hidden group">
         <img src={fotosDestacadas[0].src} alt={fotosDestacadas[0].alt}
           class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" loading="eager" />
       </div>
-      <!-- Slots 3, 4, 5: tres columnas iguales — img3, img4, img2 -->
-      <div class="col-span-1 h-[320px] overflow-hidden group">
+
+      <!-- Fila 2: tres iguales — presidente+luis+paula / luis hablando / luis entrevistado -->
+      <div class="col-span-1 h-56 sm:h-64 lg:h-[320px] overflow-hidden group">
         <img src={fotosDestacadas[2].src} alt={fotosDestacadas[2].alt}
           class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" loading="lazy" />
       </div>
-      <div class="col-span-1 h-[320px] overflow-hidden group">
+      <div class="col-span-1 h-56 sm:h-64 lg:h-[320px] overflow-hidden group">
         <img src={fotosDestacadas[3].src} alt={fotosDestacadas[3].alt}
           class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" loading="lazy" />
       </div>
-      <div class="col-span-1 h-[320px] overflow-hidden group">
+      <div class="col-span-1 h-56 sm:h-64 lg:h-[320px] overflow-hidden group">
         <img src={fotosDestacadas[1].src} alt={fotosDestacadas[1].alt}
           class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" loading="lazy" />
       </div>
-      <!-- Img 6: pequeña 1 columna -->
-      <div class="col-span-1 h-[400px] overflow-hidden group">
+
+      <!-- Fila 3: presidente+equipo (1/3) + presidente y luis (2/3) -->
+      <div class="col-span-1 h-64 sm:h-72 lg:h-[400px] overflow-hidden group">
         <img src={fotosDestacadas[5].src} alt={fotosDestacadas[5].alt}
           class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" loading="lazy" />
       </div>
-      <!-- Img 7: grande 2 columnas -->
-      <div class="col-span-2 h-[400px] overflow-hidden group">
+      <div class="col-span-1 sm:col-span-2 lg:col-span-2 h-64 sm:h-72 lg:h-[400px] overflow-hidden group">
         <img src={fotosDestacadas[6].src} alt={fotosDestacadas[6].alt}
           class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" loading="lazy" />
       </div>
+
     </div>
   </section>
 
