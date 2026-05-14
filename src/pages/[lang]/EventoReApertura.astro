@@ -11,21 +11,26 @@ export function getStaticPaths() {
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const fotos = [
-  { src: '/images/florida/florida-hero.jpg',                    alt: 'Ceremonia apertura — Establecimiento Florida' },
-  { src: '/images/reapertura/reapertura-ceremonia-01.jpg',      alt: 'Acto de apertura oficial' },
-  { src: '/images/reapertura/reapertura-ceremonia-02.jpg',      alt: 'Discurso inaugural' },
-  { src: '/images/reapertura/reapertura-exterior-01.jpg',       alt: 'Vista exterior Establecimiento Florida' },
-  { src: '/images/reapertura/reapertura-exterior-02.jpg',       alt: 'Acceso principal Florida' },
-  { src: '/images/reapertura/reapertura-autoridades-01.jpg',    alt: 'Autoridades presentes en la reapertura' },
-  { src: '/images/reapertura/reapertura-autoridades-02.jpg',    alt: 'Delegación oficial Grupo Saturno' },
-  { src: '/images/reapertura/reapertura-instalaciones-01.jpg',  alt: 'Instalaciones Establecimiento Florida 365' },
-  { src: '/images/reapertura/reapertura-instalaciones-02.jpg',  alt: 'Interior planta Florida' },
-  { src: '/images/reapertura/reapertura-detalle-01.jpg',        alt: 'Detalle del evento' },
-  { src: '/images/reapertura/reapertura-detalle-02.jpg',        alt: 'Momento ceremonial' },
-  { src: '/images/reapertura/reapertura-galeria-01.jpg',        alt: 'Galería reapertura Florida' },
-  { src: '/images/reapertura/reapertura-galeria-02.jpg',        alt: 'Celebración Grupo Saturno Florida' },
-  { src: '/images/florida/florida-exterior-02.jpg',             alt: 'Fachada Establecimiento Florida' },
+const fotosDestacadas = [
+  { src: '/images/fotos/intendente-presidente-luis.jpeg',       alt: 'Intendente de Florida, Presidente y Luis — reapertura 2026' },
+  { src: '/images/fotos/luis-entrevistado.jpeg',                alt: 'Luis entrevistado — reapertura Establecimiento Florida' },
+  { src: '/images/fotos/presidente-con-luis-y-paula.jpeg',      alt: 'Presidente con Luis y Paula — Grupo Saturno' },
+  { src: '/images/fotos/luis-hablando.jpeg',                    alt: 'Luis hablando — ceremonia reapertura' },
+  { src: '/images/fotos/presidente-hablando.jpeg',              alt: 'Presidente hablando — acto oficial' },
+  { src: '/images/fotos/presidente-y-equipo-saturno.jpeg',      alt: 'Presidente y equipo Saturno' },
+  { src: '/images/fotos/presidente-y-luis.jpeg',                alt: 'Presidente y Luis — Establecimiento Florida' },
+];
+
+const fotosMarquee = [
+  { src: '/images/fotos/luis-hablando-otro-angulo.jpeg',        alt: 'Luis hablando — otro ángulo' },
+  { src: '/images/fotos/cortando-cinta.jpeg',                   alt: 'Cortando la cinta — reapertura oficial' },
+  { src: '/images/fotos/stand-china.jpeg',                      alt: 'Stand China — Grupo Saturno' },
+  { src: '/images/fotos/florida-y-cma.jpeg',                    alt: 'Florida y CMA' },
+  { src: '/images/fotos/establecimiento-florida.jpeg',          alt: 'Establecimiento Florida 365' },
+  { src: '/images/reapertura/florida-136.jpg',                  alt: 'Establecimiento Florida — reapertura abril 2026' },
+  { src: '/images/fotos/intendente-presidente-luis.jpeg',       alt: 'Autoridades — reapertura Florida' },
+  { src: '/images/fotos/presidente-con-luis-y-paula.jpeg',      alt: 'Presidencia y equipo directivo' },
+  { src: '/images/fotos/luis-entrevistado.jpeg',                alt: 'Entrevista — evento reapertura' },
 ];
 ---
 <SubLandingLayout
@@ -105,13 +110,13 @@ const fotos = [
     </div>
   </section>
 
-  <!-- Galería masonry -->
-  <section class="bg-carbon py-4 px-1">
-    <div class="max-w-[1440px] mx-auto mb-6 px-8 lg:px-20 pt-10">
+  <!-- Galería destacada -->
+  <section class="bg-carbon pt-10 pb-6 px-1">
+    <div class="max-w-[1440px] mx-auto mb-6 px-8 lg:px-20">
       <SectionLabel class="text-white/60 mb-2">{t('reapertura.galleryLabel')}</SectionLabel>
     </div>
     <div class="columns-1 sm:columns-2 lg:columns-3 gap-1 px-1">
-      {fotos.map(({ src, alt }, i) => (
+      {fotosDestacadas.map(({ src, alt }, i) => (
         <div class="break-inside-avoid mb-1 overflow-hidden group">
           <img
             src={src}
@@ -123,6 +128,72 @@ const fotos = [
       ))}
     </div>
   </section>
+
+  <!-- Marquee galería -->
+  <section class="bg-carbon pb-10 overflow-hidden">
+    <div class="flex flex-col gap-1">
+
+      <!-- Fila 1: izquierda → -->
+      <div class="flex gap-1 marquee-left">
+        <div class="flex gap-1 shrink-0 marquee-track">
+          {[...fotosMarquee, ...fotosMarquee].map(({ src, alt }, i) => (
+            <div class="w-64 h-44 shrink-0 overflow-hidden">
+              <img src={src} alt={alt} class="w-full h-full object-cover" loading="lazy" />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Fila 2: derecha ← -->
+      <div class="flex gap-1 marquee-right">
+        <div class="flex gap-1 shrink-0 marquee-track">
+          {[...fotosMarquee.slice(3), ...fotosMarquee, ...fotosMarquee.slice(0, 3)].map(({ src, alt }, i) => (
+            <div class="w-64 h-44 shrink-0 overflow-hidden">
+              <img src={src} alt={alt} class="w-full h-full object-cover" loading="lazy" />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Fila 3: izquierda → -->
+      <div class="flex gap-1 marquee-left">
+        <div class="flex gap-1 shrink-0 marquee-track">
+          {[...fotosMarquee.slice(5), ...fotosMarquee, ...fotosMarquee.slice(0, 5)].map(({ src, alt }, i) => (
+            <div class="w-64 h-44 shrink-0 overflow-hidden">
+              <img src={src} alt={alt} class="w-full h-full object-cover" loading="lazy" />
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <style>
+    .marquee-left  { display: flex; }
+    .marquee-right { display: flex; }
+
+    .marquee-left .marquee-track {
+      animation: scroll-left 30s linear infinite;
+    }
+    .marquee-right .marquee-track {
+      animation: scroll-right 30s linear infinite;
+    }
+
+    @keyframes scroll-left {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    @keyframes scroll-right {
+      from { transform: translateX(-50%); }
+      to   { transform: translateX(0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-left .marquee-track,
+      .marquee-right .marquee-track { animation: none; }
+    }
+  </style>
 
   <!-- Volver + CTA -->
   <section class="bg-off-white py-20 px-8 lg:px-20">
