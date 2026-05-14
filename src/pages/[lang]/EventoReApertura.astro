@@ -117,17 +117,17 @@ const fotosMarquee = [
     </div>
     <!-- Grid editorial con tamaños alternados -->
     <div class="grid grid-cols-3 gap-1 px-1">
-      <!-- Img 1: grande 2 columnas -->
+      <!-- Slot 1: grande 2 columnas — img5 (presidente hablando) -->
       <div class="col-span-2 h-[480px] overflow-hidden group">
+        <img src={fotosDestacadas[4].src} alt={fotosDestacadas[4].alt}
+          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" loading="eager" />
+      </div>
+      <!-- Slot 2: pequeña 1 columna — img1 (intendente+presidente+luis) -->
+      <div class="col-span-1 h-[480px] overflow-hidden group">
         <img src={fotosDestacadas[0].src} alt={fotosDestacadas[0].alt}
           class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" loading="eager" />
       </div>
-      <!-- Img 2: pequeña 1 columna -->
-      <div class="col-span-1 h-[480px] overflow-hidden group">
-        <img src={fotosDestacadas[1].src} alt={fotosDestacadas[1].alt}
-          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" loading="eager" />
-      </div>
-      <!-- Imgs 3, 4, 5: tres columnas iguales medianas -->
+      <!-- Slots 3, 4, 5: tres columnas iguales — img3, img4, img2 -->
       <div class="col-span-1 h-[320px] overflow-hidden group">
         <img src={fotosDestacadas[2].src} alt={fotosDestacadas[2].alt}
           class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" loading="lazy" />
@@ -137,7 +137,7 @@ const fotosMarquee = [
           class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" loading="lazy" />
       </div>
       <div class="col-span-1 h-[320px] overflow-hidden group">
-        <img src={fotosDestacadas[4].src} alt={fotosDestacadas[4].alt}
+        <img src={fotosDestacadas[1].src} alt={fotosDestacadas[1].alt}
           class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" loading="lazy" />
       </div>
       <!-- Img 6: pequeña 1 columna -->
