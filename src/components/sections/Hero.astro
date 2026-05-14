@@ -6,23 +6,13 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 <section class="relative h-[92vh] min-h-[600px] flex items-end overflow-hidden">
-  <video
-    autoplay
-    muted
-    loop
-    playsinline
-    poster="/images/hero/hero-campo-planta.jpg"
-    class="absolute inset-0 w-full h-full object-cover object-center"
-    aria-hidden="true"
-  >
-    <source src="/videos/adelanto-vertical.mp4" type="video/mp4" />
-    <!-- Fallback para navegadores sin soporte de video -->
-    <img
-      src="/images/hero/hero-campo-planta.jpg"
-      alt="Campo y planta Frigorífico Saturno, Empalme Olmos, Uruguay"
-      class="absolute inset-0 w-full h-full object-cover object-center"
-    />
-  </video>
+  <img
+    src="/images/hero/hero-campo-planta.jpg"
+    alt="Campo y planta Frigorífico Saturno, Empalme Olmos, Uruguay"
+    class="absolute inset-0 w-full h-full object-cover object-top"
+    loading="eager"
+    decoding="async"
+  />
 
   <!-- Overlay cinematográfico -->
   <div class="absolute inset-0 bg-gradient-to-t from-carbon/85 via-carbon/30 to-carbon/10"
