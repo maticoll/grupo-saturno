@@ -323,6 +323,8 @@
     "ctaButton": "查看佛罗里达冷冻厂"
   },
   "common": {
-    "downloadBrochure": "↓ 下载宣传册"
+    "downloadBrochure": "↓ 下载宣传册",
+    "mapCaption": "我们的出口目的国",
+    "floridaCmaCaption": "佛罗里达与CMA"
   }
 }

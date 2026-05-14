@@ -322,6 +322,8 @@
     "ctaButton": "View Establecimiento Florida 365"
   },
   "common": {
-    "downloadBrochure": "↓ Download Brochure"
+    "downloadBrochure": "↓ Download Brochure",
+    "mapCaption": "Countries we export to",
+    "floridaCmaCaption": "Florida and CMA"
   }
 }
