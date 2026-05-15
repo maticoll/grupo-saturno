@@ -22,7 +22,7 @@
   "units": {
     "unit1Number": "Unidad 01",
     "unit1Title": "Establecimiento Florida 365",
-    "unit1Desc": "Establecimiento Florida 365 — Planta de faena y exportación habilitada para China, Estados Unidos y la Unión Europea. 300 vacunos por día de capacidad operativa.",
+    "unit1Desc": "Establecimiento Florida 365 — Planta de faena y exportación habilitada para China, Estados Unidos, la Unión Europea y terceros países. 300 vacunos por día de capacidad operativa.",
     "unit1Cta": "Conocer Establecimiento Florida 365",
     "unit2Number": "Unidad 02",
     "unit2Title": "Frigorífico Saturno",
@@ -33,7 +33,7 @@
     "label": "El Grupo",
     "h2": "Un grupo, una cadena completa.",
     "h2Italic": "una cadena completa.",
-    "body": "Grupo Saturno es una empresa 100% uruguaya con más de 26 años en la industria cárnica. Operamos dos plantas propias —Frigorífico Saturno en Empalme Olmos y el Establecimiento Florida 365— con habilitaciones vigentes para exportar a China (GACC), Estados Unidos (USDA) y la Unión Europea. Cada animal está identificado individualmente desde su nacimiento, en el sistema de trazabilidad más riguroso del mundo. De la faena al contenedor, sin intermediarios.",
+    "body": "Grupo Saturno es una empresa 100% uruguaya con más de 26 años en la industria cárnica. Operamos dos plantas propias —Frigorífico Saturno en Empalme Olmos y el Establecimiento Florida 365— con habilitaciones vigentes para exportar a China (GACC), Estados Unidos (USDA), la Unión Europea y terceros países. Cada animal está identificado individualmente desde su nacimiento, en el sistema de trazabilidad más riguroso del mundo. De la faena al contenedor, sin intermediarios.",
     "stat1Number": "26",
     "stat1Unit": "años",
     "stat1Desc": "de trayectoria",
@@ -49,7 +49,7 @@
     "h2": "Lo que nos mueve cada día.",
     "h2Italic": "cada día.",
     "misionLabel": "Misión",
-    "mision": "Llegar a la mesa de cada rincón del Uruguay llevando alimentos que propicien nutricion, salud, momentos de encuentro, felicidad y paz.",
+    "mision": "Llegar a la mesa de cada rincón del Mundo llevando alimentos que propicien nutricion, salud, momentos de encuentro, felicidad y paz.",
     "visionLabel": "Visión",
     "vision": "Ser una empresa que aprende y evoluciona constantemente, optimizando recursos y promoviendo un equipo humano capacitado y comprometido, con infraestructura, equipamiento acorde y un ambiente de trabajo positivo, para ofrecer soluciones integrales y adaptarlas a las necesidades de nuestros clientes.\n\nNos comprometemos con el crecimiento sostenible y la mejora continua, buscando generar un impacto positivo en nuestro equipo, clientes, colaboradores y la comunidad.\n\nAspiramos a seguir siendo reconocidos por nuestra empatía, seriedad y confianza, valores fundamentales y no negociables, fortaleciendo relaciones estratégicas y duraderas con todos los actores involucrados, manteniendo un espíritu competitivo.",
     "valores": [
