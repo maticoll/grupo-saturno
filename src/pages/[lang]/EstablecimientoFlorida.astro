@@ -97,24 +97,59 @@ const markets = JSON.parse(t('florida.markets')) as Array<{
           />
         </div>
       </div>
-      <div class="grid grid-cols-2 gap-2">
-        <div class="overflow-hidden">
-          <img
-            src="/images/linea-procesado-2.jpg"
-            alt="Línea de procesado — Establecimiento Florida 365, Grupo Saturno"
-            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-            loading="lazy"
-          />
+      <!-- Carrusel vertical: izquierda sube, derecha baja -->
+      <div class="grid grid-cols-2 gap-2 h-[520px] lg:h-[640px] overflow-hidden">
+        <!-- Columna izquierda: sube -->
+        <div class="vert-clip">
+          <div class="vert-track vert-up">
+            {[
+              '/images/verticales/Mesa de trabajo 1.webp',
+              '/images/verticales/Mesa de trabajo 3.webp',
+              '/images/verticales/Mesa de trabajo 5.webp',
+              '/images/verticales/Mesa de trabajo 7.webp',
+              '/images/verticales/Mesa de trabajo 9.webp',
+              '/images/verticales/Mesa de trabajo 11.webp',
+              '/images/verticales/Mesa de trabajo 13.webp',
+              '/images/verticales/Mesa de trabajo 15.webp',
+            ].flatMap(src => [src, src]).map((src, i) => (
+              <div class="vert-item">
+                <img src={src} alt="Establecimiento Florida 365 — Grupo Saturno" class="w-full h-full object-cover" loading="lazy" />
+              </div>
+            ))}
+          </div>
         </div>
-        <div class="overflow-hidden">
-          <img
-            src="/images/fotos/IMG_9407.jpeg"
-            alt="Cortes vacunos al vacío — Establecimiento Florida 365, Grupo Saturno"
-            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-            loading="lazy"
-          />
+        <!-- Columna derecha: baja -->
+        <div class="vert-clip">
+          <div class="vert-track vert-down">
+            {[
+              '/images/verticales/Mesa de trabajo 2.webp',
+              '/images/verticales/Mesa de trabajo 4.webp',
+              '/images/verticales/Mesa de trabajo 6.webp',
+              '/images/verticales/Mesa de trabajo 8.webp',
+              '/images/verticales/Mesa de trabajo 10.webp',
+              '/images/verticales/Mesa de trabajo 12.webp',
+              '/images/verticales/Mesa de trabajo 14.webp',
+            ].flatMap(src => [src, src]).map((src, i) => (
+              <div class="vert-item">
+                <img src={src} alt="Establecimiento Florida 365 — Grupo Saturno" class="w-full h-full object-cover" loading="lazy" />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
+
+      <style>
+        .vert-clip { overflow: hidden; height: 100%; }
+        .vert-track { display: flex; flex-direction: column; gap: 8px; }
+        .vert-item { width: 100%; aspect-ratio: 3/4; flex-shrink: 0; overflow: hidden; }
+        .vert-up   { animation: vert-scroll-up   28s linear infinite; }
+        .vert-down { animation: vert-scroll-down 28s linear infinite; }
+        @keyframes vert-scroll-up   { from { transform: translateY(0); } to { transform: translateY(-50%); } }
+        @keyframes vert-scroll-down { from { transform: translateY(-50%); } to { transform: translateY(0); } }
+        @media (prefers-reduced-motion: reduce) {
+          .vert-up, .vert-down { animation: none; }
+        }
+      </style>
     </div>
   </section>
 
