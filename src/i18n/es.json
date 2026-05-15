@@ -12,7 +12,7 @@
     "zh": "中文"
   },
   "hero": {
-    "kicker": "Empalme Olmos, Uruguay · Est. 1990",
+    "kicker": "Uruguay · Est. 1990",
     "h1": "36 años aprendiendo y creciendo.",
     "h1Italic": "y creciendo.",
     "lead": "Grupo Saturno integra producción ganadera, procesamiento frigorífico y comercialización. Un socio confiable para quienes entienden que la calidad se construye en cada eslabón.",
@@ -33,7 +33,7 @@
     "label": "El Grupo",
     "h2": "Un grupo, una cadena completa.",
     "h2Italic": "una cadena completa.",
-    "body": "Grupo Saturno es una empresa 100% uruguaya con más de 36 años en la industria cárnica. Operamos dos plantas propias —Frigorífico Saturno en Empalme Olmos y el Establecimiento Florida 365— con habilitaciones vigentes para exportar a China (GACC), Estados Unidos (USDA), la Unión Europea y terceros países. Cada animal está identificado individualmente desde su nacimiento, en el sistema de trazabilidad más riguroso del mundo. De la faena al mundo, sin intermediarios.",
+    "body": "Grupo Saturno es una empresa 100% uruguaya con más de 36 años en la industria cárnica. Operamos dos plantas propias —Frigorífico Saturno y el Establecimiento Florida 365— con habilitaciones vigentes para exportar a China (GACC), Estados Unidos (USDA), la Unión Europea y terceros países. Cada animal está identificado individualmente desde su nacimiento, en el sistema de trazabilidad más riguroso del mundo. De la faena al mundo, sin intermediarios.",
     "stat1Number": "36",
     "stat1Unit": "años",
     "stat1Desc": "de trayectoria",
@@ -101,7 +101,7 @@
     "label": "Cómo trabajamos",
     "h2": "Un proveedor.",
     "h2Italic": "Toda la cadena.",
-    "body1": "Nuestro ganado pasta en campos propios en Uruguay. La faena ocurre en el Establecimiento Florida 365. El procesamiento, el desosado y el envasado al vacío suceden en nuestra planta de Empalme Olmos. La distribución la coordinamos nosotros. El importador no negocia con un trader — negocia directamente con quien conoce el animal desde su nacimiento.",
+    "body1": "Nuestro ganado pasta en campos propios en Uruguay. La faena ocurre en el Establecimiento Florida 365. El procesamiento, el desosado y el envasado al vacío suceden en nuestra planta industrial. La distribución la coordinamos nosotros. El importador no negocia con un trader — negocia directamente con quien conoce el animal desde su nacimiento.",
     "body2": "Eso es lo que significa integración vertical en la práctica. No como concepto de marketing, sino como algo que cambia el precio, el control y la trazabilidad de cada kilo que sale de nuestras plantas.",
     "fact1": "Faena propia",
     "fact2": "Procesamiento propio",
@@ -139,7 +139,7 @@
     "h2Italic": "a largo plazo.",
     "lead": "Si representás una empresa importadora, distribuidora o del sector alimenticio, te invitamos a conocernos en profundidad.",
     "locationLabel": "Ubicación",
-    "location": "Empalme Olmos, Canelones, Uruguay",
+    "location": "Uruguay",
     "emailLabel": "Email",
     "email": "exportaciones@frigorificoflorida.uy",
     "linkedinLabel": "LinkedIn",
@@ -163,11 +163,11 @@
     "legalTitle": "Legal",
     "legal": "Aviso legal",
     "privacy": "Privacidad",
-    "copyright": "© 2026 Grupo Saturno · Empalme Olmos, Uruguay"
+    "copyright": "© 2026 Grupo Saturno · Uruguay"
   },
   "meta": {
     "homeTitle": "Grupo Saturno — Producción y Procesamiento Cárnico | Uruguay",
-    "homeDesc": "36 años de trayectoria en ganadería, procesamiento frigorífico y comercialización internacional. Empalme Olmos, Uruguay.",
+    "homeDesc": "36 años de trayectoria en ganadería, procesamiento frigorífico y comercialización internacional. Uruguay.",
     "floridaTitle": "Establecimiento Florida 365 — Grupo Saturno | Procesamiento Cárnico Uruguay",
     "floridaDesc": "Establecimiento Florida, Unidad 01 de Grupo Saturno. Planta frigorífica en Florida, Uruguay. Procesamiento especializado, exportación y trazabilidad completa.",
     "saturnoTitle": "Frigorífico Saturno — Grupo Saturno",
