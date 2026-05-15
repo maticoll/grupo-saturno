@@ -87,33 +87,31 @@ const markets = JSON.parse(t('florida.markets')) as Array<{
             </div>
           ))}
         </div>
-      </div>
-      <div class="grid grid-cols-1 gap-2">
-        <div class="aspect-[16/9] overflow-hidden">
+        <div class="mt-2 overflow-hidden">
           <img
             src="/images/florida-entrada.jpg"
             alt="Entrada Establecimiento Florida — Grupo Saturno, Florida, Uruguay"
+            class="w-full aspect-[16/9] object-cover hover:scale-105 transition-transform duration-700"
+            loading="lazy"
+          />
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-2">
+        <div class="overflow-hidden">
+          <img
+            src="/images/linea-procesado-2.jpg"
+            alt="Línea de procesado — Establecimiento Florida 365, Grupo Saturno"
             class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
             loading="lazy"
           />
         </div>
-        <div class="grid grid-cols-2 gap-2">
-          <div class="aspect-[4/3] overflow-hidden">
-            <img
-              src="/images/linea-procesado-2.jpg"
-              alt="Línea de procesado — Establecimiento Florida 365, Grupo Saturno"
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-              loading="lazy"
-            />
-          </div>
-          <div class="aspect-[4/3] overflow-hidden">
-            <img
-              src="/images/fotos/IMG_9407.jpeg"
-              alt="Cortes vacunos al vacío — Establecimiento Florida 365, Grupo Saturno"
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-              loading="lazy"
-            />
-          </div>
+        <div class="overflow-hidden">
+          <img
+            src="/images/fotos/IMG_9407.jpeg"
+            alt="Cortes vacunos al vacío — Establecimiento Florida 365, Grupo Saturno"
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+            loading="lazy"
+          />
         </div>
       </div>
     </div>
