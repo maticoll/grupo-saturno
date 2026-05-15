@@ -102,38 +102,44 @@ const markets = JSON.parse(t('florida.markets')) as Array<{
         <!-- Columna izquierda: sube -->
         <div class="vert-clip">
           <div class="vert-track vert-up">
-            {[
-              '/images/verticales/Mesa de trabajo 1.webp',
-              '/images/verticales/Mesa de trabajo 3.webp',
-              '/images/verticales/Mesa de trabajo 5.webp',
-              '/images/verticales/Mesa de trabajo 7.webp',
-              '/images/verticales/Mesa de trabajo 9.webp',
-              '/images/verticales/Mesa de trabajo 11.webp',
-              '/images/verticales/Mesa de trabajo 13.webp',
-              '/images/verticales/Mesa de trabajo 15.webp',
-            ].flatMap(src => [src, src]).map((src, i) => (
-              <div class="vert-item">
-                <img src={src} alt="Establecimiento Florida 365 — Grupo Saturno" class="w-full h-full object-cover" loading="lazy" />
-              </div>
-            ))}
+            {(() => {
+              const imgs = [
+                '/images/verticales/Mesa de trabajo 1.webp',
+                '/images/verticales/Mesa de trabajo 3.webp',
+                '/images/verticales/Mesa de trabajo 5.webp',
+                '/images/verticales/Mesa de trabajo 7.webp',
+                '/images/verticales/Mesa de trabajo 9.webp',
+                '/images/verticales/Mesa de trabajo 11.webp',
+                '/images/verticales/Mesa de trabajo 13.webp',
+                '/images/verticales/Mesa de trabajo 15.webp',
+              ];
+              return [...imgs, ...imgs].map((src, i) => (
+                <div class="vert-item">
+                  <img src={src} alt="Establecimiento Florida 365 — Grupo Saturno" class="w-full h-full object-cover" loading="lazy" />
+                </div>
+              ));
+            })()}
           </div>
         </div>
         <!-- Columna derecha: baja -->
         <div class="vert-clip">
           <div class="vert-track vert-down">
-            {[
-              '/images/verticales/Mesa de trabajo 2.webp',
-              '/images/verticales/Mesa de trabajo 4.webp',
-              '/images/verticales/Mesa de trabajo 6.webp',
-              '/images/verticales/Mesa de trabajo 8.webp',
-              '/images/verticales/Mesa de trabajo 10.webp',
-              '/images/verticales/Mesa de trabajo 12.webp',
-              '/images/verticales/Mesa de trabajo 14.webp',
-            ].flatMap(src => [src, src]).map((src, i) => (
-              <div class="vert-item">
-                <img src={src} alt="Establecimiento Florida 365 — Grupo Saturno" class="w-full h-full object-cover" loading="lazy" />
-              </div>
-            ))}
+            {(() => {
+              const imgs = [
+                '/images/verticales/Mesa de trabajo 2.webp',
+                '/images/verticales/Mesa de trabajo 4.webp',
+                '/images/verticales/Mesa de trabajo 6.webp',
+                '/images/verticales/Mesa de trabajo 8.webp',
+                '/images/verticales/Mesa de trabajo 10.webp',
+                '/images/verticales/Mesa de trabajo 12.webp',
+                '/images/verticales/Mesa de trabajo 14.webp',
+              ];
+              return [...imgs, ...imgs].map((src, i) => (
+                <div class="vert-item">
+                  <img src={src} alt="Establecimiento Florida 365 — Grupo Saturno" class="w-full h-full object-cover" loading="lazy" />
+                </div>
+              ));
+            })()}
           </div>
         </div>
       </div>
