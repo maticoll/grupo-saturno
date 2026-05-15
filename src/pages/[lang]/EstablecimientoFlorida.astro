@@ -97,8 +97,8 @@ const markets = JSON.parse(t('florida.markets')) as Array<{
           />
         </div>
       </div>
-      <!-- Carrusel vertical: izquierda sube, derecha baja -->
-      <div class="grid grid-cols-2 gap-2 overflow-hidden h-full min-h-[400px]">
+      <!-- Carrusel vertical: izquierda sube, derecha baja — muestra 2.25 fotos -->
+      <div class="grid grid-cols-2 gap-2 vert-outer">
         <!-- Columna izquierda: sube -->
         <div class="vert-clip">
           <div class="vert-track vert-up">
@@ -145,11 +145,13 @@ const markets = JSON.parse(t('florida.markets')) as Array<{
       </div>
 
       <style>
-        .vert-clip { overflow: hidden; height: 100%; }
+        /* Altura de cada foto: 220px. Contenedor muestra 2.25 fotos: 220*2.25 + 8*2 = 511px */
+        .vert-outer { gap: 8px; }
+        .vert-clip  { overflow: hidden; height: 511px; }
         .vert-track { display: flex; flex-direction: column; gap: 8px; }
-        .vert-item { width: 100%; aspect-ratio: 3/4; flex-shrink: 0; overflow: hidden; }
-        .vert-up   { animation: vert-scroll-up   28s linear infinite; }
-        .vert-down { animation: vert-scroll-down 28s linear infinite; }
+        .vert-item  { width: 100%; height: 220px; flex-shrink: 0; overflow: hidden; }
+        .vert-up    { animation: vert-scroll-up   28s linear infinite; }
+        .vert-down  { animation: vert-scroll-down 28s linear infinite; }
         @keyframes vert-scroll-up   { from { transform: translateY(0); } to { transform: translateY(-50%); } }
         @keyframes vert-scroll-down { from { transform: translateY(-50%); } to { transform: translateY(0); } }
         @media (prefers-reduced-motion: reduce) {
