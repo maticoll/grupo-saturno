@@ -12,7 +12,7 @@
     "zh": "中文"
   },
   "hero": {
-    "kicker": "Empalme Olmos, Uruguay · Est. 1998",
+    "kicker": "Empalme Olmos, Uruguay · Est. 1990",
     "h1": "36 años aprendiendo y creciendo.",
     "h1Italic": "y creciendo.",
     "lead": "Grupo Saturno integra producción ganadera, procesamiento frigorífico y comercialización. Un socio confiable para quienes entienden que la calidad se construye en cada eslabón.",
@@ -33,16 +33,16 @@
     "label": "El Grupo",
     "h2": "Un grupo, una cadena completa.",
     "h2Italic": "una cadena completa.",
-    "body": "Grupo Saturno es una empresa 100% uruguaya con más de 26 años en la industria cárnica. Operamos dos plantas propias —Frigorífico Saturno en Empalme Olmos y el Establecimiento Florida 365— con habilitaciones vigentes para exportar a China (GACC), Estados Unidos (USDA), la Unión Europea y terceros países. Cada animal está identificado individualmente desde su nacimiento, en el sistema de trazabilidad más riguroso del mundo. De la faena al contenedor, sin intermediarios.",
-    "stat1Number": "26",
+    "body": "Grupo Saturno es una empresa 100% uruguaya con más de 36 años en la industria cárnica. Operamos dos plantas propias —Frigorífico Saturno en Empalme Olmos y el Establecimiento Florida 365— con habilitaciones vigentes para exportar a China (GACC), Estados Unidos (USDA), la Unión Europea y terceros países. Cada animal está identificado individualmente desde su nacimiento, en el sistema de trazabilidad más riguroso del mundo. De la faena al mundo, sin intermediarios.",
+    "stat1Number": "36",
     "stat1Unit": "años",
     "stat1Desc": "de trayectoria",
     "stat2Number": "100%",
     "stat2Unit": "trazabilidad",
     "stat2Desc": "origen al producto final",
-    "stat3Number": "3",
+    "stat3Number": "4+",
     "stat3Unit": "mercados",
-    "stat3Desc": "China · EE.UU. · Unión Europea"
+    "stat3Desc": "China · EE.UU. · UE · Terceros países"
   },
   "mvv": {
     "label": "Propósito",
@@ -113,13 +113,13 @@
     "items": [
       {
         "n": "01",
-        "title": "De la faena al contenedor, dentro del grupo",
+        "title": "Del origen al mundo, dentro del grupo",
         "text": "El Establecimiento Florida 365 es nuestra planta de faena propia. Producimos, procesamos y exportamos sin ceder el control a terceros. Un solo interlocutor, trazabilidad real en cada etapa."
       },
       {
         "n": "02",
-        "title": "Tres mercados, tres estándares. Un solo proveedor.",
-        "text": "Habilitados para exportar a China (GACC), Estados Unidos (USDA) y la Unión Europea. No es un objetivo: son aprobaciones activas. Si tu mercado es uno de ellos, ya cumplimos sus exigencias."
+        "title": "Cuatro mercados. Un solo proveedor.",
+        "text": "Habilitados para exportar a China (GACC), Estados Unidos (USDA), la Unión Europea y terceros países. Son aprobaciones activas, no objetivos. Si tu mercado es uno de ellos, ya cumplimos sus exigencias."
       },
       {
         "n": "03",
@@ -141,7 +141,7 @@
     "locationLabel": "Ubicación",
     "location": "Empalme Olmos, Canelones, Uruguay",
     "emailLabel": "Email",
-    "email": "[A CONFIRMAR CON CLIENTE]",
+    "email": "exportaciones@frigorificoflorida.uy",
     "linkedinLabel": "LinkedIn",
     "linkedin": "/grupo-saturno",
     "fieldName": "Nombre",
@@ -157,7 +157,7 @@
     "submit": "Enviar consulta →"
   },
   "footer": {
-    "desc": "Empresa uruguaya con 26 años de trayectoria en producción, procesamiento y comercialización de carne.",
+    "desc": "Empresa uruguaya con 36 años de trayectoria en producción, procesamiento y comercialización de carne.",
     "navTitle": "Navegación",
     "unitsTitle": "Unidades",
     "legalTitle": "Legal",
@@ -167,7 +167,7 @@
   },
   "meta": {
     "homeTitle": "Grupo Saturno — Producción y Procesamiento Cárnico | Uruguay",
-    "homeDesc": "26 años de trayectoria en ganadería, procesamiento frigorífico y comercialización internacional. Empalme Olmos, Uruguay.",
+    "homeDesc": "36 años de trayectoria en ganadería, procesamiento frigorífico y comercialización internacional. Empalme Olmos, Uruguay.",
     "floridaTitle": "Establecimiento Florida 365 — Grupo Saturno | Procesamiento Cárnico Uruguay",
     "floridaDesc": "Establecimiento Florida, Unidad 01 de Grupo Saturno. Planta frigorífica en Florida, Uruguay. Procesamiento especializado, exportación y trazabilidad completa.",
     "saturnoTitle": "Frigorífico Saturno — Grupo Saturno",
@@ -180,7 +180,7 @@
     "heroDesc": "Establecimiento especializado en procesamiento y exportación de carne vacuna. Florida, Uruguay.",
     "presentationLabel": "Presentación",
     "presentationH2": "Especialización y capacidad de escala",
-    "presentationBody": "El Establecimiento Florida 365 es la planta de faena propia de Grupo Saturno, adquirida en 2025 y reinaugurada en marzo de 2026. Con habilitaciones activas para exportar a China, Estados Unidos y la Unión Europea, es el eslabón que completa la integración vertical del grupo: del campo al contenedor, sin intermediarios.",
+    "presentationBody": "El Establecimiento Florida 365 es la planta de faena propia de Grupo Saturno, adquirida en 2025 y reinaugurada en marzo de 2026. Con habilitaciones activas para exportar a China, Estados Unidos y la Unión Europea, es el eslabón que completa la integración vertical del grupo: del campo al mundo, sin intermediarios.",
     "stat1Label": "Capacidad",
     "stat1Value": "300 vacunos / día",
     "stat2Label": "Empleos directos",
@@ -190,7 +190,7 @@
     "stat4Label": "Habilitaciones",
     "stat4Value": "GACC · USDA · UE",
     "marketsLabel": "Habilitaciones de exportación",
-    "marketsH2": "Tres mercados. Tres estándares.",
+    "marketsH2": "Cuatro mercados. Cuatro estándares.",
     "marketsH2Italic": "Un solo proveedor.",
     "markets": [
       {
@@ -225,15 +225,33 @@
     "heroKicker": "Unidad 02 · Grupo Saturno",
     "presentationLabel": "Presentación",
     "presentationH2": "Núcleo productivo del grupo",
-    "presentationBody1": "Fundado en 1998, Frigorífico Saturno es una empresa 100% nacional con planta industrial inaugurada en 2009, ubicada en Ruta 8 Km 38, Empalme Olmos, Canelones. Producción y procesamiento integrados con trazabilidad desde el origen.",
+    "presentationBody1": "Fundado en 1990, Frigorífico Saturno es una empresa 100% nacional con planta industrial inaugurada en 2009, ubicada en Ruta 8 Km 38, Empalme Olmos, Canelones. Producción y procesamiento integrados con trazabilidad desde el origen.",
     "presentationBody2": "\"Desde el inicio la razón de ser Frigorífico Saturno: ADN Uruguayo.\"",
     "stats": [
-      { "value": "+20", "label": "Años de trayectoria" },
-      { "value": "2.183", "label": "m² planta industrial" },
-      { "value": "5.000+", "label": "Toneladas / año" },
-      { "value": "100", "label": "Empleados nacionales" },
-      { "value": "15", "label": "Vehículos de distribución" },
-      { "value": "8+", "label": "Departamentos cubiertos" }
+      {
+        "value": "+20",
+        "label": "Años de trayectoria"
+      },
+      {
+        "value": "2.183",
+        "label": "m² planta industrial"
+      },
+      {
+        "value": "5.000+",
+        "label": "Toneladas / año"
+      },
+      {
+        "value": "100",
+        "label": "Empleados nacionales"
+      },
+      {
+        "value": "15",
+        "label": "Vehículos de distribución"
+      },
+      {
+        "value": "8+",
+        "label": "Departamentos cubiertos"
+      }
     ],
     "distLabel": "Distribución",
     "distH2": "Cobertura nacional propia",
@@ -279,12 +297,36 @@
     "pilaresLabel": "Pilares Estratégicos",
     "pilaresH2": "Los seis ejes que nos definen",
     "pilares": [
-      { "num": "01", "title": "El Productor", "desc": "Proveedor originario con quien compartimos criterios, bonanzas y avatares de la industria." },
-      { "num": "02", "title": "El Cliente", "desc": "Gran objetivo. Enfoque en el mercado local con la mayor calidad disponible." },
-      { "num": "03", "title": "El Trabajador", "desc": "Mejor ámbito laboral, alta capacitación y máximo compromiso del equipo." },
-      { "num": "04", "title": "El Entorno Social", "desc": "Buenos servidores en el radio comarcal y en todo el país." },
-      { "num": "05", "title": "El Conocimiento", "desc": "Mayor responsabilidad y capacitación constante como motor de crecimiento." },
-      { "num": "06", "title": "Economía Saludable", "desc": "Rentabilidad que se convierte en inversión, desarrollo y planes a ejecutar." }
+      {
+        "num": "01",
+        "title": "El Productor",
+        "desc": "Proveedor originario con quien compartimos criterios, bonanzas y avatares de la industria."
+      },
+      {
+        "num": "02",
+        "title": "El Cliente",
+        "desc": "Gran objetivo. Enfoque en el mercado local con la mayor calidad disponible."
+      },
+      {
+        "num": "03",
+        "title": "El Trabajador",
+        "desc": "Mejor ámbito laboral, alta capacitación y máximo compromiso del equipo."
+      },
+      {
+        "num": "04",
+        "title": "El Entorno Social",
+        "desc": "Buenos servidores en el radio comarcal y en todo el país."
+      },
+      {
+        "num": "05",
+        "title": "El Conocimiento",
+        "desc": "Mayor responsabilidad y capacitación constante como motor de crecimiento."
+      },
+      {
+        "num": "06",
+        "title": "Economía Saludable",
+        "desc": "Rentabilidad que se convierte en inversión, desarrollo y planes a ejecutar."
+      }
     ],
     "identityLabel": "Identidad",
     "identityH2": "ADN Uruguayo",

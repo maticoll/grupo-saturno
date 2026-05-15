@@ -1,6 +1,7 @@
 ---
 import SubLandingLayout from '../../layouts/SubLandingLayout.astro';
 import SectionLabel from '../../components/ui/SectionLabel.astro';
+import CadenaValor from '../../components/sections/CadenaValor.astro';
 import ContactoComercial from '../../components/sections/ContactoComercial.astro';
 import { getLangFromUrl, useTranslations, languages } from '../../i18n/index';
 
@@ -129,6 +130,8 @@ const markets = JSON.parse(t('florida.markets')) as Array<{
       <p class="font-serif text-[0.8rem] tracking-[0.08em] text-carbon/60 mt-2 italic">{t('common.mapCaption')}</p>
     </div>
   </section>
+
+  <CadenaValor />
 
   <!-- Tres mercados -->
   <section class="bg-white py-24 px-8 lg:px-20">
