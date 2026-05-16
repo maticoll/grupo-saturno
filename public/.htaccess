@@ -1,0 +1,5 @@
+<Files ".env">
+    <RequireAll>
+        Require all denied
+    </RequireAll>
+</Files>
