@@ -9,7 +9,7 @@ Landing page institucional trilingüe para [GrupoSaturno.com.uy](https://gruposa
 - **Interactividad:** Alpine.js
 - **i18n:** Astro i18n nativo — rutas `/es/`, `/en/`, `/zh/`
 - **Tipografía:** Cormorant Garamond + Inter + Noto SC (zh)
-- **Formulario:** Formspree (endpoint pendiente de configurar)
+- **Formulario:** PHP + PHPMailer 7.1.0 + SMTP de NTY (vendored en `public/PHPMailer/`)
 
 ## Correr en local
 
@@ -54,5 +54,25 @@ Ver `ASSETS-TODO.md` para imágenes a proveer.
 
 ## Deploy
 
-Compatible con Vercel, Netlify y Cloudflare Pages.
-Output: carpeta `dist/` con HTML estático puro.
+Hosting destino: **NTY (cPanel + Apache + PHP 8.1+)**.
+Subir el contenido de `dist/` por FTP a la raíz del dominio.
+El formulario de contacto requiere PHP en el servidor — Vercel/Netlify/Cloudflare Pages NO sirven (no ejecutan PHP).
+
+### Variables de entorno en producción
+
+Setearlas en cPanel ➜ "Setup PHP" ➜ "Environment Variables", o subir un `.env` junto a `contacto.php` en la raíz del dist.
+Ver `.env.example` para la lista completa. El `.htaccess` ya bloquea el acceso HTTP a `.env`.
+
+## Testing del formulario de contacto en local
+
+`astro dev` no ejecuta PHP. Para probar el endpoint end-to-end:
+
+```bash
+npm run build
+cp .env.example dist/.env       # completar las credenciales reales antes
+php -S localhost:8000 -t dist
+```
+
+Abrir `http://localhost:8000/es/`, completar el form y enviarlo.
+Requiere PHP 8.1+ instalado y en el PATH (Windows: `winget install --id PHP.PHP`).
+Alternativas: Laragon o XAMPP si preferís Apache real (más cerca del entorno NTY).
