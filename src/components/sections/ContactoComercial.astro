@@ -3,6 +3,31 @@ import SectionLabel from '../ui/SectionLabel.astro';
 import { getLangFromUrl, useTranslations } from '../../i18n/index';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+const fields = [
+  { key: 'Name',    max: 80  },
+  { key: 'Company', max: 120 },
+  { key: 'Country', max: 80  },
+  { key: 'Email',   max: 120 },
+];
+
+const i18nData = {
+  submit: t('contact.submit'),
+  sending: t('contact.statusSending'),
+  success: t('contact.statusSuccess'),
+  network: t('contact.errorNetwork'),
+  errors: {
+    missing_fields:     t('contact.errorMissingFields'),
+    invalid_email:      t('contact.errorInvalidEmail'),
+    too_long:           t('contact.errorTooLong'),
+    invalid_input:      t('contact.errorInvalidInput'),
+    method_not_allowed: t('contact.errorMethodNotAllowed'),
+    send_failed:        t('contact.errorSendFailed'),
+    server_error:       t('contact.errorServerError'),
+  },
+};
+
+const formLang = Astro.currentLocale ?? 'es';
 ---
 <section id="contacto" class="bg-[#141410] py-28 px-8 lg:px-20">
   <div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
@@ -22,27 +47,62 @@ const t = useTranslations(lang);
       </div>
     </div>
 
-    {/* TODO: Replace PLACEHOLDER with the real Formspree form ID before go-live */}
     <form
-      x-data="{ submitted: false }"
-      @submit.prevent="submitted = true; $el.submit()"
-      action="https://formspree.io/f/PLACEHOLDER"
+      x-data={`{
+        status: 'idle',
+        msg: '',
+        i18n: ${JSON.stringify(i18nData)},
+        async submit(e) {
+          this.status = 'sending';
+          this.msg = this.i18n.sending;
+          try {
+            const res = await fetch('/contacto.php', {
+              method: 'POST',
+              body: new FormData(e.target),
+              headers: { 'Accept': 'application/json' },
+            });
+            const data = await res.json().catch(() => ({ ok: false, error: 'server_error' }));
+            if (data.ok) {
+              this.status = 'success';
+              this.msg = this.i18n.success;
+              e.target.reset();
+            } else {
+              this.status = 'error';
+              this.msg = this.i18n.errors[data.error] || this.i18n.errors.server_error;
+            }
+          } catch (err) {
+            this.status = 'error';
+            this.msg = this.i18n.network;
+          }
+        }
+      }`}
+      @submit.prevent="submit($event)"
+      action="/contacto.php"
       method="POST"
+      novalidate
       class="scroll-reveal"
       style="transition-delay: 100ms"
     >
+      <input type="hidden" name="lang" value={formLang} />
+
+      <div aria-hidden="true" style="position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden;">
+        <label for="contact-website">Website</label>
+        <input id="contact-website" type="text" name="website" tabindex="-1" autocomplete="off" />
+      </div>
+
       <div class="grid grid-cols-2 gap-px bg-white/[0.06] mb-px">
-        {['Name', 'Company', 'Country', 'Email'].map((field) => (
+        {fields.map(({ key, max }) => (
           <div class="bg-white/[0.03] px-5 py-4">
-            <label for={`contact-${field.toLowerCase()}`} class="font-sans text-[0.6rem] tracking-[0.15em] uppercase text-white/25 block mb-2">
-              {t(`contact.field${field}`)}
+            <label for={`contact-${key.toLowerCase()}`} class="font-sans text-[0.6rem] tracking-[0.15em] uppercase text-white/25 block mb-2">
+              {t(`contact.field${key}`)}
             </label>
             <input
-              id={`contact-${field.toLowerCase()}`}
-              type={field === 'Email' ? 'email' : 'text'}
-              name={field.toLowerCase()}
+              id={`contact-${key.toLowerCase()}`}
+              type={key === 'Email' ? 'email' : 'text'}
+              name={key.toLowerCase()}
               required
-              placeholder={t(`contact.field${field}Placeholder`)}
+              maxlength={max}
+              placeholder={t(`contact.field${key}Placeholder`)}
               class="font-sans text-[0.8rem] font-light text-white/50 bg-transparent border-none outline-none w-full border-b border-white/[0.08] pb-1 placeholder:text-white/20"
             />
           </div>
@@ -57,16 +117,25 @@ const t = useTranslations(lang);
           name="message"
           rows="4"
           required
+          maxlength="3000"
           placeholder={t('contact.fieldMessagePlaceholder')}
           class="font-sans text-[0.8rem] font-light text-white/50 bg-transparent border-none outline-none w-full border-b border-white/[0.08] pb-1 placeholder:text-white/20 resize-none"
         ></textarea>
       </div>
       <button
         type="submit"
-        class="w-full bg-burgundy text-white font-sans text-[0.72rem] font-medium tracking-[0.12em] uppercase py-4 mt-4 hover:bg-burgundy-light transition-colors duration-200"
+        :disabled="status === 'sending'"
+        class="w-full bg-burgundy text-white font-sans text-[0.72rem] font-medium tracking-[0.12em] uppercase py-4 mt-4 hover:bg-burgundy-light transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        {t('contact.submit')}
+        <span x-text="status === 'sending' ? i18n.sending : i18n.submit">{t('contact.submit')}</span>
       </button>
+      <p
+        aria-live="polite"
+        x-show="msg !== ''"
+        x-text="msg"
+        :class="status === 'success' ? 'text-emerald-400/70' : status === 'error' ? 'text-rose-400/70' : 'text-white/40'"
+        class="font-sans text-[0.72rem] mt-4 min-h-[1em]"
+      ></p>
     </form>
   </div>
 </section>
