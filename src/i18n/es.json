@@ -154,7 +154,17 @@
     "fieldCountryPlaceholder": "País de origen",
     "fieldEmailPlaceholder": "correo@empresa.com",
     "fieldMessagePlaceholder": "¿En qué podemos ayudarte?",
-    "submit": "Enviar consulta →"
+    "submit": "Enviar consulta →",
+    "statusSending": "Enviando…",
+    "statusSuccess": "¡Mensaje enviado! Te respondemos a la brevedad.",
+    "errorMissingFields": "Completá todos los campos requeridos.",
+    "errorInvalidEmail": "Revisá la dirección de email.",
+    "errorTooLong": "Alguno de los campos excede el largo máximo.",
+    "errorInvalidInput": "Hay caracteres no permitidos en algún campo.",
+    "errorMethodNotAllowed": "Método no permitido.",
+    "errorSendFailed": "No pudimos enviar el mensaje. Probá de nuevo en unos minutos.",
+    "errorServerError": "Hubo un problema en el servidor. Probá de nuevo en unos minutos.",
+    "errorNetwork": "No pudimos contactar al servidor. Revisá tu conexión."
   },
   "footer": {
     "desc": "Empresa uruguaya con 36 años de trayectoria en producción, procesamiento y comercialización de carne.",

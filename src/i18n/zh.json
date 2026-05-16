@@ -155,7 +155,17 @@
     "fieldCountryPlaceholder": "所在国家",
     "fieldEmailPlaceholder": "mail@company.com",
     "fieldMessagePlaceholder": "请问有什么可以帮助您？",
-    "submit": "发送询盘 →"
+    "submit": "发送询盘 →",
+    "statusSending": "正在发送…",
+    "statusSuccess": "消息已发送！我们会尽快回复您。",
+    "errorMissingFields": "请填写所有必填字段。",
+    "errorInvalidEmail": "请检查电子邮件地址。",
+    "errorTooLong": "某个字段超出了最大长度。",
+    "errorInvalidInput": "某个字段包含不允许的字符。",
+    "errorMethodNotAllowed": "方法不允许。",
+    "errorSendFailed": "无法发送消息，请稍后再试。",
+    "errorServerError": "服务器出现问题，请稍后再试。",
+    "errorNetwork": "无法连接到服务器，请检查您的网络连接。"
   },
   "footer": {
     "desc": "一家拥有36年历史的乌拉圭企业，专注于牛肉的生产、加工与商业销售。",

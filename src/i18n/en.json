@@ -154,7 +154,17 @@
     "fieldCountryPlaceholder": "Country of origin",
     "fieldEmailPlaceholder": "mail@company.com",
     "fieldMessagePlaceholder": "How can we assist you?",
-    "submit": "Send enquiry →"
+    "submit": "Send enquiry →",
+    "statusSending": "Sending…",
+    "statusSuccess": "Message sent! We will get back to you shortly.",
+    "errorMissingFields": "Please complete all required fields.",
+    "errorInvalidEmail": "Please check the email address.",
+    "errorTooLong": "One of the fields exceeds the maximum length.",
+    "errorInvalidInput": "Some field contains characters that are not allowed.",
+    "errorMethodNotAllowed": "Method not allowed.",
+    "errorSendFailed": "We could not send the message. Please try again in a few minutes.",
+    "errorServerError": "There was a server problem. Please try again in a few minutes.",
+    "errorNetwork": "We could not reach the server. Please check your connection."
   },
   "footer": {
     "desc": "A Uruguayan company with 36 years of experience in the production, processing, and commercialization of beef.",
