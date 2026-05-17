@@ -115,7 +115,7 @@ const markets = JSON.parse(t('florida.markets')) as Array<{
               ];
               return [...imgs, ...imgs].map((src, i) => (
                 <div class="vert-item">
-                  <img src={src} alt="Establecimiento Florida 365 — Grupo Saturno" class="w-full h-auto block" loading="lazy" />
+                  <img src={src} alt="Establecimiento Florida 365 — Grupo Saturno" class="w-full h-auto block" loading="eager" />
                 </div>
               ));
             })()}
@@ -136,7 +136,7 @@ const markets = JSON.parse(t('florida.markets')) as Array<{
               ];
               return [...imgs, ...imgs].map((src, i) => (
                 <div class="vert-item">
-                  <img src={src} alt="Establecimiento Florida 365 — Grupo Saturno" class="w-full h-auto block" loading="lazy" />
+                  <img src={src} alt="Establecimiento Florida 365 — Grupo Saturno" class="w-full h-auto block" loading="eager" />
                 </div>
               ));
             })()}
