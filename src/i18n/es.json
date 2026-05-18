@@ -22,7 +22,7 @@
   "units": {
     "unit1Number": "Unidad 01",
     "unit1Title": "Establecimiento Florida 365",
-    "unit1Desc": "Establecimiento Florida 365 — Planta de faena y exportación. 300 vacunos por día de capacidad operativa.",
+    "unit1Desc": "Establecimiento Florida 365 — Planta de faena y exportación habilitada para China, Estados Unidos, la Unión Europea y terceros países. 300 vacunos por día de capacidad operativa.",
     "unit1Cta": "Conocer Establecimiento Florida 365",
     "unit2Number": "Unidad 02",
     "unit2Title": "Frigorífico Saturno",
@@ -33,7 +33,7 @@
     "label": "El Grupo",
     "h2": "Un grupo, una cadena completa.",
     "h2Italic": "una cadena completa.",
-    "body": "Grupo Saturno es una empresa 100% uruguaya con más de 36 años en la industria cárnica. Operamos dos plantas propias —Frigorífico Saturno y el Establecimiento Florida 365—. Cada animal está identificado individualmente desde su nacimiento, en el sistema de trazabilidad más riguroso del mundo. De la faena al mundo, sin intermediarios.",
+    "body": "Grupo Saturno es una empresa 100% uruguaya con más de 36 años en la industria cárnica. Operamos dos plantas propias —Frigorífico Saturno y el Establecimiento Florida 365— con habilitaciones vigentes para exportar a China (GACC), Estados Unidos (USDA), la Unión Europea y terceros países. Cada animal está identificado individualmente desde su nacimiento, en el sistema de trazabilidad más riguroso del mundo. De la faena al mundo, sin intermediarios.",
     "stat1Number": "36",
     "stat1Unit": "años",
     "stat1Desc": "de trayectoria",
@@ -42,7 +42,7 @@
     "stat2Desc": "origen al producto final",
     "stat3Number": "4+",
     "stat3Unit": "mercados",
-    "stat3Desc": "Exportación internacional"
+    "stat3Desc": "China · EE.UU. · UE · Terceros países"
   },
   "mvv": {
     "label": "Propósito",
@@ -93,8 +93,8 @@
     "spec2Text": "Fresco · Congelado · Vacuum packed · Boxed beef",
     "spec2Pending": "",
     "spec3Cat": "Calidad",
-    "spec3Title": "Certificaciones de calidad",
-    "spec3Text": "HACCP",
+    "spec3Title": "Habilitaciones vigentes",
+    "spec3Text": "China (GACC) · Estados Unidos (USDA) · Unión Europea · HACCP",
     "spec3Pending": ""
   },
   "chain": {
@@ -118,8 +118,8 @@
       },
       {
         "n": "02",
-        "title": "Exportación directa. Sin intermediarios.",
-        "text": "Producimos, procesamos y exportamos dentro del propio grupo. Un solo interlocutor que controla cada etapa, desde el campo hasta el envío."
+        "title": "Cuatro mercados. Un solo proveedor.",
+        "text": "Habilitados para exportar a China (GACC), Estados Unidos (USDA), la Unión Europea y terceros países. Son aprobaciones activas, no objetivos. Si tu mercado es uno de ellos, ya cumplimos sus exigencias."
       },
       {
         "n": "03",
@@ -190,7 +190,7 @@
     "heroDesc": "Establecimiento especializado en procesamiento y exportación de carne vacuna. Florida, Uruguay.",
     "presentationLabel": "Presentación",
     "presentationH2": "Especialización y capacidad de escala",
-    "presentationBody": "El Establecimiento Florida 365 es la planta de faena propia de Grupo Saturno, adquirida en 2025 y reinaugurada en marzo de 2026. Es el eslabón que completa la integración vertical del grupo: del campo al mundo, sin intermediarios.",
+    "presentationBody": "El Establecimiento Florida 365 es la planta de faena propia de Grupo Saturno, adquirida en 2025 y reinaugurada en marzo de 2026. Con habilitaciones activas para exportar a China, Estados Unidos y la Unión Europea, es el eslabón que completa la integración vertical del grupo: del campo al mundo, sin intermediarios.",
     "stat1Label": "Capacidad",
     "stat1Value": "300 vacunos / día",
     "stat2Label": "Empleos directos",
@@ -316,13 +316,14 @@
     "identityH2": "ADN Uruguayo",
     "identityBody1": "Empresa 100% nacional en capital, fuentes de trabajo y mercado. Arraigada profundamente en los valores, usos y costumbres uruguayos.",
     "identityQuote": "\"Ese Uruguay, el del sueño del pibe, el que está en la ilusión de cada uruguayo.\"",
-    "identityBody2": "Con la incorporación del Establecimiento Florida 365 en 2026, Frigorífico Saturno completó su integración vertical: producción ganadera, faena propia, industrialización y exportación directa al mundo.",
+    "identityBody2": "Con la incorporación del Establecimiento Florida 365 en 2026, Frigorífico Saturno completó su integración vertical: producción ganadera, faena propia, industrialización y exportación directa a China, Estados Unidos y la Unión Europea.",
     "adnItems": [
       "Capital, fuentes de trabajo y mercado 100% nacionales",
       "Calidad de exportación disponible para el consumidor local",
       "Trazabilidad individual: cada animal registrado electrónicamente desde el nacimiento",
       "Servicio tailor-made para importadores, chefs y distribuidores",
-      "Presencia regional en 8+ departamentos"
+      "Presencia regional en 8+ departamentos",
+      "Habilitaciones vigentes para exportar a China, EE.UU. y Unión Europea"
     ],
     "contactLabel": "Contacto directo",
     "contactName": "Frigorífico Saturno",
