@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import alpinejs from '@astrojs/alpinejs';
 
 export default defineConfig({
-  site: 'https://gruposaturno.com.uy',
+  site: 'https://gruposaturno.uy',
   output: 'static',
   integrations: [
     tailwind({ applyBaseStyles: false }),

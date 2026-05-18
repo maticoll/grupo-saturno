@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gruposaturno.com.uy/sitemap-index.xml
+Sitemap: https://gruposaturno.uy/sitemap-index.xml

@@ -111,7 +111,7 @@ try {
     }
     $mail->addReplyTo($email, $name);
 
-    $host = $_SERVER['HTTP_HOST'] ?? 'gruposaturno.com.uy';
+    $host = $_SERVER['HTTP_HOST'] ?? 'gruposaturno.uy';
     $langTag = $lang !== null ? '[' . strtoupper($lang) . '] ' : '';
     $mail->Subject = $langTag . "Nuevo contacto desde $host";
 
