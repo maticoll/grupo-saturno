@@ -181,13 +181,15 @@ const fotosMarqueeRow3 = [
   <!-- Fotos medio: 3 iguales -->
   <section class="bg-carbon py-1 px-1">
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-1">
-      <div class="h-56 sm:h-64 lg:h-[320px] overflow-hidden group">
+      <div class="h-56 sm:h-64 lg:h-[320px] relative overflow-hidden group">
         <img src={fotosDestacadas[2].src} alt={fotosDestacadas[2].alt}
           class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" loading="lazy" />
+        <div class="photo-caption">{t('reapertura.captionOrsiAvero')}</div>
       </div>
-      <div class="h-56 sm:h-64 lg:h-[320px] overflow-hidden group">
+      <div class="h-56 sm:h-64 lg:h-[320px] relative overflow-hidden group">
         <img src={fotosDestacadas[3].src} alt={fotosDestacadas[3].alt}
           class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" loading="lazy" />
+        <div class="photo-caption">{t('reapertura.captionAvero')}</div>
       </div>
       <div class="h-56 sm:h-64 lg:h-[320px] relative overflow-hidden group">
         <img src={fotosDestacadas[5].src} alt={fotosDestacadas[5].alt}
