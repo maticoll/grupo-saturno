@@ -240,12 +240,13 @@ const fotosMarqueeRow3 = [
     </div>
   </section>
 
-  <style>
+  <style is:global>
     .photo-caption {
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
+      z-index: 10;
       padding: 0.65rem 1rem 0.6rem;
       background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0) 100%);
       font-family: 'ITC Blair', sans-serif;
@@ -255,7 +256,9 @@ const fotosMarqueeRow3 = [
       color: rgba(255,255,255,0.88);
       pointer-events: none;
     }
+  </style>
 
+  <style>
     .marquee-clip {
       width: 100%;
       overflow: hidden;
