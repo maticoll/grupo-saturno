@@ -199,32 +199,6 @@
     "stat3Value": "US$ 6.26 million",
     "stat4Label": "Approvals",
     "stat4Value": "GACC · USDA · EU · Third country status",
-    "marketsLabel": "Export approvals",
-    "marketsH2": "Four markets. Four standards.",
-    "marketsH2Italic": "One supplier.",
-    "markets": [
-      {
-        "flag": "🇨🇳",
-        "name": "China",
-        "cert": "GACC — General Administration of Customs",
-        "stat": "Active approval",
-        "text": "Florida 365 holds an active GACC approval for the Chinese market. With the plant's reopening, the goal is to rebuild and strengthen ties with importers and trade delegations, and to develop new relationships in one of the most important markets for Uruguayan beef."
-      },
-      {
-        "flag": "🇺🇸",
-        "name": "United States",
-        "cert": "USDA — Department of Agriculture",
-        "stat": "Active approval",
-        "text": "The North American market demands the world's strictest sanitary protocols. Florida 365 holds an active USDA approval, enabling direct export of premium cuts to importers and distributors in the US."
-      },
-      {
-        "flag": "🇪🇺",
-        "name": "European Union",
-        "cert": "EU Approval — animal welfare and traceability",
-        "stat": "Active approval",
-        "text": "Europe requires maximum traceability, animal welfare and the absence of growth hormones. Uruguay meets and exceeds all these requirements. Florida 365 is approved to export to all 27 member states."
-      }
-    ],
     "teaserLabel": "March 2026",
     "teaserH2": "Reopening of",
     "teaserH2Italic": "Establecimiento Florida",

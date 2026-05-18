@@ -18,9 +18,7 @@ const stats = [
   { label: t('florida.stat4Label'), value: t('florida.stat4Value') },
 ];
 
-const markets = JSON.parse(t('florida.markets')) as Array<{
-  flag: string; name: string; cert: string; stat: string; text: string;
-}>;
+
 ---
 <SubLandingLayout
   title={t('meta.floridaTitle')}
@@ -175,30 +173,6 @@ const markets = JSON.parse(t('florida.markets')) as Array<{
   </section>
 
   <CadenaValor />
-
-  <!-- Tres mercados -->
-  <section class="bg-white py-24 px-8 lg:px-20">
-    <div class="max-w-[1440px] mx-auto">
-      <p class="font-sans text-[0.6rem] tracking-[0.22em] uppercase text-burgundy mb-4 flex items-center gap-3">
-        <span class="w-5 h-px bg-burgundy inline-block" aria-hidden="true"></span>
-        {t('florida.marketsLabel')}
-      </p>
-      <h2 class="font-serif text-[clamp(1.8rem,2.5vw,2.5rem)] font-light tracking-[-0.025em] text-carbon mb-12">
-        {t('florida.marketsH2')}<br /><em class="italic text-carbon/60">{t('florida.marketsH2Italic')}</em>
-      </h2>
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-px bg-burgundy/10">
-        {markets.map(({ flag, name, cert, stat, text }) => (
-          <div class="bg-white p-8 lg:p-10">
-            <p class="text-3xl mb-4">{flag}</p>
-            <p class="font-sans text-[0.58rem] tracking-[0.18em] uppercase text-burgundy mb-1">{cert}</p>
-            <h3 class="font-serif text-[1.4rem] font-light text-carbon mb-1">{name}</h3>
-            <p class="font-sans text-[0.68rem] font-medium text-burgundy mb-4">{stat}</p>
-            <p class="font-sans text-[0.8rem] font-light text-[#555] leading-[1.75]">{text}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
 
   <!-- Fotos + Brochure -->
   <section class="bg-off-white py-20 px-8 lg:px-20">

@@ -199,32 +199,6 @@
     "stat3Value": "US$ 6,26 millones",
     "stat4Label": "Habilitaciones",
     "stat4Value": "GACC · USDA · UE",
-    "marketsLabel": "Habilitaciones de exportación",
-    "marketsH2": "Cuatro mercados. Cuatro estándares.",
-    "marketsH2Italic": "Un solo proveedor.",
-    "markets": [
-      {
-        "flag": "🇨🇳",
-        "name": "China",
-        "cert": "GACC — Administración General de Aduanas",
-        "stat": "Habilitación activa",
-        "text": "Florida 365 cuenta con habilitación GACC vigente para el mercado chino. Con la reapertura del establecimiento, el objetivo es retomar y fortalecer vínculos con importadores y delegaciones comerciales, y generar nuevas relaciones en uno de los mercados más relevantes para la carne vacuna uruguaya."
-      },
-      {
-        "flag": "🇺🇸",
-        "name": "Estados Unidos",
-        "cert": "USDA — Departamento de Agricultura",
-        "stat": "Habilitación activa",
-        "text": "El mercado norteamericano exige los protocolos sanitarios más estrictos del mundo. Florida 365 cuenta con habilitación USDA vigente, lo que permite exportar cortes premium directamente a importadores y distribuidores en EE.UU."
-      },
-      {
-        "flag": "🇪🇺",
-        "name": "Unión Europea",
-        "cert": "Habilitación UE — bienestar animal y trazabilidad",
-        "stat": "Habilitación activa",
-        "text": "Europa exige máxima trazabilidad, bienestar animal y ausencia de hormonas de crecimiento. Uruguay cumple y supera todos estos requisitos. Florida 365 está habilitado para exportar a los 27 países del bloque."
-      }
-    ],
     "teaserLabel": "Marzo 2026",
     "teaserH2": "Reapertura del",
     "teaserH2Italic": "Establecimiento Florida",
