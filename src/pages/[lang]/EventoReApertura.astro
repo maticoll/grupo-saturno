@@ -152,13 +152,15 @@ const fotosMarqueeRow3 = [
       <SectionLabel class="text-white/60 mb-2">{t('reapertura.galleryLabel')}</SectionLabel>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1">
-      <div class="col-span-1 sm:col-span-2 lg:col-span-2 h-64 sm:h-80 lg:h-[480px] overflow-hidden group">
+      <div class="col-span-1 sm:col-span-2 lg:col-span-2 h-64 sm:h-80 lg:h-[480px] relative overflow-hidden group">
         <img src={fotosDestacadas[4].src} alt={fotosDestacadas[4].alt}
           class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" loading="eager" />
+        <div class="photo-caption">{t('reapertura.captionPresidente')}</div>
       </div>
-      <div class="col-span-1 h-64 sm:h-80 lg:h-[480px] overflow-hidden group">
+      <div class="col-span-1 h-64 sm:h-80 lg:h-[480px] relative overflow-hidden group">
         <img src={fotosDestacadas[0].src} alt={fotosDestacadas[0].alt}
           class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" loading="eager" />
+        <div class="photo-caption">{t('reapertura.captionIntendente')}</div>
       </div>
     </div>
   </section>
@@ -235,6 +237,21 @@ const fotosMarqueeRow3 = [
   </section>
 
   <style>
+    .photo-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 0.65rem 1rem 0.6rem;
+      background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0) 100%);
+      font-family: 'ITC Blair', sans-serif;
+      font-weight: 300;
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.88);
+      pointer-events: none;
+    }
+
     .marquee-clip {
       width: 100%;
       overflow: hidden;
