@@ -22,7 +22,7 @@
   "units": {
     "unit1Number": "Unit 01",
     "unit1Title": "Establecimiento Florida 365",
-    "unit1Desc": "Establecimiento Florida 365 — Slaughter and export plant approved for China, the United States, the European Union, and third countries. Capacity of 300 head of cattle per day.",
+    "unit1Desc": "Establecimiento Florida 365 — Slaughter and export plant. Capacity of 300 head of cattle per day.",
     "unit1Cta": "Learn about Establecimiento Florida 365",
     "unit2Number": "Unit 02",
     "unit2Title": "Frigorífico Saturno",
@@ -33,7 +33,7 @@
     "label": "The Group",
     "h2": "One group, one complete chain.",
     "h2Italic": "one complete chain.",
-    "body": "Grupo Saturno is a 100% Uruguayan company with over 36 years in the meat industry. We operate two own plants — Frigorífico Saturno and Establecimiento Florida 365 — with active approvals to export to China (GACC), the United States (USDA), the European Union, and third countries. Every animal is individually identified from birth, under the world's most rigorous traceability system. From slaughter to shipment, without intermediaries.",
+    "body": "Grupo Saturno is a 100% Uruguayan company with over 36 years in the meat industry. We operate two own plants — Frigorífico Saturno and Establecimiento Florida 365 —. Every animal is individually identified from birth, under the world's most rigorous traceability system. From slaughter to shipment, without intermediaries.",
     "stat1Number": "36",
     "stat1Unit": "years",
     "stat1Desc": "of experience",
@@ -42,7 +42,7 @@
     "stat2Desc": "from origin to final product",
     "stat3Number": "4+",
     "stat3Unit": "markets",
-    "stat3Desc": "China · USA · EU · Third Countries"
+    "stat3Desc": "International exports"
   },
   "mvv": {
     "label": "Purpose",
@@ -93,8 +93,8 @@
     "spec2Text": "Fresh · Frozen · Vacuum packed · Boxed beef",
     "spec2Pending": "",
     "spec3Cat": "Quality",
-    "spec3Title": "Active approvals",
-    "spec3Text": "China (GACC) · United States (USDA) · European Union · HACCP",
+    "spec3Title": "Quality certifications",
+    "spec3Text": "HACCP",
     "spec3Pending": ""
   },
   "chain": {
@@ -118,8 +118,8 @@
       },
       {
         "n": "02",
-        "title": "Four markets. One supplier.",
-        "text": "We hold active export approvals for China (GACC), the United States (USDA), the European Union, and third countries. These are not targets — they are current certifications. If your market is one of them, we already meet its requirements."
+        "title": "Direct export. No intermediaries.",
+        "text": "We produce, process, and export within the group itself. One point of contact controlling every stage, from the field to the shipment."
       },
       {
         "n": "03",
@@ -190,7 +190,7 @@
     "heroDesc": "Specialised plant for beef processing and export. Florida, Uruguay.",
     "presentationLabel": "Overview",
     "presentationH2": "Specialisation and scale capacity",
-    "presentationBody": "Establecimiento Florida 365 is Grupo Saturno's own slaughter plant, acquired in 2025 and reopened in March 2026. With active approvals to export to China, the United States and the European Union, it is the link that completes the group's vertical integration: from field to the world, without intermediaries.",
+    "presentationBody": "Establecimiento Florida 365 is Grupo Saturno's own slaughter plant, acquired in 2025 and reopened in March 2026. It is the link that completes the group's vertical integration: from field to the world, without intermediaries.",
     "stat1Label": "Capacity",
     "stat1Value": "300 head / day",
     "stat2Label": "Direct jobs",
@@ -316,14 +316,13 @@
     "identityH2": "Uruguayan DNA",
     "identityBody1": "A 100% national company in capital, employment and market. Deeply rooted in Uruguayan values, customs and traditions.",
     "identityQuote": "\"That Uruguay — the one of childhood dreams, the one alive in every Uruguayan's aspirations.\"",
-    "identityBody2": "With the incorporation of Establecimiento Florida 365 in 2026, Frigorífico Saturno completed its vertical integration: cattle production, own slaughter, industrialisation and direct export to China, the United States and the European Union.",
+    "identityBody2": "With the incorporation of Establecimiento Florida 365 in 2026, Frigorífico Saturno completed its vertical integration: cattle production, own slaughter, industrialisation and direct export to the world.",
     "adnItems": [
       "Capital, employment and market 100% national",
       "Export quality available to the local consumer",
       "Individual traceability: every animal electronically registered from birth",
       "Tailor-made service for importers, chefs and distributors",
-      "Regional presence in 8+ departments",
-      "Active approvals to export to China, USA and European Union"
+      "Regional presence in 8+ departments"
     ],
     "contactLabel": "Direct contact",
     "contactName": "Frigorífico Saturno",
