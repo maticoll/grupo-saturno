@@ -373,7 +373,10 @@
     "ctaText": "Discover the production capacity, processes, and commercial offering of Establecimiento Florida.",
     "ctaButton": "View Establecimiento Florida 365",
     "captionPresidente": "President of the Republic — Yamandú Orsi",
-    "captionIntendente": "Mayor of Florida — Carlos Fernando Enciso, Yamandú Orsi, Luis Avero"
+    "captionIntendente": "Mayor of Florida — Carlos Fernando Enciso, Yamandú Orsi, Luis Avero",
+    "captionOrsiAvero": "Yamandú Orsi, Luis Avero",
+    "captionAvero": "Luis Avero",
+    "captionEquipoOrsiEnciso": "Saturno Team, Yamandú Orsi and Carlos Fernando Enciso"
   },
   "common": {
     "downloadBrochure": "↓ Download Brochure",

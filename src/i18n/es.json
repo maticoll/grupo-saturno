@@ -373,7 +373,10 @@
     "ctaText": "Conocé las capacidades productivas, procesos y oferta comercial del Establecimiento Florida.",
     "ctaButton": "Ver Establecimiento Florida 365",
     "captionPresidente": "Presidente de la república — Yamandú Orsi",
-    "captionIntendente": "Intendente de Florida — Carlos Fernando Enciso, Yamandú Orsi, Luis Avero"
+    "captionIntendente": "Intendente de Florida — Carlos Fernando Enciso, Yamandú Orsi, Luis Avero",
+    "captionOrsiAvero": "Yamandú Orsi, Luis Avero",
+    "captionAvero": "Luis Avero",
+    "captionEquipoOrsiEnciso": "Equipo Saturno, Yamandú Orsi y Carlos Fernando Enciso"
   },
   "common": {
     "downloadBrochure": "↓ Descargar Brochure",
