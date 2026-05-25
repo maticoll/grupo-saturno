@@ -249,19 +249,22 @@ const adnItems = JSON.parse(t('saturno.adnItems')) as string[];
         <h2 class="font-serif text-[clamp(1.8rem,2.5vw,2.5rem)] font-light tracking-[-0.025em] text-carbon mb-6">
           {t('saturno.identityH2')}
         </h2>
-        <p class="font-sans text-[0.85rem] font-light text-[#555] leading-[1.8] mb-6">
+        <p class="adn-para font-sans text-[0.85rem] font-light text-[#555] leading-[1.8] mb-6" style="animation-delay:0ms">
           {t('saturno.identityBody1')}
         </p>
-        <p class="font-sans text-[0.85rem] font-light text-[#555] leading-[1.8]">
+        <p class="adn-para font-sans text-[0.85rem] font-light text-[#555] leading-[1.8]" style="animation-delay:220ms">
           {t('saturno.identityBody2')}
         </p>
-        <p class="font-serif text-[1rem] font-light text-carbon tracking-[0.04em] italic text-center mt-10">
+        <p class="adn-quote font-serif text-[1rem] font-light text-carbon tracking-[0.04em] italic text-center mt-10">
           {t('saturno.identityQuote')}
         </p>
       </div>
       <div class="space-y-4">
-        {adnItems.map(item => (
-          <div class="flex items-center gap-4 py-4 border-b border-[#eee]">
+        {adnItems.map((item, i) => (
+          <div
+            class="adn-item flex items-center gap-4 py-4 border-b border-[#eee]"
+            style={`animation-delay:${i * 80}ms`}
+          >
             <span class="w-2 h-2 rounded-full bg-burgundy shrink-0" aria-hidden="true"></span>
             <span class="font-sans text-[0.82rem] font-light text-[#444]">{item}</span>
           </div>
@@ -330,6 +333,26 @@ const adnItems = JSON.parse(t('saturno.adnItems')) as string[];
   .pilar-card.is-visible {
     animation: pilarFall 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
   }
+
+  /* ADN — párrafos (reutiliza pilarFall) */
+  .adn-para { opacity: 0; }
+  .adn-para.is-visible {
+    animation: pilarFall 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  }
+
+  /* ADN — ítems slide desde la derecha */
+  @keyframes adnSlideIn {
+    from { opacity: 0; transform: translateX(52px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+  .adn-item { opacity: 0; }
+  .adn-item.is-visible {
+    animation: adnSlideIn 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  }
+
+  /* ADN — quote typewriter */
+  .adn-quote { opacity: 0; }
+  .adn-quote.is-typing { opacity: 1; }
 </style>
 
 <script>
@@ -379,4 +402,54 @@ const adnItems = JSON.parse(t('saturno.adnItems')) as string[];
     { threshold: 0.12 }
   );
   pilarCards.forEach(card => pilarObserver.observe(card));
+
+  // ADN — párrafos (caída escalonada)
+  const adnParas = document.querySelectorAll<HTMLElement>('.adn-para');
+  const adnParaObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-visible');
+        adnParaObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  adnParas.forEach(p => adnParaObs.observe(p));
+
+  // ADN — ítems (slide desde la derecha)
+  const adnItems = document.querySelectorAll<HTMLElement>('.adn-item');
+  const adnItemObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-visible');
+        adnItemObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  adnItems.forEach(item => adnItemObs.observe(item));
+
+  // ADN — quote typewriter
+  const adnQuote = document.querySelector<HTMLElement>('.adn-quote');
+  if (adnQuote) {
+    const fullText = adnQuote.textContent?.trim() ?? '';
+    adnQuote.textContent = '';
+    let typed = false;
+    const quoteObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting && !typed) {
+          typed = true;
+          adnQuote.classList.add('is-typing');
+          quoteObs.unobserve(e.target);
+          let i = 0;
+          const tick = () => {
+            if (i < fullText.length) {
+              adnQuote.textContent += fullText[i++];
+              setTimeout(tick, 48);
+            }
+          };
+          tick();
+        }
+      });
+    }, { threshold: 0.6 });
+    quoteObs.observe(adnQuote);
+  }
 </script>
