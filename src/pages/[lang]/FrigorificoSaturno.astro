@@ -227,8 +227,11 @@ const adnItems = JSON.parse(t('saturno.adnItems')) as string[];
         </h2>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {pilares.map(pilar => (
-          <div class="border border-white/10 p-8 hover:border-burgundy/60 transition-colors duration-300">
+        {pilares.map((pilar, i) => (
+          <div
+            class="pilar-card border border-white/10 p-8 hover:border-burgundy/60 transition-colors duration-300"
+            style={`animation-delay: ${i * 110}ms`}
+          >
             <p class="font-sans text-[0.65rem] tracking-[0.18em] uppercase text-burgundy mb-4">{pilar.num}</p>
             <h3 class="font-serif text-[1.1rem] font-light text-white mb-3">{pilar.title}</h3>
             <p class="font-sans text-[0.8rem] font-light text-[#aaa] leading-[1.7]">{pilar.desc}</p>
@@ -307,6 +310,26 @@ const adnItems = JSON.parse(t('saturno.adnItems')) as string[];
     padding-left: 4px;
     padding-right: 4px;
   }
+
+  /* Pilares — animación de caída */
+  @keyframes pilarFall {
+    from {
+      opacity: 0;
+      transform: translateY(-42px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .pilar-card {
+    opacity: 0;
+  }
+
+  .pilar-card.is-visible {
+    animation: pilarFall 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  }
 </style>
 
 <script>
@@ -341,4 +364,19 @@ const adnItems = JSON.parse(t('saturno.adnItems')) as string[];
       zones.forEach(zone => zone.classList.remove('sc-active'));
     });
   });
+
+  // Pilares — animación scroll
+  const pilarCards = document.querySelectorAll('.pilar-card');
+  const pilarObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          pilarObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+  pilarCards.forEach(card => pilarObserver.observe(card));
 </script>
