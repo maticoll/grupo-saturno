@@ -153,7 +153,7 @@ const adnItems = JSON.parse(t('saturno.adnItems')) as string[];
               <p class="font-sans text-[0.72rem] text-[#555] py-1 border-b border-[#eee]">{corte}</p>
             ))}
           </div>
-          <ul class="space-y-3">
+          <ul class="space-y-3 mb-8">
             {premiumItems.map(item => (
               <li class="flex items-start gap-3">
                 <span class="w-1 h-1 rounded-full bg-burgundy mt-[0.45rem] shrink-0" aria-hidden="true"></span>
@@ -161,6 +161,13 @@ const adnItems = JSON.parse(t('saturno.adnItems')) as string[];
               </li>
             ))}
           </ul>
+          <img
+            src="/images/cortes-vaca.webp"
+            alt="Diagrama de cortes de la vaca — Frigorífico Saturno"
+            class="w-[35%] h-auto"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <!-- Premium Store -->
         <div class="bg-white p-10 border-t-2 border-[#c8a87a]">
@@ -180,17 +187,6 @@ const adnItems = JSON.parse(t('saturno.adnItems')) as string[];
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- Imagen cortes de vaca -->
-  <section class="bg-white py-0">
-    <img
-      src="/images/cortes-vaca.webp"
-      alt="Diagrama de cortes de la vaca — Frigorífico Saturno"
-      class="w-full h-auto block"
-      loading="lazy"
-      decoding="async"
-    />
   </section>
 
   <!-- Pilares estratégicos -->
