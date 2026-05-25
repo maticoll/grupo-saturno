@@ -172,16 +172,16 @@ const adnItems = JSON.parse(t('saturno.adnItems')) as string[];
               loading="lazy"
               decoding="async"
             />
-            <!-- Zona 4 → Bife Ancho (idx 0) -->
-            <div class="sc-zone" data-cuts="0" style="left:33%;top:14%;width:19%;height:28%;"></div>
-            <!-- Zona 5 → Bife Angosto (idx 1) -->
-            <div class="sc-zone" data-cuts="1" style="left:50%;top:14%;width:10%;height:19%;"></div>
-            <!-- Zona 6 → Lomo (idx 2) -->
-            <div class="sc-zone" data-cuts="2" style="left:58%;top:13%;width:9%;height:16%;"></div>
-            <!-- Zona 7 → Cuadril + Colita (idx 3,4) -->
-            <div class="sc-zone" data-cuts="3,4" style="left:65%;top:8%;width:19%;height:22%;"></div>
-            <!-- Zona 11 → Vacío (idx 5) -->
-            <div class="sc-zone" data-cuts="5" style="left:55%;top:46%;width:17%;height:17%;"></div>
+            <!-- Zona 4 → Bife Ancho (idx 0) — centro ~41%,27% -->
+            <div class="sc-zone" data-cuts="0" style="left:37%;top:21%;width:8%;height:11%;"></div>
+            <!-- Zona 5 → Bife Angosto (idx 1) — centro ~52.5%,26.5% -->
+            <div class="sc-zone" data-cuts="1" style="left:48.5%;top:21%;width:8%;height:11%;"></div>
+            <!-- Zona 6 → Lomo (idx 2) — centro ~62%,25.5% -->
+            <div class="sc-zone" data-cuts="2" style="left:58%;top:20%;width:8%;height:11%;"></div>
+            <!-- Zona 7 → Cuadril + Colita (idx 3,4) — centro ~75.5%,22.5% -->
+            <div class="sc-zone" data-cuts="3,4" style="left:71.5%;top:17%;width:8%;height:11%;"></div>
+            <!-- Zona 11 → Vacío (idx 5) — centro ~63%,56% -->
+            <div class="sc-zone" data-cuts="5" style="left:59%;top:51%;width:8%;height:11%;"></div>
           </div>
         </div>
         <!-- Premium Store -->
@@ -276,13 +276,13 @@ const adnItems = JSON.parse(t('saturno.adnItems')) as string[];
   .sc-zone {
     position: absolute;
     cursor: pointer;
-    border-radius: 3px;
+    border-radius: 50%;
     transition: background-color 0.18s ease, box-shadow 0.18s ease;
   }
   .sc-zone:hover,
   .sc-zone.sc-active {
-    background-color: rgba(255, 255, 255, 0.28);
-    box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, 0.55);
+    background-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.85), 0 0 10px rgba(255, 255, 255, 0.35);
   }
   .sc-cut.sc-active {
     color: #6B2E2A !important;
