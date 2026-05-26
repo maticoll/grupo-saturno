@@ -15,13 +15,13 @@ const valores = JSON.parse(t('mvv.valores')) as Array<{word: string; desc: strin
           <em class="italic text-white/55">{t('mvv.h2Italic')}</em>
         </h2>
       </div>
-      <div class="scroll-reveal" style="transition-delay: 100ms">
+      <div class="drop-reveal" style="transition-delay: 100ms">
         <p class="font-sans text-[0.6rem] tracking-[0.2em] uppercase text-burgundy mb-4">{t('mvv.misionLabel')}</p>
         <p class="font-serif text-[1.2rem] font-light italic leading-[1.55] text-white/75">
           "{t('mvv.mision')}"
         </p>
       </div>
-      <div class="scroll-reveal" style="transition-delay: 200ms">
+      <div class="drop-reveal" style="transition-delay: 200ms">
         <p class="font-sans text-[0.6rem] tracking-[0.2em] uppercase text-burgundy mb-4">{t('mvv.visionLabel')}</p>
         {t('mvv.vision').split('\n\n').map((parr: string, i: number) => (
           <p class={`font-serif text-[1.2rem] font-light italic leading-[1.55] text-white/75${i > 0 ? ' mt-4' : ''}`}>

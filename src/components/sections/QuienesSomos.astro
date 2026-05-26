@@ -13,14 +13,15 @@ const t = useTranslations(lang);
         <em class="italic">{t('about.h2Italic')}</em>
       </h2>
     </div>
-    <div class="scroll-reveal" style="transition-delay: 100ms">
-      <p class="font-sans text-[0.88rem] font-light text-[#444] leading-[1.85] mb-12">
+    <div style="transition-delay: 100ms">
+      <p class="font-sans text-[0.88rem] font-light text-[#444] leading-[1.85] mb-12 drop-reveal">
         {t('about.body')}
       </p>
       <div class="grid grid-cols-3 gap-8 border-t border-burgundy/15 pt-8">
         {[1,2,3].map(n => (
           <div>
-            <div class="font-serif text-[3rem] font-light leading-none text-burgundy tracking-[-0.03em] mb-1">
+            <div class="font-serif text-[3rem] font-light leading-none text-burgundy tracking-[-0.03em] mb-1"
+              data-count-up={t(`about.stat${n}Number`)}>
               {t(`about.stat${n}Number`)}
             </div>
             <div class="font-sans text-[0.65rem] tracking-[0.1em] uppercase text-warm-gray">

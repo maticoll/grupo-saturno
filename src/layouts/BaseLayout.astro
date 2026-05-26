@@ -101,7 +101,33 @@ const hreflangs = languages.map(l => ({
         (entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('revealed'); }),
         { threshold: 0.1 }
       );
-      document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+      document.querySelectorAll('.scroll-reveal, .drop-reveal').forEach(el => observer.observe(el));
+
+      // Count-up animation para elementos con data-count-up
+      const countUpObserver = new IntersectionObserver(
+        (entries) => entries.forEach(e => {
+          if (!e.isIntersecting) return;
+          const el = e.target;
+          const raw = el.dataset.countUp;
+          const match = raw.match(/^(\d[\d.,]*)(.*)$/);
+          if (!match) return;
+          const target = parseFloat(match[1].replace(',', '.'));
+          const suffix = match[2] || '';
+          const duration = 700;
+          const startTime = performance.now();
+          const tick = (now) => {
+            const progress = Math.min((now - startTime) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            el.textContent = Math.round(target * eased) + suffix;
+            if (progress < 1) requestAnimationFrame(tick);
+            else el.textContent = raw;
+          };
+          requestAnimationFrame(tick);
+          countUpObserver.unobserve(el);
+        }),
+        { threshold: 0.5 }
+      );
+      document.querySelectorAll('[data-count-up]').forEach(el => countUpObserver.observe(el));
     }
   </script>
 </body>

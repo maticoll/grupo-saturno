@@ -72,7 +72,17 @@
     opacity: 1;
     transform: translateY(0);
   }
+  .drop-reveal {
+    opacity: 0;
+    transform: translateY(-22px);
+    transition: opacity 0.55s ease-out, transform 0.55s ease-out;
+  }
+  .drop-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
   @media (prefers-reduced-motion: reduce) {
     .scroll-reveal { opacity: 1; transform: none; transition: none; }
+    .drop-reveal { opacity: 1; transform: none; transition: none; }
   }
 }

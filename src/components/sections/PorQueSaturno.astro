@@ -13,7 +13,7 @@ const items = JSON.parse(t('why.items')) as Array<{n: string; title: string; tex
     </h2>
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-px bg-burgundy/10">
       {items.map((item: {n: string, title: string, text: string}, i: number) => (
-        <div class="bg-off-white p-10 scroll-reveal cursor-default transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] hover:z-10 relative" style={`transition-delay: ${i * 80}ms`}>
+        <div class="bg-off-white p-10 drop-reveal cursor-default transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] hover:z-10 relative" style={`transition-delay: ${i * 80}ms`}>
           <div class="font-serif text-[2.5rem] font-light text-burgundy/15 leading-none mb-5 tracking-[-0.05em]">
             {item.n}
           </div>
