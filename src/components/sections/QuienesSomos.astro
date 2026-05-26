@@ -18,8 +18,8 @@ const t = useTranslations(lang);
         {t('about.body')}
       </p>
       <div class="grid grid-cols-3 gap-8 border-t border-burgundy/15 pt-8">
-        {[1,2,3].map(n => (
-          <div>
+        {[1,2,3].map((n, i) => (
+          <div class="scroll-reveal" style={`transition-delay: ${200 + i * 120}ms`}>
             <div class="font-serif text-[3rem] font-light leading-none text-burgundy tracking-[-0.03em] mb-1"
               data-count-up={t(`about.stat${n}Number`)}>
               {t(`about.stat${n}Number`)}
