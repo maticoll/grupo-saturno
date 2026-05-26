@@ -95,27 +95,39 @@ const hreflangs = languages.map(l => ({
 <body>
   <slot />
   <script>
-    // Scroll reveal con IntersectionObserver
+    // Scroll reveal con IntersectionObserver — agrega Y remueve 'revealed' para replay
     if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       const observer = new IntersectionObserver(
-        (entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('revealed'); }),
+        (entries) => entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('revealed');
+          } else {
+            e.target.classList.remove('revealed');
+          }
+        }),
         { threshold: 0.1 }
       );
       document.querySelectorAll('.scroll-reveal, .drop-reveal').forEach(el => observer.observe(el));
 
-      // Count-up animation para elementos con data-count-up
+      // Count-up con replay: resetea al salir, anima al entrar
       const countUpObserver = new IntersectionObserver(
         (entries) => entries.forEach(e => {
-          if (!e.isIntersecting) return;
           const el = e.target;
           const raw = el.dataset.countUp;
+          if (!e.isIntersecting) {
+            el.textContent = raw;
+            return;
+          }
           const match = raw.match(/^(\d[\d.,]*)(.*)$/);
           if (!match) return;
           const target = parseFloat(match[1].replace(',', '.'));
           const suffix = match[2] || '';
           const duration = 700;
           const startTime = performance.now();
+          const version = Date.now();
+          el._countVersion = version;
           const tick = (now) => {
+            if (el._countVersion !== version) return;
             const progress = Math.min((now - startTime) / duration, 1);
             const eased = 1 - Math.pow(1 - progress, 3);
             el.textContent = Math.round(target * eased) + suffix;
@@ -123,7 +135,6 @@ const hreflangs = languages.map(l => ({
             else el.textContent = raw;
           };
           requestAnimationFrame(tick);
-          countUpObserver.unobserve(el);
         }),
         { threshold: 0.5 }
       );
