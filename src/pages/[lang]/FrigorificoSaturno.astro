@@ -208,19 +208,22 @@ const adnItems = JSON.parse(t('saturno.adnItems')) as string[];
               aria-hidden="true"
             >
               <!-- Zona 4 → Bife Ancho (idx 0) -->
-              <polygon class="sc-zone" data-cuts="0"
+              <polygon class="sc-zone" data-cuts="0" data-image="/images/cut-4.png"
                 points="488,168 757,168 757,370 488,370" />
               <!-- Zona 5 → Bife Angosto (idx 1) -->
-              <polygon class="sc-zone" data-cuts="1"
+              <polygon class="sc-zone" data-cuts="1" data-image="/images/cut-5.png"
                 points="778,168 882,168 882,340 778,340" />
-              <!-- Zona 6 → Lomo (idx 2) -->
+              <!-- Zona 6 → Lomo (idx 2) — sin imagen específica -->
               <polygon class="sc-zone" data-cuts="2"
                 points="883,163 973,163 973,310 883,310" />
-              <!-- Zona 7 → Cuadril + Colita (idx 3,4) -->
-              <polygon class="sc-zone" data-cuts="3,4"
-                points="954,138 1195,138 1195,345 954,345" />
+              <!-- Zona 7 → Cuadril (idx 3) -->
+              <polygon class="sc-zone" data-cuts="3" data-image="/images/cut-7.png"
+                points="954,138 1075,138 1075,345 954,345" />
+              <!-- Zona 6 → Colita de cuadril (idx 4) -->
+              <polygon class="sc-zone" data-cuts="4" data-image="/images/cut-6.png"
+                points="1075,138 1195,138 1195,345 1075,345" />
               <!-- Zona 11 → Vacío (idx 5) -->
-              <polygon class="sc-zone" data-cuts="5"
+              <polygon class="sc-zone" data-cuts="5" data-image="/images/cut-11.png"
                 points="840,533 1080,533 1080,688 840,688" />
             </svg>
           </div>
@@ -370,18 +373,41 @@ const adnItems = JSON.parse(t('saturno.adnItems')) as string[];
 <script>
   const zones = document.querySelectorAll<HTMLElement>('.sc-zone');
   const cutItems = document.querySelectorAll<HTMLElement>('.sc-cut');
+  const cowImg = document.querySelector<HTMLImageElement>('#cow-hotmap img');
+  const cowBaseSrc = cowImg?.src ?? '';
+
+  // Mapa idx → imagen (generado desde data-image de cada zona)
+  const idxToImage = new Map<number, string>();
+  zones.forEach(zone => {
+    const img = zone.dataset.image;
+    if (!img) return;
+    (zone.dataset.cuts ?? '').split(',').map(Number).forEach(i => idxToImage.set(i, img));
+  });
 
   function setActive(indices: number[], on: boolean) {
     indices.forEach(i => cutItems[i]?.classList.toggle('sc-active', on));
+  }
+
+  function swapCowImage(indices: number[], on: boolean) {
+    if (!cowImg) return;
+    if (on) {
+      // Usa la imagen del primer índice que tenga una asignada
+      const img = indices.map(i => idxToImage.get(i)).find(Boolean);
+      if (img) cowImg.src = img;
+    } else {
+      cowImg.src = cowBaseSrc;
+    }
   }
 
   zones.forEach(zone => {
     const indices = (zone.dataset.cuts ?? '').split(',').map(Number);
     zone.addEventListener('mouseenter', () => {
       setActive(indices, true);
+      swapCowImage(indices, true);
     });
     zone.addEventListener('mouseleave', () => {
       setActive(indices, false);
+      swapCowImage(indices, false);
     });
   });
 
@@ -393,10 +419,12 @@ const adnItems = JSON.parse(t('saturno.adnItems')) as string[];
         const zoneIndices = (zone.dataset.cuts ?? '').split(',').map(Number);
         if (zoneIndices.includes(idx)) zone.classList.add('sc-active');
       });
+      swapCowImage([idx], true);
     });
     item.addEventListener('mouseleave', () => {
       item.classList.remove('sc-active');
       zones.forEach(zone => zone.classList.remove('sc-active'));
+      swapCowImage([idx], false);
     });
   });
 
