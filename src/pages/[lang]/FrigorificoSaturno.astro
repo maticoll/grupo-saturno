@@ -310,7 +310,8 @@ const adnItems = JSON.parse(t('saturno.adnItems')) as string[];
     stroke: none;
   }
   #cow-hotmap {
-    aspect-ratio: 1448 / 1086;
+    padding-bottom: 75%; /* 1086/1448 ≈ 75% — fija la altura relativa al ancho */
+    height: 0;
   }
   #cow-hotmap img {
     position: absolute;
@@ -318,6 +319,7 @@ const adnItems = JSON.parse(t('saturno.adnItems')) as string[];
     width: 100%;
     height: 100%;
     object-fit: contain;
+    object-position: center;
   }
   .sc-cut.sc-active {
     color: #6B2E2A !important;
