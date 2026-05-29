@@ -151,40 +151,46 @@ const adnItems = JSON.parse(t('saturno.adnItems')) as string[];
         <div class="bg-white p-10 border-t-2 border-burgundy">
           <p class="font-sans text-[0.65rem] tracking-[0.18em] uppercase text-burgundy mb-4">{t('saturno.premiumLabel')}</p>
           <h3 class="font-serif text-[1.4rem] font-light text-carbon mb-4">{t('saturno.premiumH3')}</h3>
-          <p class="font-sans text-[0.82rem] font-light text-[#555] leading-[1.8] mb-4">
-            {t('saturno.premiumBody')}
-          </p>
-          <div class="grid grid-cols-2 gap-1 mb-6" id="saturno-cuts-list">
-            {cuts.map((corte, i) => (
-              <p
-                class="sc-cut font-sans text-[0.72rem] text-[#555] py-1 border-b border-[#eee] transition-all duration-200 cursor-default rounded-sm"
-                data-cut-idx={i}
-              >{corte}</p>
-            ))}
-          </div>
-          <ul class="space-y-3 mb-8">
-            {premiumItems.map(item => (
-              <li class="flex items-start gap-3">
-                <span class="w-1 h-1 rounded-full bg-burgundy mt-[0.45rem] shrink-0" aria-hidden="true"></span>
-                <span class="font-sans text-[0.8rem] font-light text-[#555] leading-[1.7]">{item}</span>
-              </li>
-            ))}
-          </ul>
-          <div class="relative w-[35%]" id="cow-hotmap">
-            <img
-              src="/images/cortes-vaca.webp"
-              alt="Diagrama de cortes de la vaca — Frigorífico Saturno"
-              class="w-full h-auto block select-none"
-              loading="lazy"
-              decoding="async"
-            />
-            <!-- SVG overlay — viewBox coincide con dimensiones reales de la imagen (1448×1086) -->
-            <svg
-              class="absolute inset-0 w-full h-full"
-              viewBox="0 0 1448 1086"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+            <!-- Columna izquierda: descripción + ítems -->
+            <div>
+              <p class="font-sans text-[0.82rem] font-light text-[#555] leading-[1.8] mb-6">
+                {t('saturno.premiumBody')}
+              </p>
+              <ul class="space-y-3">
+                {premiumItems.map(item => (
+                  <li class="flex items-start gap-3">
+                    <span class="w-1 h-1 rounded-full bg-burgundy mt-[0.45rem] shrink-0" aria-hidden="true"></span>
+                    <span class="font-sans text-[0.8rem] font-light text-[#555] leading-[1.7]">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <!-- Columna derecha: cortes de carne arriba + vaca debajo -->
+            <div>
+              <div class="grid grid-cols-2 gap-1 mb-6" id="saturno-cuts-list">
+                {cuts.map((corte, i) => (
+                  <p
+                    class="sc-cut font-sans text-[0.72rem] text-[#555] py-1 border-b border-[#eee] transition-all duration-200 cursor-default rounded-sm"
+                    data-cut-idx={i}
+                  >{corte}</p>
+                ))}
+              </div>
+              <div class="relative w-full" id="cow-hotmap">
+                <img
+                  src="/images/cortes-vaca.webp"
+                  alt="Diagrama de cortes de la vaca — Frigorífico Saturno"
+                  class="w-full h-auto block select-none"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <!-- SVG overlay — viewBox coincide con dimensiones reales de la imagen (1448×1086) -->
+                <svg
+                  class="absolute inset-0 w-full h-full"
+                  viewBox="0 0 1448 1086"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
               <!-- Zona 4 → Bife Ancho (idx 0) -->
               <polygon class="sc-zone" data-cuts="0"
                 points="488,168 757,168 757,370 488,370" />
@@ -200,7 +206,9 @@ const adnItems = JSON.parse(t('saturno.adnItems')) as string[];
               <!-- Zona 11 → Vacío (idx 5) -->
               <polygon class="sc-zone" data-cuts="5"
                 points="840,533 1080,533 1080,688 840,688" />
-            </svg>
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
         <!-- Premium Store -->
@@ -337,13 +345,13 @@ const adnItems = JSON.parse(t('saturno.adnItems')) as string[];
   }
 
   .pilar-card.is-visible {
-    animation: pilarFall 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+    animation: pilarFall 1.05s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
   }
 
   /* ADN — párrafos (reutiliza pilarFall) */
   .adn-para { opacity: 0; }
   .adn-para.is-visible {
-    animation: pilarFall 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+    animation: pilarFall 1.05s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
   }
 
   /* ADN — ítems slide desde la derecha */
@@ -353,7 +361,7 @@ const adnItems = JSON.parse(t('saturno.adnItems')) as string[];
   }
   .adn-item { opacity: 0; }
   .adn-item.is-visible {
-    animation: adnSlideIn 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+    animation: adnSlideIn 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
   }
 
   /* ADN — quote typewriter */
@@ -449,7 +457,7 @@ const adnItems = JSON.parse(t('saturno.adnItems')) as string[];
           const tick = () => {
             if (i < fullText.length) {
               adnQuote.textContent += fullText[i++];
-              setTimeout(tick, 48);
+              setTimeout(tick, 70);
             }
           };
           tick();
