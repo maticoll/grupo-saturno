@@ -1,5 +1,11 @@
+# Bloquea el acceso HTTP a .env y a cualquier dotfile (.git, .htaccess, etc).
+# El RedirectMatch evita siquiera revelar la existencia del archivo.
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
 <Files ".env">
-    <RequireAll>
-        Require all denied
-    </RequireAll>
+    Require all denied
 </Files>
+
+RedirectMatch 404 /\.(?!well-known/)

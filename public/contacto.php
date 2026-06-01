@@ -72,7 +72,15 @@ if (preg_match('/[\r\n]/', $name . $company . $country . $email)) {
     respond(400, ['ok' => false, 'error' => 'invalid_input']);
 }
 
-$required = ['SMTP_HOST', 'SMTP_PORT', 'SMTP_USER', 'SMTP_PASS', 'MAIL_FROM', 'MAIL_FROM_NAME', 'MAIL_TO'];
+// SMTP_AUTH default 'true' para no romper despliegues existentes con SMTP autenticado.
+// Cuando es 'false' (Exim local, etc), SMTP_USER/SMTP_PASS dejan de ser obligatorios.
+$smtpAuth = strtolower(getenv('SMTP_AUTH') ?: 'true') === 'true';
+
+$required = ['SMTP_HOST', 'SMTP_PORT', 'MAIL_FROM', 'MAIL_FROM_NAME', 'MAIL_TO'];
+if ($smtpAuth) {
+    $required[] = 'SMTP_USER';
+    $required[] = 'SMTP_PASS';
+}
 foreach ($required as $k) {
     if (getenv($k) === false || getenv($k) === '') {
         error_log("contacto.php: falta variable de entorno obligatoria $k");
@@ -95,13 +103,33 @@ try {
     }
 
     $mail->isSMTP();
-    $mail->Host       = getenv('SMTP_HOST');
-    $mail->Port       = (int) getenv('SMTP_PORT');
-    $mail->SMTPAuth   = true;
-    $mail->Username   = getenv('SMTP_USER');
-    $mail->Password   = getenv('SMTP_PASS');
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-    $mail->CharSet    = 'UTF-8';
+    $mail->Host    = getenv('SMTP_HOST');
+    $mail->Port    = (int) getenv('SMTP_PORT');
+    $mail->CharSet = 'UTF-8';
+
+    $mail->SMTPAuth = $smtpAuth;
+    if ($smtpAuth) {
+        $mail->Username = getenv('SMTP_USER');
+        $mail->Password = getenv('SMTP_PASS');
+    }
+
+    // 'smtps' (default, 465) | 'starttls' (587) | 'none' (Exim local en 25, sin TLS).
+    $smtpSecure = strtolower(getenv('SMTP_SECURE') ?: 'smtps');
+    switch ($smtpSecure) {
+        case 'starttls':
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            break;
+        case 'none':
+            // String vacío + SMTPAutoTLS=false es CRÍTICO: sin esto PHPMailer intenta
+            // STARTTLS automáticamente y rompe contra un MTA local sin TLS.
+            $mail->SMTPSecure = '';
+            $mail->SMTPAutoTLS = false;
+            break;
+        case 'smtps':
+        default:
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+            break;
+    }
 
     $mail->setFrom(getenv('MAIL_FROM'), getenv('MAIL_FROM_NAME'));
     $mail->addAddress(getenv('MAIL_TO'));
