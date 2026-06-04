@@ -18,7 +18,7 @@ const { extraLogo } = Astro.props;
     window.addEventListener('scroll', _handler, { passive: true });
   "
   x-destroy="window.removeEventListener('scroll', _handler)"
-  :class="scrolled ? 'bg-cream/95 backdrop-blur-md shadow-sm' : 'bg-transparent'"
+  :class="scrolled ? 'bg-cream/95 backdrop-blur-md shadow-sm' : 'bg-cream/95'"
   class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-out"
 >
   <div class="max-w-[1440px] mx-auto px-8 lg:px-20 h-16 flex items-center justify-between">
