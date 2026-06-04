@@ -9,13 +9,14 @@ export interface Props {
   description: string;
   unitName: string;
   image?: string;
+  headerExtraLogo?: { src: string; alt: string };
 }
 
-const { title, description, unitName, image } = Astro.props;
+const { title, description, unitName, image, headerExtraLogo } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 ---
 <BaseLayout title={title} description={description} image={image}>
-  <Header />
+  <Header extraLogo={headerExtraLogo} />
   <!-- Breadcrumb -->
   <nav aria-label="Breadcrumb"
     class="sticky top-16 z-40 bg-cream/95 backdrop-blur border-b border-burgundy/10 px-8 lg:px-20 py-3 hidden lg:flex items-center gap-2 text-xs text-warm-gray tracking-wide">

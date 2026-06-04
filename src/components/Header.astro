@@ -4,6 +4,11 @@ import MobileMenu from './MobileMenu.astro';
 import { getLangFromUrl, useTranslations } from '../i18n/index';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+export interface Props {
+  extraLogo?: { src: string; alt: string };
+}
+const { extraLogo } = Astro.props;
 ---
 <header
   x-data="{ scrolled: false, _handler: null }"
@@ -19,13 +24,25 @@ const t = useTranslations(lang);
   <div class="max-w-[1440px] mx-auto px-8 lg:px-20 h-16 flex items-center justify-between">
 
     <!-- Logo -->
-    <a href={`/${lang}/`} class="shrink-0" aria-label="Grupo Saturno — inicio">
-      <img
-        src="/images/saturno-logo-texto.svg"
-        alt="Grupo Saturno"
-        class="h-28 w-auto"
-      />
-    </a>
+    <div class="flex items-center gap-4 shrink-0">
+      <a href={`/${lang}/`} aria-label="Grupo Saturno — inicio">
+        <img
+          src="/images/saturno-logo-texto.svg"
+          alt="Grupo Saturno"
+          class="h-28 w-auto"
+        />
+      </a>
+      {extraLogo && (
+        <>
+          <span class="w-px h-8 bg-carbon/20" aria-hidden="true"></span>
+          <img
+            src={extraLogo.src}
+            alt={extraLogo.alt}
+            class="h-10 w-auto"
+          />
+        </>
+      )}
+    </div>
 
     <!-- Nav desktop -->
     <nav class="hidden lg:flex items-center gap-10" aria-label="Navegacion principal">
