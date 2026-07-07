@@ -2,6 +2,7 @@
 import { getLangFromUrl, useTranslations } from '../../i18n/index';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const facts: string[] = JSON.parse(t('chain.facts'));
 ---
 <section id="trayectoria" class="bg-carbon overflow-hidden">
   <div class="max-w-[1440px] mx-auto">
@@ -40,8 +41,8 @@ const t = useTranslations(lang);
         <p class="font-sans text-[0.83rem] font-light text-white/50 leading-[1.95]">
           {t('chain.body2')}
         </p>
-        <div class="mt-12 pt-8 border-t border-white/[0.07] flex flex-wrap gap-x-7 gap-y-3">
-          {[t('chain.fact1'), t('chain.fact2'), t('chain.fact3')].map(fact => (
+        <div class="mt-12 pt-8 border-t border-white/[0.07] grid grid-cols-1 sm:grid-cols-3 gap-x-7 gap-y-4">
+          {facts.map(fact => (
             <span class="font-sans text-[0.63rem] tracking-[0.16em] uppercase text-burgundy">
               {fact}
             </span>

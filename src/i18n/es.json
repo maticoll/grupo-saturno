@@ -229,13 +229,18 @@
   },
   "chain": {
     "label": "Cómo trabajamos",
-    "h2": "Un proveedor.",
-    "h2Italic": "Toda la cadena.",
-    "body1": "Nuestro ganado pasta en campos propios en Uruguay. El procesamiento, el desosado y el envasado al vacío suceden en nuestra planta industrial. La distribución la coordinamos nosotros. El importador no negocia con un trader — negocia directamente con quien conoce el animal desde su nacimiento.",
-    "body2": "Eso es lo que significa integración vertical en la práctica. No como concepto de marketing, sino como algo que cambia el precio, el control y la trazabilidad de cada kilo que sale de nuestras plantas.",
-    "fact1": "Faena propia",
-    "fact2": "Procesamiento propio",
-    "fact3": "Sin traders ni brokers"
+    "h2": "Una empresa seria.",
+    "h2Italic": "Procesos que respetamos.",
+    "body1": "Somos una empresa seria en la que respetamos todos los procesos de bienestar animal, inocuidad, seguridad alimentaria, calidad, sustentabilidad y trazabilidad.",
+    "body2": "Nos caracteriza la adaptación a las necesidades de cada mercado y, en especial, de cada cliente.",
+    "facts": [
+      "Bienestar animal",
+      "Inocuidad",
+      "Seguridad alimentaria",
+      "Calidad",
+      "Sustentabilidad",
+      "Trazabilidad"
+    ]
   },
   "why": {
     "label": "Diferenciadores",
@@ -309,7 +314,7 @@
     "homeTitle": "Grupo Saturno — Producción y Procesamiento Cárnico | Uruguay",
     "homeDesc": "36 años de trayectoria en ganadería, procesamiento frigorífico y comercialización internacional. Uruguay.",
     "floridaTitle": "Establecimiento Florida 365 — Grupo Saturno | Procesamiento Cárnico Uruguay",
-    "floridaDesc": "Establecimiento Florida, Unidad 01 de Grupo Saturno. Planta frigorífica en Florida, Uruguay. Procesamiento especializado, exportación y trazabilidad completa.",
+    "floridaDesc": "Establecimiento Florida 365, el frigorífico exportador de Grupo Saturno: faena, desosado y depósito en Florida, Uruguay. Habilitado para China, Estados Unidos y la Unión Europea — nuestra ventana al mundo.",
     "saturnoTitle": "Frigorífico Saturno — Grupo Saturno",
     "saturnoDesc": "Ciclo 2 del Grupo Saturno: centro logístico y de distribución nacional, dedicado al mercado interno uruguayo.",
     "reoaberturaTitle": "Reapertura Establecimiento Florida 365 — Marzo 2026 · Grupo Saturno",
@@ -317,10 +322,10 @@
   },
   "florida": {
     "heroKicker": "Unidad 01 · Grupo Saturno",
-    "heroDesc": "Establecimiento especializado en procesamiento y exportación de carne vacuna. Florida, Uruguay.",
+    "heroDesc": "Nuestro frigorífico exportador: faena, desosado y depósito. Florida, Uruguay.",
     "presentationLabel": "Presentación",
-    "presentationH2": "Especialización y capacidad de escala",
-    "presentationBody": "El Establecimiento Florida 365 es la planta de faena propia de Grupo Saturno, adquirida en 2025 y reinaugurada en marzo de 2026. Con habilitaciones activas para exportar a China, Estados Unidos y la Unión Europea, es el eslabón que completa la integración vertical del grupo: del campo al mundo, sin intermediarios.",
+    "presentationH2": "Nuestra ventana al mundo",
+    "presentationBody": "El Establecimiento Florida 365 es nuestro frigorífico exportador: faena, desosado y depósito. Habilitado para los mercados más exigentes —China (GACC), Estados Unidos (USDA) y la Unión Europea—, es la ventana del grupo al mundo: del campo a cada destino, sin intermediarios.",
     "stat1Label": "Capacidad",
     "stat1Value": "300 vacunos / día",
     "stat2Label": "Empleos directos",

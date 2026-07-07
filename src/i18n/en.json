@@ -229,13 +229,18 @@
   },
   "chain": {
     "label": "How we work",
-    "h2": "One supplier.",
-    "h2Italic": "The entire chain.",
-    "body1": "Our cattle graze on our own fields in Uruguay. Processing, deboning and vacuum packing happen at our industrial plant. We coordinate distribution ourselves. The importer does not negotiate with a trader — they negotiate directly with the people who have known the animal since birth.",
-    "body2": "That is what vertical integration means in practice. Not as a marketing concept, but as something that changes the price, the control and the traceability of every kilo that leaves our plants.",
-    "fact1": "Own slaughter plant",
-    "fact2": "Own processing plant",
-    "fact3": "No traders or brokers"
+    "h2": "A serious company.",
+    "h2Italic": "Processes we respect.",
+    "body1": "We are a serious company that respects every process of animal welfare, food safety, food security, quality, sustainability and traceability.",
+    "body2": "We are defined by our ability to adapt to the needs of each market and, above all, of each client.",
+    "facts": [
+      "Animal welfare",
+      "Food safety",
+      "Food security",
+      "Quality",
+      "Sustainability",
+      "Traceability"
+    ]
   },
   "why": {
     "label": "Differentiators",
@@ -309,7 +314,7 @@
     "homeTitle": "Grupo Saturno — Beef Production & Processing | Uruguay",
     "homeDesc": "36 years of experience in cattle farming, meat processing, and international commercialization. Uruguay.",
     "floridaTitle": "Establecimiento Florida 365 — Grupo Saturno | Meat Processing Uruguay",
-    "floridaDesc": "Florida Plant, Business Unit 01 of Grupo Saturno. Meat processing facility in Florida, Uruguay. Specialised processing, export capacity, and full traceability.",
+    "floridaDesc": "Establecimiento Florida 365, Grupo Saturno's export meat plant: slaughter, deboning and storage in Florida, Uruguay. Approved for China, the United States and the European Union — our window to the world.",
     "saturnoTitle": "Frigorífico Saturno — Grupo Saturno",
     "saturnoDesc": "Cycle 2 of Grupo Saturno: national logistics and distribution centre, dedicated to the Uruguayan domestic market.",
     "reoaberturaTitle": "Florida Plant Reopening — April 2026 · Grupo Saturno",
@@ -317,10 +322,10 @@
   },
   "florida": {
     "heroKicker": "Unit 01 · Grupo Saturno",
-    "heroDesc": "Specialised plant for beef processing and export. Florida, Uruguay.",
+    "heroDesc": "Our export meat plant: slaughter, deboning and storage. Florida, Uruguay.",
     "presentationLabel": "Overview",
-    "presentationH2": "Specialisation and scale capacity",
-    "presentationBody": "Establecimiento Florida 365 is Grupo Saturno's own slaughter plant, acquired in 2025 and reopened in March 2026. With active approvals to export to China, the United States and the European Union, it is the link that completes the group's vertical integration: from field to the world, without intermediaries.",
+    "presentationH2": "Our window to the world",
+    "presentationBody": "Establecimiento Florida 365 is our export meat plant: slaughter, deboning and storage. Approved for the most demanding markets — China (GACC), the United States (USDA) and the European Union — it is the group's window to the world: from the field to every destination, without intermediaries.",
     "stat1Label": "Capacity",
     "stat1Value": "300 head / day",
     "stat2Label": "Direct jobs",
