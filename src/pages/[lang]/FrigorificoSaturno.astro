@@ -19,6 +19,25 @@ const storeItems = JSON.parse(t('saturno.storeItems')) as string[];
 const pilares = JSON.parse(t('saturno.pilares')) as Array<{ num: string; title: string; desc: string }>;
 const adnItems = JSON.parse(t('saturno.adnItems')) as string[];
 const cutCategories = JSON.parse(t('product.cutsFullCategories')) as Array<{ title: string; items: string[] }>;
+const cowZones = JSON.parse(t('saturno.cowZones')) as string[];
+const zoneLabel = (n: number) => `${String(n).padStart(2, '0')} · ${cowZones[n - 1]}`;
+
+// Zonas sin corte premium destacado — polígonos trazados desde los píxeles verdes de cada cut-N.png
+const extraZones = [
+  { n: 1, points: '246,148 214,171 225,193 218,216 197,238 188,261 174,284 154,307 131,329 115,352 121,374 149,397 315,419 320,419 331,397 342,374 349,352 355,329 359,307 360,284 359,261 354,238 364,216 379,193 384,171 255,148' },
+  { n: 2, points: '381,204 360,228 364,251 366,276 365,300 363,323 357,347 350,371 340,394 326,418 345,442 363,466 376,490 377,490 393,466 408,442 422,418 435,394 447,371 460,347 470,323 479,300 488,276 495,251 500,228 386,204' },
+  { n: 3, points: '485,317 468,343 455,370 441,396 426,422 410,449 394,476 381,502 393,529 406,555 421,581 441,608 585,635 589,635 599,608 608,581 614,555 619,529 621,502 622,476 620,449 615,422 606,396 593,370 570,343 519,317' },
+  { n: 8, points: '994,334 853,350 596,365 606,381 614,396 619,412 623,427 625,443 627,459 627,475 627,490 627,506 626,521 769,521 915,506 999,490 1026,475 1020,459 1016,443 1013,427 1010,412 1008,396 1007,381 1006,365 1006,350 1006,334' },
+  { n: 9, points: '625,528 624,537 622,546 621,555 619,563 617,572 614,581 612,590 609,599 605,608 602,616 599,625 706,635 730,635 731,625 731,616 731,608 732,599 732,590 732,581 731,572 730,563 730,555 728,546 727,537 695,528' },
+  { n: 10, points: '881,515 758,526 732,536 734,547 736,557 737,568 738,579 738,589 738,600 738,610 737,621 736,631 810,643 875,643 925,631 925,621 925,610 924,600 923,589 921,579 919,568 917,557 915,547 912,536 909,526 906,515' },
+  { n: 12, points: '1021,291 1016,310 1013,329 1012,348 1012,367 1013,386 1074,406 1119,425 1154,444 1183,464 1207,483 1226,502 1242,521 1244,521 1249,502 1253,483 1258,464 1262,444 1265,425 1267,406 1269,386 1267,367 1256,348 1223,329 1152,310 1035,291' },
+  { n: 13, points: '1015,396 1017,412 1019,427 1023,443 1027,459 1032,475 1038,490 1045,506 1052,521 1060,537 1069,552 1079,568 1090,583 1091,583 1093,568 1098,552 1105,537 1119,521 1222,506 1207,490 1189,475 1165,459 1141,443 1110,427 1073,412 1023,396' },
+  { n: 14, points: '1156,509 1132,519 1120,529 1111,539 1106,548 1102,558 1099,568 1098,578 1098,588 1101,598 1108,607 1117,617 1127,627 1134,627 1170,617 1195,607 1211,598 1225,588 1233,578 1234,568 1235,558 1237,548 1239,539 1235,529 1220,519 1191,509' },
+  { n: 15, points: '1231,591 1214,603 1192,615 1156,627 1134,640 1141,652 1149,664 1157,675 1166,687 1174,699 1181,711 1186,723 1190,735 1211,735 1244,723 1253,711 1255,699 1257,687 1260,675 1261,664 1261,652 1253,640 1244,627 1238,615 1235,603 1233,591' },
+  { n: 16, points: '505,631 489,643 491,653 493,664 495,675 496,685 497,696 498,707 499,717 502,728 505,739 507,749 526,760 555,760 559,749 563,739 569,728 573,717 574,707 573,696 575,685 577,675 579,664 582,653 585,643 553,631' },
+  { n: 17, points: '508,764 507,776 507,788 505,800 503,812 499,825 495,838 490,850 484,862 475,874 465,886 457,898 467,910 507,910 525,898 526,886 528,874 546,862 547,850 547,838 547,825 547,812 548,800 549,788 552,776 516,764' },
+  { n: 18, points: '1248,728 1193,744 1195,759 1197,775 1197,790 1197,806 1196,822 1194,838 1191,853 1187,869 1174,884 1165,900 1172,915 1206,915 1233,900 1234,884 1250,869 1251,853 1249,838 1245,822 1243,806 1244,790 1246,775 1247,759 1248,744 1250,728' },
+];
 ---
 <SubLandingLayout
   title={t('meta.saturnoTitle')}
@@ -208,23 +227,31 @@ const cutCategories = JSON.parse(t('product.cutsFullCategories')) as Array<{ tit
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
             >
+              <!-- Zonas sin corte premium (primero en el DOM: las premium quedan arriba en solapamientos) -->
+              {extraZones.map(({ n, points }) => (
+                <polygon class="sc-zone" data-zone={n} data-zone-label={zoneLabel(n)}
+                  data-image={`/images/cut-${n}.png`} points={points} />
+              ))}
               <!-- Zona 4 → Bife Ancho (idx 0) -->
-              <polygon class="sc-zone" data-cuts="0" data-image="/images/cut-4.png"
+              <polygon class="sc-zone" data-cuts="0" data-zone-label={zoneLabel(4)} data-image="/images/cut-4.png"
                 points="488,168 757,168 757,370 488,370" />
               <!-- Zona 5 → Bife Angosto (idx 1) -->
-              <polygon class="sc-zone" data-cuts="1" data-image="/images/cut-5.png"
+              <polygon class="sc-zone" data-cuts="1" data-zone-label={zoneLabel(5)} data-image="/images/cut-5.png"
                 points="778,168 882,168 882,340 778,340" />
               <!-- Zona 6 → Lomo (idx 2) -->
-              <polygon class="sc-zone" data-cuts="2" data-image="/images/cut-6.png"
+              <polygon class="sc-zone" data-cuts="2" data-zone-label={zoneLabel(6)} data-image="/images/cut-6.png"
                 points="883,163 973,163 973,310 883,310" />
               <!-- Zona 7 → Cuadril + Colita de cuadril (idx 3,4) -->
-              <polygon class="sc-zone" data-cuts="3,4" data-image="/images/cut-7.png"
+              <polygon class="sc-zone" data-cuts="3,4" data-zone-label={zoneLabel(7)} data-image="/images/cut-7.png"
                 points="954,138 1195,138 1195,345 954,345" />
               <!-- Zona 11 → Vacío (idx 5) -->
-              <polygon class="sc-zone" data-cuts="5" data-image="/images/cut-11.png"
+              <polygon class="sc-zone" data-cuts="5" data-zone-label={zoneLabel(11)} data-image="/images/cut-11.png"
                 points="840,533 1080,533 1080,688 840,688" />
             </svg>
           </div>
+          <p id="cow-zone-caption" class="font-sans text-[0.72rem] font-light text-[#888] mt-3 min-h-[1.2rem] transition-colors duration-200" data-hint={t('saturno.cowHint')}>
+            {t('saturno.cowHint')}
+          </p>
         </div>
       </div>
 
@@ -373,6 +400,10 @@ const cutCategories = JSON.parse(t('product.cutsFullCategories')) as Array<{ tit
     object-fit: contain;
     object-position: center;
   }
+  #cow-zone-caption.is-active {
+    color: #6B2E2A;
+    font-weight: 500;
+  }
   .sc-cut.sc-active {
     color: #6B2E2A !important;
     font-weight: 600;
@@ -427,14 +458,22 @@ const cutCategories = JSON.parse(t('product.cutsFullCategories')) as Array<{ tit
   const cutItems = document.querySelectorAll<HTMLElement>('.sc-cut');
   const cowImg = document.querySelector<HTMLImageElement>('#cow-hotmap img');
   const cowBaseSrc = cowImg?.src ?? '';
+  const caption = document.querySelector<HTMLElement>('#cow-zone-caption');
+  const captionHint = caption?.dataset.hint ?? '';
 
-  // Mapa idx → imagen (generado desde data-image de cada zona)
+  // Mapa idx → imagen (generado desde data-image de cada zona premium)
   const idxToImage = new Map<number, string>();
   zones.forEach(zone => {
     const img = zone.dataset.image;
     if (!img) return;
-    (zone.dataset.cuts ?? '').split(',').map(Number).forEach(i => idxToImage.set(i, img));
+    (zone.dataset.cuts ?? '').split(',').filter(Boolean).map(Number).forEach(i => idxToImage.set(i, img));
   });
+
+  function setCaption(label: string | undefined, on: boolean) {
+    if (!caption) return;
+    caption.textContent = on && label ? label : captionHint;
+    caption.classList.toggle('is-active', on && !!label);
+  }
 
   function setActive(indices: number[], on: boolean) {
     indices.forEach(i => cutItems[i]?.classList.toggle('sc-active', on));
@@ -452,14 +491,16 @@ const cutCategories = JSON.parse(t('product.cutsFullCategories')) as Array<{ tit
   }
 
   zones.forEach(zone => {
-    const indices = (zone.dataset.cuts ?? '').split(',').map(Number);
+    const indices = (zone.dataset.cuts ?? '').split(',').filter(Boolean).map(Number);
     zone.addEventListener('mouseenter', () => {
       setActive(indices, true);
-      swapCowImage(indices, true);
+      if (cowImg && zone.dataset.image) cowImg.src = zone.dataset.image;
+      setCaption(zone.dataset.zoneLabel, true);
     });
     zone.addEventListener('mouseleave', () => {
       setActive(indices, false);
-      swapCowImage(indices, false);
+      if (cowImg) cowImg.src = cowBaseSrc;
+      setCaption(undefined, false);
     });
   });
 

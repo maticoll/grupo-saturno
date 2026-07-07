@@ -396,6 +396,27 @@
       "Colita de Cuadril (Tri-tip)",
       "Vacío (Flank)"
     ],
+    "cowHint": "Pasá el cursor o tocá una zona de la vaca para identificar sus cortes.",
+    "cowZones": [
+      "Cogote",
+      "Aguja · Tapa de aguja",
+      "Paleta · Marucha · Chingolo",
+      "Bife ancho · Tapa de bife ancho",
+      "Bife angosto",
+      "Lomo",
+      "Cuadril · Picaña · Colita de cuadril",
+      "Asado · Costillar",
+      "Pecho",
+      "Falda · Matambre",
+      "Vacío · Entraña",
+      "Nalga de adentro · Tapa de nalga",
+      "Bola de lomo",
+      "Peceto · Cuadrada",
+      "Tortuguita",
+      "Brazuelo",
+      "Garrón delantero",
+      "Garrón trasero"
+    ],
     "premiumItems": [
       "Desafío profesional de la propia estructura",
       "Máxima calidad para el consumidor local",

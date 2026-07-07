@@ -396,6 +396,27 @@
       "Tri-tip (Colita de Cuadril)",
       "Flank (Vacío)"
     ],
+    "cowHint": "Hover over or tap a region of the diagram to identify its cuts.",
+    "cowZones": [
+      "Neck",
+      "Chuck Roll · Chuck Cover",
+      "Blade Clod · Blade Oyster · Chuck Tender",
+      "Ribeye · Rib Eye Cap",
+      "Striploin",
+      "Tenderloin",
+      "Rump · Rump Cap · Tri-tip",
+      "Ribs · Rib Plate",
+      "Brisket",
+      "Navel Plate · Rose Meat",
+      "Thin Flank · Skirt Steak",
+      "Inside · Inside Cap",
+      "Knuckle",
+      "Eye Round · Outside Flat",
+      "Heel Muscle",
+      "Shin",
+      "Fore Shank",
+      "Hind Shank"
+    ],
     "premiumItems": [
       "Professional challenge from the group's own infrastructure",
       "Maximum quality for the local consumer",
