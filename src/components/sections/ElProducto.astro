@@ -98,32 +98,15 @@ const cutCategories = JSON.parse(t('product.cutsFullCategories')) as Array<{titl
 
     </div>
 
-    <!-- Ficha tecnica -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-px bg-burgundy/10 scroll-reveal">
-      <div class="bg-cream p-9">
-        <p class="font-sans text-[0.7rem] tracking-[0.2em] uppercase text-burgundy mb-3">{t('product.spec1Cat')}</p>
-        <h3 class="font-serif text-[1.3rem] font-medium text-carbon mb-2">{t('product.spec1Title')}</h3>
-        <p class="font-sans text-[0.9rem] font-light text-[#666] leading-[1.7]">{t('product.spec1Text')}</p>
-      </div>
-      <div class="bg-cream p-9">
-        <p class="font-sans text-[0.7rem] tracking-[0.2em] uppercase text-burgundy mb-3">{t('product.spec2Cat')}</p>
-        <h3 class="font-serif text-[1.3rem] font-medium text-carbon mb-2">{t('product.spec2Title')}</h3>
-        <p class="font-sans text-[0.9rem] font-light text-[#666] leading-[1.7]">{t('product.spec2Text')}</p>
-      </div>
-    </div>
-
     <!-- Listado completo de cortes INAC (acordeon) -->
-    <div class="mt-px bg-burgundy/10 scroll-reveal" x-data="{ open: false, cat: null }">
+    <div class="bg-burgundy/10 scroll-reveal" x-data="{ open: false, cat: null }">
       <button
         type="button"
         @click="open = !open"
         :aria-expanded="open"
         class="w-full bg-cream px-9 py-6 min-h-[44px] flex items-center justify-between gap-4 text-left cursor-pointer"
       >
-        <div>
-          <p class="font-sans text-[0.7rem] tracking-[0.2em] uppercase text-burgundy mb-2">{t('product.spec1Cat')}</p>
-          <h3 class="font-serif text-[1.3rem] font-medium text-carbon">{t('product.cutsFullToggle')}</h3>
-        </div>
+        <h3 class="font-serif text-[1.3rem] font-medium text-carbon">{t('product.cutsFullToggle')}</h3>
         <svg class="w-5 h-5 text-burgundy shrink-0 transition-transform duration-300" :class="open && 'rotate-180'"
           fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
