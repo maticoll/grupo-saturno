@@ -40,9 +40,7 @@
     "stat2Number": "100%",
     "stat2Unit": "traceability",
     "stat2Desc": "from origin to final product",
-    "stat3Number": "1",
-    "stat3Unit": "whole world",
-    "stat3Desc": "as our destination — approved for the most demanding markets"
+    "stat3Phrase": "A whole world as our destination"
   },
   "mvv": {
     "label": "Purpose",

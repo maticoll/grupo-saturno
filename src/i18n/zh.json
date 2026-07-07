@@ -41,9 +41,7 @@
     "stat2Number": "100%",
     "stat2Unit": "全程溯源",
     "stat2Desc": "从源头到最终产品",
-    "stat3Number": "1",
-    "stat3Unit": "个世界",
-    "stat3Desc": "以整个世界为目的地——已获准进入最严苛市场"
+    "stat3Phrase": "以整个世界为目的地"
   },
   "mvv": {
     "label": "企业宗旨",

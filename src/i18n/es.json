@@ -40,9 +40,7 @@
     "stat2Number": "100%",
     "stat2Unit": "trazabilidad",
     "stat2Desc": "origen al producto final",
-    "stat3Number": "1",
-    "stat3Unit": "mundo entero",
-    "stat3Desc": "como destino — habilitados para los mercados más exigentes"
+    "stat3Phrase": "Un mundo entero como destino"
   },
   "mvv": {
     "label": "Propósito",
