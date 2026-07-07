@@ -311,7 +311,7 @@
     "floridaTitle": "Establecimiento Florida 365 — Grupo Saturno | Meat Processing Uruguay",
     "floridaDesc": "Florida Plant, Business Unit 01 of Grupo Saturno. Meat processing facility in Florida, Uruguay. Specialised processing, export capacity, and full traceability.",
     "saturnoTitle": "Frigorífico Saturno — Grupo Saturno",
-    "saturnoDesc": "Core production unit of Grupo Saturno. Integrated processing with full traceability from origin.",
+    "saturnoDesc": "Cycle 2 of Grupo Saturno: national logistics and distribution centre, dedicated to the Uruguayan domestic market.",
     "reoaberturaTitle": "Florida Plant Reopening — April 2026 · Grupo Saturno",
     "reoaberturaDesc": "Photographic record of the reopening ceremony of Establecimiento Florida, Grupo Saturno. A milestone in our industrial history, April 2026."
   },
@@ -338,8 +338,8 @@
   "saturno": {
     "heroKicker": "Unit 02 · Grupo Saturno",
     "presentationLabel": "Overview",
-    "presentationH2": "The productive core of the group",
-    "presentationBody1": "Founded in 1990, Frigorífico Saturno is a 100% Uruguayan company with an industrial plant opened in 2009, located at Route 8 Km 38, Empalme Olmos, Canelones. Integrated production and processing with full traceability from origin.",
+    "presentationH2": "Cycle 2, dedicated to the Uruguayan domestic market",
+    "presentationBody1": "Founded in 1990, Frigorífico Saturno is the group's cycle 2: a national logistics and distribution centre with its plant at Route 8 Km 38, Empalme Olmos, Canelones. We supply the whole country with a fleet of more than 40 vehicles and a volume exceeding 1,000 tonnes per month.",
     "presentationBody2": "\"From the outset, the reason for being of Frigorífico Saturno: Uruguayan DNA.\"",
     "stats": [
       {
@@ -351,34 +351,35 @@
         "label": "m² industrial plant"
       },
       {
-        "value": "5,000+",
+        "value": "12,000+",
         "label": "Tonnes / year"
       },
       {
-        "value": "100",
+        "value": "100+",
         "label": "National employees"
       },
       {
-        "value": "15",
+        "value": "40+",
         "label": "Distribution vehicles"
       },
       {
-        "value": "8+",
+        "value": "19",
         "label": "Departments covered"
       }
     ],
     "distLabel": "Distribution",
     "distH2": "Nationwide own distribution",
-    "distBody": "A fleet of 15 vehicles with state-of-the-art refrigeration equipment that guarantees the cold chain from the plant to the delivery point.",
+    "distBody": "A fleet of more than 40 vehicles with state-of-the-art refrigeration equipment that guarantees the cold chain from the plant to the delivery point.",
     "distMetroLabel": "Metropolitan Area",
     "distMetroFreq": "Daily distribution",
     "distInteriorLabel": "Interior of the country",
-    "distInteriorDepts": "Artigas · Salto · Paysandú · Río Negro · Soriano · Colonia · Flores · San José",
-    "distInteriorFreq": "Weekly frequency",
+    "distInteriorDepts": "All departments",
+    "distInteriorFreq": "Twice a week",
     "capacityLabel": "Installed capacity",
     "capacity": [
       "Cycle II Industrial Plant — 2,183 m²",
-      "Processing of more than 5,000 tonnes per year",
+      "National logistics and distribution centre",
+      "Processing of more than 12,000 tonnes per year",
       "100 employees — 100% national workforce",
       "Traceability from producer to customer"
     ],
@@ -386,7 +387,7 @@
     "productH2": "Premium quality, available locally",
     "premiumLabel": "Saturno Premium",
     "premiumH3": "A line of excellence",
-    "premiumBody": "The beef Uruguay exports to the world's most demanding markets, now available to the Uruguayan consumer. Angus and Hereford steers and cows, natural pasture grazing, balanced supplementation without growth hormones.",
+    "premiumBody": "The beef Uruguay exports to the world's most demanding markets, now available to the Uruguayan consumer. Angus and Hereford steers and heifers, natural pasture grazing, balanced supplementation without growth hormones.",
     "cuts": [
       "Ribeye (Bife Ancho)",
       "Striploin (Bife Angosto)",
@@ -414,7 +415,7 @@
       {
         "num": "01",
         "title": "The Producer",
-        "desc": "The original supplier with whom we share standards, successes and challenges of the industry."
+        "desc": "The first and fundamental link, with whom we maintain a close, day-to-day relationship."
       },
       {
         "num": "02",
@@ -429,7 +430,7 @@
       {
         "num": "04",
         "title": "The Social Environment",
-        "desc": "Good service within the local area and across the whole country."
+        "desc": "Committed to our area of influence across the whole country."
       },
       {
         "num": "05",
@@ -452,7 +453,7 @@
       "Export quality available to the local consumer",
       "Individual traceability: every animal electronically registered from birth",
       "Tailor-made service for importers, chefs and distributors",
-      "Regional presence in 8+ departments"
+      "Presence in all 19 departments"
     ],
     "contactLabel": "Direct contact",
     "contactName": "Frigorífico Saturno",

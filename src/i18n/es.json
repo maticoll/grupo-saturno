@@ -311,7 +311,7 @@
     "floridaTitle": "Establecimiento Florida 365 — Grupo Saturno | Procesamiento Cárnico Uruguay",
     "floridaDesc": "Establecimiento Florida, Unidad 01 de Grupo Saturno. Planta frigorífica en Florida, Uruguay. Procesamiento especializado, exportación y trazabilidad completa.",
     "saturnoTitle": "Frigorífico Saturno — Grupo Saturno",
-    "saturnoDesc": "Núcleo productivo del Grupo Saturno. Procesamiento integrado con trazabilidad desde el origen.",
+    "saturnoDesc": "Ciclo 2 del Grupo Saturno: centro logístico y de distribución nacional, dedicado al mercado interno uruguayo.",
     "reoaberturaTitle": "Reapertura Establecimiento Florida 365 — Marzo 2026 · Grupo Saturno",
     "reoaberturaDesc": "Registro fotográfico de la ceremonia de reapertura del Establecimiento Florida, Grupo Saturno. Un hito en nuestra historia industrial, Marzo 2026."
   },
@@ -338,8 +338,8 @@
   "saturno": {
     "heroKicker": "Unidad 02 · Grupo Saturno",
     "presentationLabel": "Presentación",
-    "presentationH2": "Núcleo productivo del grupo",
-    "presentationBody1": "Fundado en 1990, Frigorífico Saturno es una empresa 100% nacional con planta industrial inaugurada en 2009, ubicada en Ruta 8 Km 38, Empalme Olmos, Canelones. Producción y procesamiento integrados con trazabilidad desde el origen.",
+    "presentationH2": "Ciclo 2, dedicado al mercado interno uruguayo",
+    "presentationBody1": "Fundado en 1990, Frigorífico Saturno es el ciclo 2 del grupo: centro logístico y de distribución nacional con planta en Ruta 8 Km 38, Empalme Olmos, Canelones. Abastecemos a todo el país con una flota de más de 40 vehículos y un volumen superior a las 1.000 toneladas mensuales.",
     "presentationBody2": "\"Desde el inicio la razón de ser Frigorífico Saturno: ADN Uruguayo.\"",
     "stats": [
       {
@@ -351,34 +351,35 @@
         "label": "m² planta industrial"
       },
       {
-        "value": "5.000+",
+        "value": "12.000+",
         "label": "Toneladas / año"
       },
       {
-        "value": "100",
+        "value": "100+",
         "label": "Empleados nacionales"
       },
       {
-        "value": "15",
+        "value": "40+",
         "label": "Vehículos de distribución"
       },
       {
-        "value": "8+",
+        "value": "19",
         "label": "Departamentos cubiertos"
       }
     ],
     "distLabel": "Distribución",
     "distH2": "Cobertura nacional propia",
-    "distBody": "Flota de 15 vehículos con equipamiento de frío de última generación que garantiza la cadena de frío desde la planta hasta el punto de entrega.",
+    "distBody": "Flota de más de 40 vehículos con equipamiento de frío de última generación que garantiza la cadena de frío desde la planta hasta el punto de entrega.",
     "distMetroLabel": "Zona Metropolitana",
     "distMetroFreq": "Distribución diaria",
     "distInteriorLabel": "Interior del país",
-    "distInteriorDepts": "Artigas · Salto · Paysandú · Río Negro · Soriano · Colonia · Flores · San José",
-    "distInteriorFreq": "Frecuencia semanal",
+    "distInteriorDepts": "Todos los departamentos",
+    "distInteriorFreq": "Dos veces por semana",
     "capacityLabel": "Capacidad instalada",
     "capacity": [
       "Planta Industrial Ciclo II — 2.183 m²",
-      "Procesamiento de más de 5.000 toneladas anuales",
+      "Centro logístico y de distribución nacional",
+      "Procesamiento de más de 12.000 toneladas al año",
       "100 empleados de mano de obra nacional",
       "Trazabilidad desde el productor hasta el cliente"
     ],
@@ -386,7 +387,7 @@
     "productH2": "Calidad premium, disponible localmente",
     "premiumLabel": "Saturno Premium",
     "premiumH3": "Una línea de excelencia",
-    "premiumBody": "Las carnes que Uruguay exporta a los mercados más exigentes del mundo, ahora disponibles para el consumidor uruguayo. Novillos y vacas Angus y Hereford, pastoreo a pradera natural, suplementación equilibrada sin hormonas de crecimiento.",
+    "premiumBody": "Las carnes que Uruguay exporta a los mercados más exigentes del mundo, ahora disponibles para el consumidor uruguayo. Novillos y vaquillonas Angus y Hereford, pastoreo a pradera natural, suplementación equilibrada sin hormonas de crecimiento.",
     "cuts": [
       "Bife Ancho (Ribeye)",
       "Bife Angosto (Striploin)",
@@ -414,7 +415,7 @@
       {
         "num": "01",
         "title": "El Productor",
-        "desc": "Proveedor originario con quien compartimos criterios, bonanzas y avatares de la industria."
+        "desc": "Eslabón inicial y fundamental con el que mantenemos un relacionamiento cercano y diario."
       },
       {
         "num": "02",
@@ -429,7 +430,7 @@
       {
         "num": "04",
         "title": "El Entorno Social",
-        "desc": "Buenos servidores en el radio comarcal y en todo el país."
+        "desc": "Comprometidos con nuestra zona de influencia en todo el país."
       },
       {
         "num": "05",
@@ -452,7 +453,7 @@
       "Calidad de exportación disponible para el consumidor local",
       "Trazabilidad individual: cada animal registrado electrónicamente desde el nacimiento",
       "Servicio tailor-made para importadores, chefs y distribuidores",
-      "Presencia regional en 8+ departamentos"
+      "Presencia en los 19 departamentos"
     ],
     "contactLabel": "Contacto directo",
     "contactName": "Frigorífico Saturno",
