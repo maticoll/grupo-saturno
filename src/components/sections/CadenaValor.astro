@@ -35,19 +35,22 @@ const facts: string[] = JSON.parse(t('chain.facts'));
 
       <!-- Columna derecha: texto -->
       <div class="px-8 lg:px-16 py-24 lg:py-28 lg:border-l border-white/[0.06] scroll-reveal" style="transition-delay:80ms">
-        <p class="font-sans text-[0.83rem] font-light text-white/50 leading-[1.95] mb-6">
+        <p class="font-sans text-[0.83rem] font-light text-white/50 leading-[1.95]">
           {t('chain.body1')}
         </p>
-        <p class="font-sans text-[0.83rem] font-light text-white/50 leading-[1.95]">
-          {t('chain.body2')}
-        </p>
-        <div class="mt-12 pt-8 border-t border-white/[0.07] grid grid-cols-1 sm:grid-cols-3 gap-x-7 gap-y-4">
-          {facts.map(fact => (
-            <span class="font-sans text-[0.63rem] tracking-[0.16em] uppercase text-burgundy">
-              {fact}
-            </span>
+        <div class="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-px bg-white/[0.08]">
+          {facts.map((fact, i) => (
+            <div class="bg-carbon p-5">
+              <p class="font-sans text-[0.58rem] tracking-[0.18em] text-burgundy mb-2">0{i + 1}</p>
+              <p class="font-sans text-[0.63rem] tracking-[0.14em] uppercase text-white/70 leading-[1.6]">
+                {fact}
+              </p>
+            </div>
           ))}
         </div>
+        <p class="mt-10 border-l-2 border-burgundy pl-6 font-serif text-[1.1rem] lg:text-[1.3rem] font-light italic text-white/75 leading-[1.6]">
+          {t('chain.body2')}
+        </p>
       </div>
 
     </div>
