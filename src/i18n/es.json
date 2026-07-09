@@ -393,34 +393,100 @@
     "premiumLabel": "Saturno Premium",
     "premiumH3": "Una línea de excelencia",
     "premiumBody": "Las carnes que Uruguay exporta a los mercados más exigentes del mundo, ahora disponibles para el consumidor uruguayo. Novillos y vaquillonas Angus y Hereford, pastoreo a pradera natural, suplementación equilibrada sin hormonas de crecimiento.",
-    "cuts": [
-      "Bife Ancho (Ribeye)",
-      "Bife Angosto (Striploin)",
-      "Lomo (Tenderloin)",
-      "Cuadril (Rump)",
-      "Colita de Cuadril (Tri-tip)",
-      "Vacío (Flank)"
-    ],
-    "cowHint": "Pasá el cursor o tocá una zona de la vaca para identificar sus cortes.",
+    "cowHint": "Pasá el cursor o tocá una zona de la vaca para descubrir todos los cortes de esa región.",
+    "cowPanelKicker": "18 zonas · Manual de Cortes INAC",
+    "cutsListTitle": "Listado completo de cortes",
     "cowZones": [
-      "Cogote",
-      "Aguja · Tapa de aguja",
-      "Paleta · Marucha · Chingolo",
-      "Bife ancho · Tapa de bife ancho",
-      "Bife angosto",
-      "Lomo",
-      "Cuadril · Picaña · Colita de cuadril",
-      "Asado · Costillar",
-      "Pecho",
-      "Falda · Matambre",
-      "Vacío · Entraña",
-      "Nalga de adentro · Tapa de nalga",
-      "Bola de lomo",
-      "Peceto · Cuadrada",
-      "Tortuguita",
-      "Brazuelo",
-      "Garrón delantero",
-      "Garrón trasero"
+      {
+        "name": "Cogote",
+        "cuts": ["Cogote", "Cordón de cogote", "Aguja con cogote"]
+      },
+      {
+        "name": "Aguja",
+        "cuts": [
+          "Aguja",
+          "Tapa de aguja",
+          "Labio de aguja",
+          "Sobrecostilla",
+          "Huachalomo"
+        ]
+      },
+      {
+        "name": "Paleta",
+        "cuts": [
+          "Paleta",
+          "Carnaza de paleta",
+          "Tierno de paleta",
+          "Marucha",
+          "Chingolo"
+        ]
+      },
+      {
+        "name": "Bife ancho",
+        "cuts": ["Bife ancho", "Bife ancho sin tapa", "Tapa de bife ancho"]
+      },
+      { "name": "Bife angosto", "cuts": ["Bife angosto"] },
+      { "name": "Lomo", "cuts": ["Lomo"] },
+      {
+        "name": "Cuadril",
+        "cuts": [
+          "Cuadril completo",
+          "Corazón de cuadril",
+          "Tapa de cuadril (picaña)",
+          "Colita de cuadril"
+        ]
+      },
+      {
+        "name": "Asado · Costillar",
+        "cuts": [
+          "Asado",
+          "Asado con vacío",
+          "Asado corte inglés",
+          "Costilla redonda",
+          "Intercostales"
+        ]
+      },
+      {
+        "name": "Pecho",
+        "cuts": ["Pecho", "Pecho solapa", "Pecho sin solapa"]
+      },
+      {
+        "name": "Falda",
+        "cuts": ["Falda con hueso", "Falda sin hueso", "Matambre"]
+      },
+      {
+        "name": "Vacío",
+        "cuts": [
+          "Vacío",
+          "Bife grande de vacío",
+          "Bife de vacío",
+          "Entraña fina",
+          "Entraña gruesa",
+          "Arañita"
+        ]
+      },
+      {
+        "name": "Nalga de adentro",
+        "cuts": [
+          "Nalga de adentro",
+          "Nalga de adentro sin tapa",
+          "Tapa de nalga"
+        ]
+      },
+      { "name": "Bola de lomo", "cuts": ["Bola de lomo"] },
+      {
+        "name": "Nalga de afuera",
+        "cuts": [
+          "Peceto",
+          "Cuadrada",
+          "Nalga de afuera con tortuguita",
+          "Nalga de afuera sin tortuguita"
+        ]
+      },
+      { "name": "Tortuguita", "cuts": ["Tortuguita"] },
+      { "name": "Brazuelo", "cuts": ["Brazuelo", "Cónico"] },
+      { "name": "Garrón delantero", "cuts": ["Garrón delantero", "Bananita"] },
+      { "name": "Garrón trasero", "cuts": ["Garrón trasero"] }
     ],
     "premiumItems": [
       "Desafío profesional de la propia estructura",

@@ -13,17 +13,16 @@ const t = useTranslations(lang);
 
 const stats = JSON.parse(t('saturno.stats')) as Array<{ value: string; label: string }>;
 const capacity = JSON.parse(t('saturno.capacity')) as string[];
-const cuts = JSON.parse(t('saturno.cuts')) as string[];
 const premiumItems = JSON.parse(t('saturno.premiumItems')) as string[];
 const storeItems = JSON.parse(t('saturno.storeItems')) as string[];
 const pilares = JSON.parse(t('saturno.pilares')) as Array<{ num: string; title: string; desc: string }>;
 const adnItems = JSON.parse(t('saturno.adnItems')) as string[];
 const cutCategories = JSON.parse(t('product.cutsFullCategories')) as Array<{ title: string; items: string[] }>;
-const cowZones = JSON.parse(t('saturno.cowZones')) as string[];
-const zoneLabel = (n: number) => `${String(n).padStart(2, '0')} · ${cowZones[n - 1]}`;
+const cowZones = JSON.parse(t('saturno.cowZones')) as Array<{ name: string; cuts: string[] }>;
 
-// Zonas sin corte premium destacado — polígonos trazados desde los píxeles verdes de cada cut-N.png
-const extraZones = [
+// Polígonos de las 18 zonas — trazados desde los píxeles verdes de cada cut-N.png.
+// Las zonas 4-7 y 11 van al final del array para quedar arriba en el DOM ante solapamientos.
+const zonePolys = [
   { n: 1, points: '246,148 214,171 225,193 218,216 197,238 188,261 174,284 154,307 131,329 115,352 121,374 149,397 315,419 320,419 331,397 342,374 349,352 355,329 359,307 360,284 359,261 354,238 364,216 379,193 384,171 255,148' },
   { n: 2, points: '381,204 360,228 364,251 366,276 365,300 363,323 357,347 350,371 340,394 326,418 345,442 363,466 376,490 377,490 393,466 408,442 422,418 435,394 447,371 460,347 470,323 479,300 488,276 495,251 500,228 386,204' },
   { n: 3, points: '485,317 468,343 455,370 441,396 426,422 410,449 394,476 381,502 393,529 406,555 421,581 441,608 585,635 589,635 599,608 608,581 614,555 619,529 621,502 622,476 620,449 615,422 606,396 593,370 570,343 519,317' },
@@ -37,6 +36,11 @@ const extraZones = [
   { n: 16, points: '505,631 489,643 491,653 493,664 495,675 496,685 497,696 498,707 499,717 502,728 505,739 507,749 526,760 555,760 559,749 563,739 569,728 573,717 574,707 573,696 575,685 577,675 579,664 582,653 585,643 553,631' },
   { n: 17, points: '508,764 507,776 507,788 505,800 503,812 499,825 495,838 490,850 484,862 475,874 465,886 457,898 467,910 507,910 525,898 526,886 528,874 546,862 547,850 547,838 547,825 547,812 548,800 549,788 552,776 516,764' },
   { n: 18, points: '1248,728 1193,744 1195,759 1197,775 1197,790 1197,806 1196,822 1194,838 1191,853 1187,869 1174,884 1165,900 1172,915 1206,915 1233,900 1234,884 1250,869 1251,853 1249,838 1245,822 1243,806 1244,790 1246,775 1247,759 1248,744 1250,728' },
+  { n: 4, points: '488,168 757,168 757,370 488,370' },
+  { n: 5, points: '778,168 882,168 882,340 778,340' },
+  { n: 6, points: '883,163 973,163 973,310 883,310' },
+  { n: 7, points: '954,138 1195,138 1195,345 954,345' },
+  { n: 11, points: '840,533 1080,533 1080,688 840,688' },
 ];
 ---
 <SubLandingLayout
@@ -166,140 +170,115 @@ const extraZones = [
           {t('saturno.productH2')}
         </h2>
       </div>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <!-- Columna izquierda: Una Línea de Excelencia (info) + Premium Store -->
-        <div class="flex flex-col gap-8">
-          <!-- Saturno Premium — descripción + ítems -->
-          <div class="bg-white p-10 border-t-2 border-burgundy">
-            <p class="font-sans text-[0.65rem] tracking-[0.18em] uppercase text-burgundy mb-4">{t('saturno.premiumLabel')}</p>
-            <h3 class="font-serif text-[1.4rem] font-light text-carbon mb-4">{t('saturno.premiumH3')}</h3>
-            <p class="font-sans text-[0.82rem] font-light text-[#555] leading-[1.8] mb-6">
-              {t('saturno.premiumBody')}
-            </p>
-            <ul class="space-y-3">
-              {premiumItems.map(item => (
-                <li class="flex items-start gap-3">
-                  <span class="w-1 h-1 rounded-full bg-burgundy mt-[0.45rem] shrink-0" aria-hidden="true"></span>
-                  <span class="font-sans text-[0.8rem] font-light text-[#555] leading-[1.7]">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <!-- Premium Store -->
-          <div class="bg-white p-10 border-t-2 border-[#c8a87a]">
-            <p class="font-sans text-[0.65rem] tracking-[0.18em] uppercase text-[#8a6a3a] mb-4">{t('saturno.storeLabel')}</p>
-            <h3 class="font-serif text-[1.4rem] font-light text-carbon mb-4">{t('saturno.storeH3')}</h3>
-            <p class="font-sans text-[0.82rem] font-light text-[#555] leading-[1.8] mb-6">
-              {t('saturno.storeBody')}
-            </p>
-            <ul class="space-y-3">
-              {storeItems.map(item => (
-                <li class="flex items-start gap-3">
-                  <span class="w-1 h-1 rounded-full bg-[#c8a87a] mt-[0.45rem] shrink-0" aria-hidden="true"></span>
-                  <span class="font-sans text-[0.8rem] font-light text-[#555] leading-[1.7]">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-        <!-- Columna derecha: cortes + vaca -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+        <!-- Saturno Premium — descripción + ítems -->
         <div class="bg-white p-10 border-t-2 border-burgundy">
-          <div class="grid grid-cols-2 gap-1 mb-6" id="saturno-cuts-list">
-            {cuts.map((corte, i) => (
-              <p
-                class="sc-cut font-sans text-[0.72rem] text-[#555] py-1 border-b border-[#eee] transition-all duration-200 cursor-default rounded-sm"
-                data-cut-idx={i}
-              >{corte}</p>
-            ))}
-          </div>
-          <div class="relative w-full" id="cow-hotmap">
-            <img
-              src="/images/cortes-vaca-1.png"
-              alt="Diagrama de cortes de la vaca — Frigorífico Saturno"
-              class="select-none"
-              loading="lazy"
-              decoding="async"
-            />
-            <!-- SVG overlay — viewBox coincide con dimensiones reales de la imagen (1448×1086) -->
-            <svg
-              class="absolute inset-0 w-full h-full"
-              viewBox="0 0 1448 1086"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <!-- Zonas sin corte premium (primero en el DOM: las premium quedan arriba en solapamientos) -->
-              {extraZones.map(({ n, points }) => (
-                <polygon class="sc-zone" data-zone={n} data-zone-label={zoneLabel(n)}
-                  data-image={`/images/cut-${n}.png`} points={points} />
-              ))}
-              <!-- Zona 4 → Bife Ancho (idx 0) -->
-              <polygon class="sc-zone" data-cuts="0" data-zone-label={zoneLabel(4)} data-image="/images/cut-4.png"
-                points="488,168 757,168 757,370 488,370" />
-              <!-- Zona 5 → Bife Angosto (idx 1) -->
-              <polygon class="sc-zone" data-cuts="1" data-zone-label={zoneLabel(5)} data-image="/images/cut-5.png"
-                points="778,168 882,168 882,340 778,340" />
-              <!-- Zona 6 → Lomo (idx 2) -->
-              <polygon class="sc-zone" data-cuts="2" data-zone-label={zoneLabel(6)} data-image="/images/cut-6.png"
-                points="883,163 973,163 973,310 883,310" />
-              <!-- Zona 7 → Cuadril + Colita de cuadril (idx 3,4) -->
-              <polygon class="sc-zone" data-cuts="3,4" data-zone-label={zoneLabel(7)} data-image="/images/cut-7.png"
-                points="954,138 1195,138 1195,345 954,345" />
-              <!-- Zona 11 → Vacío (idx 5) -->
-              <polygon class="sc-zone" data-cuts="5" data-zone-label={zoneLabel(11)} data-image="/images/cut-11.png"
-                points="840,533 1080,533 1080,688 840,688" />
-            </svg>
-          </div>
-          <p id="cow-zone-caption" class="font-sans text-[0.72rem] font-light text-[#888] mt-3 min-h-[1.2rem] transition-colors duration-200" data-hint={t('saturno.cowHint')}>
-            {t('saturno.cowHint')}
+          <p class="font-sans text-[0.65rem] tracking-[0.18em] uppercase text-burgundy mb-4">{t('saturno.premiumLabel')}</p>
+          <h3 class="font-serif text-[1.4rem] font-light text-carbon mb-4">{t('saturno.premiumH3')}</h3>
+          <p class="font-sans text-[0.82rem] font-light text-[#555] leading-[1.8] mb-6">
+            {t('saturno.premiumBody')}
           </p>
+          <ul class="space-y-3">
+            {premiumItems.map(item => (
+              <li class="flex items-start gap-3">
+                <span class="w-1 h-1 rounded-full bg-burgundy mt-[0.45rem] shrink-0" aria-hidden="true"></span>
+                <span class="font-sans text-[0.8rem] font-light text-[#555] leading-[1.7]">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <!-- Premium Store -->
+        <div class="bg-white p-10 border-t-2 border-[#c8a87a]">
+          <p class="font-sans text-[0.65rem] tracking-[0.18em] uppercase text-[#8a6a3a] mb-4">{t('saturno.storeLabel')}</p>
+          <h3 class="font-serif text-[1.4rem] font-light text-carbon mb-4">{t('saturno.storeH3')}</h3>
+          <p class="font-sans text-[0.82rem] font-light text-[#555] leading-[1.8] mb-6">
+            {t('saturno.storeBody')}
+          </p>
+          <ul class="space-y-3">
+            {storeItems.map(item => (
+              <li class="flex items-start gap-3">
+                <span class="w-1 h-1 rounded-full bg-[#c8a87a] mt-[0.45rem] shrink-0" aria-hidden="true"></span>
+                <span class="font-sans text-[0.8rem] font-light text-[#555] leading-[1.7]">{item}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
 
-      <!-- Listado completo de cortes INAC (acordeón) -->
-      <div class="bg-burgundy/10 mt-8" x-data="{ open: false, cat: null }">
-        <button
-          type="button"
-          @click="open = !open"
-          :aria-expanded="open"
-          class="w-full bg-white px-9 py-6 min-h-[44px] flex items-center justify-between gap-4 text-left cursor-pointer"
-        >
-          <h3 class="font-serif text-[1.3rem] font-medium text-carbon">{t('product.cutsFullToggle')}</h3>
-          <svg class="w-5 h-5 text-burgundy shrink-0 transition-transform duration-300" :class="open && 'rotate-180'"
-            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-          </svg>
-        </button>
-
-        <div x-show="open" x-cloak class="border-t border-burgundy/10">
-          <div class="grid grid-cols-1 gap-px bg-burgundy/10">
-            {cutCategories.map((category, i) => (
-              <div class="bg-white">
-                <button
-                  type="button"
-                  @click={`cat = cat === ${i} ? null : ${i}`}
-                  :aria-expanded={`cat === ${i}`}
-                  class="w-full px-9 py-4 min-h-[44px] flex items-center justify-between gap-4 text-left cursor-pointer"
-                >
-                  <span class="font-serif text-[1.05rem] font-medium text-carbon">{category.title}</span>
-                  <span class="flex items-center gap-3 shrink-0">
-                    <span class="font-sans text-[0.7rem] text-warm-gray">{category.items.length} {t('product.cutsFullCountLabel')}</span>
-                    <svg class="w-4 h-4 text-burgundy transition-transform duration-300" :class={`cat === ${i} && 'rotate-180'`}
-                      fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                    </svg>
-                  </span>
-                </button>
-                <ul x-show={`cat === ${i}`} x-cloak class="px-9 pb-6 columns-1 sm:columns-2 lg:columns-3 gap-x-10">
-                  {category.items.map((item) => (
-                    <li class="font-sans text-[0.82rem] font-light text-[#555] leading-[1.6] py-1.5 break-inside-avoid border-b border-burgundy/5">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+      <!-- Vaca interactiva + panel de zona -->
+      <div class="bg-white p-10 lg:p-14 border-t-2 border-burgundy">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-14 items-center">
+          <div class="lg:col-span-3">
+            <div class="relative w-full" id="cow-hotmap">
+              <img
+                src="/images/cortes-vaca-1.png"
+                alt="Diagrama de cortes de la vaca — Frigorífico Saturno"
+                class="select-none"
+                loading="lazy"
+                decoding="async"
+              />
+              <!-- SVG overlay — viewBox coincide con dimensiones reales de la imagen (1448×1086) -->
+              <svg
+                class="absolute inset-0 w-full h-full"
+                viewBox="0 0 1448 1086"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                {zonePolys.map(({ n, points }) => (
+                  <polygon class="sc-zone" data-zone={n} data-image={`/images/cut-${n}.png`} points={points} />
+                ))}
+              </svg>
+            </div>
           </div>
-          <p class="bg-white px-9 py-4 font-sans text-[0.65rem] tracking-[0.05em] text-warm-gray border-t border-burgundy/10">
+          <div class="lg:col-span-2 lg:min-h-[340px] flex flex-col justify-center">
+            <p class="font-sans text-[0.65rem] tracking-[0.18em] uppercase text-burgundy mb-6">{t('saturno.cowPanelKicker')}</p>
+            <div id="cow-panel-rest">
+              <p class="font-sans text-[0.9rem] font-light text-[#777] leading-[1.8]">{t('saturno.cowHint')}</p>
+            </div>
+            <div id="cow-panel-zone" class="hidden">
+              <p class="flex items-baseline gap-4 mb-6">
+                <span id="cow-panel-num" class="font-serif text-[2.6rem] font-light text-burgundy/40 leading-none"></span>
+                <span id="cow-panel-name" class="font-serif text-[1.5rem] font-light text-carbon leading-tight"></span>
+              </p>
+              <ul id="cow-panel-cuts" class="space-y-2.5"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script type="application/json" id="cow-zones-json" set:html={JSON.stringify(cowZones)} />
+
+
+      <!-- Listado completo de cortes INAC (3 categorías) -->
+      <div class="mt-8" x-data="{ cat: null }">
+        <p class="font-sans text-[0.65rem] tracking-[0.18em] uppercase text-[#888] mb-4">{t('saturno.cutsListTitle')}</p>
+        <div class="grid grid-cols-1 gap-px bg-burgundy/10 border border-burgundy/10">
+          {cutCategories.map((category, i) => (
+            <div class="bg-white">
+              <button
+                type="button"
+                @click={`cat = cat === ${i} ? null : ${i}`}
+                :aria-expanded={`cat === ${i}`}
+                class="w-full px-9 py-5 min-h-[44px] flex items-center justify-between gap-4 text-left cursor-pointer"
+              >
+                <span class="font-serif text-[1.05rem] font-medium text-carbon">{category.title}</span>
+                <span class="flex items-center gap-3 shrink-0">
+                  <span class="font-sans text-[0.7rem] text-warm-gray">{category.items.length} {t('product.cutsFullCountLabel')}</span>
+                  <svg class="w-4 h-4 text-burgundy transition-transform duration-300" :class={`cat === ${i} && 'rotate-180'`}
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                  </svg>
+                </span>
+              </button>
+              <ul x-show={`cat === ${i}`} x-cloak class="px-9 pb-6 columns-1 sm:columns-2 lg:columns-3 gap-x-10">
+                {category.items.map((item) => (
+                  <li class="font-sans text-[0.82rem] font-light text-[#555] leading-[1.6] py-1.5 break-inside-avoid border-b border-burgundy/5">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+          <p class="bg-white px-9 py-4 font-sans text-[0.65rem] tracking-[0.05em] text-warm-gray">
             {t('product.cutsFullSource')}
           </p>
         </div>
@@ -400,16 +379,14 @@ const extraZones = [
     object-fit: contain;
     object-position: center;
   }
-  #cow-zone-caption.is-active {
-    color: #6B2E2A;
-    font-weight: 500;
+  /* Panel de zona — entrada escalonada de los cortes */
+  @keyframes cutSlideIn {
+    from { opacity: 0; transform: translateX(18px); }
+    to   { opacity: 1; transform: translateX(0); }
   }
-  .sc-cut.sc-active {
-    color: #6B2E2A !important;
-    font-weight: 600;
-    background-color: rgba(107, 46, 42, 0.07);
-    padding-left: 4px;
-    padding-right: 4px;
+  .cow-panel-cut {
+    opacity: 0;
+    animation: cutSlideIn 0.45s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
   }
 
   /* Pilares — animación de caída */
@@ -455,69 +432,54 @@ const extraZones = [
 
 <script>
   const zones = document.querySelectorAll<HTMLElement>('.sc-zone');
-  const cutItems = document.querySelectorAll<HTMLElement>('.sc-cut');
   const cowImg = document.querySelector<HTMLImageElement>('#cow-hotmap img');
   const cowBaseSrc = cowImg?.src ?? '';
-  const caption = document.querySelector<HTMLElement>('#cow-zone-caption');
-  const captionHint = caption?.dataset.hint ?? '';
+  const panelRest = document.getElementById('cow-panel-rest');
+  const panelZone = document.getElementById('cow-panel-zone');
+  const panelNum = document.getElementById('cow-panel-num');
+  const panelName = document.getElementById('cow-panel-name');
+  const panelCuts = document.getElementById('cow-panel-cuts');
+  const zonesData = JSON.parse(
+    document.getElementById('cow-zones-json')?.textContent ?? '[]'
+  ) as Array<{ name: string; cuts: string[] }>;
 
-  // Mapa idx → imagen (generado desde data-image de cada zona premium)
-  const idxToImage = new Map<number, string>();
+  function showZone(n: number) {
+    const zone = zonesData[n - 1];
+    if (!zone || !panelNum || !panelName || !panelCuts) return;
+    panelNum.textContent = String(n).padStart(2, '0');
+    panelName.textContent = zone.name;
+    panelCuts.innerHTML = '';
+    zone.cuts.forEach((cut, i) => {
+      const li = document.createElement('li');
+      li.className = 'cow-panel-cut flex items-start gap-3';
+      li.style.animationDelay = `${i * 55}ms`;
+      const dot = document.createElement('span');
+      dot.className = 'w-1 h-1 rounded-full bg-burgundy mt-[0.5rem] shrink-0';
+      dot.setAttribute('aria-hidden', 'true');
+      const text = document.createElement('span');
+      text.className = 'font-sans text-[0.85rem] font-light text-[#444] leading-[1.7]';
+      text.textContent = cut;
+      li.append(dot, text);
+      panelCuts.appendChild(li);
+    });
+    panelRest?.classList.add('hidden');
+    panelZone?.classList.remove('hidden');
+  }
+
+  function showRest() {
+    panelZone?.classList.add('hidden');
+    panelRest?.classList.remove('hidden');
+  }
+
   zones.forEach(zone => {
-    const img = zone.dataset.image;
-    if (!img) return;
-    (zone.dataset.cuts ?? '').split(',').filter(Boolean).map(Number).forEach(i => idxToImage.set(i, img));
-  });
-
-  function setCaption(label: string | undefined, on: boolean) {
-    if (!caption) return;
-    caption.textContent = on && label ? label : captionHint;
-    caption.classList.toggle('is-active', on && !!label);
-  }
-
-  function setActive(indices: number[], on: boolean) {
-    indices.forEach(i => cutItems[i]?.classList.toggle('sc-active', on));
-  }
-
-  function swapCowImage(indices: number[], on: boolean) {
-    if (!cowImg) return;
-    if (on) {
-      // Usa la imagen del primer índice que tenga una asignada
-      const img = indices.map(i => idxToImage.get(i)).find(Boolean);
-      if (img) cowImg.src = img;
-    } else {
-      cowImg.src = cowBaseSrc;
-    }
-  }
-
-  zones.forEach(zone => {
-    const indices = (zone.dataset.cuts ?? '').split(',').filter(Boolean).map(Number);
+    const n = Number(zone.dataset.zone);
     zone.addEventListener('mouseenter', () => {
-      setActive(indices, true);
       if (cowImg && zone.dataset.image) cowImg.src = zone.dataset.image;
-      setCaption(zone.dataset.zoneLabel, true);
+      showZone(n);
     });
     zone.addEventListener('mouseleave', () => {
-      setActive(indices, false);
       if (cowImg) cowImg.src = cowBaseSrc;
-      setCaption(undefined, false);
-    });
-  });
-
-  cutItems.forEach(item => {
-    const idx = Number(item.dataset.cutIdx);
-    item.addEventListener('mouseenter', () => {
-      item.classList.add('sc-active');
-      zones.forEach(zone => {
-        const zoneIndices = (zone.dataset.cuts ?? '').split(',').map(Number);
-        if (zoneIndices.includes(idx)) zone.classList.add('sc-active');
-      });
-      swapCowImage([idx], true);
-    });
-    item.addEventListener('mouseleave', () => {
-      item.classList.remove('sc-active');
-      zones.forEach(zone => zone.classList.remove('sc-active'));
-      swapCowImage([idx], false);
+      showRest();
     });
   });
 

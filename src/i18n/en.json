@@ -393,34 +393,87 @@
     "premiumLabel": "Saturno Premium",
     "premiumH3": "A line of excellence",
     "premiumBody": "The beef Uruguay exports to the world's most demanding markets, now available to the Uruguayan consumer. Angus and Hereford steers and heifers, natural pasture grazing, balanced supplementation without growth hormones.",
-    "cuts": [
-      "Ribeye (Bife Ancho)",
-      "Striploin (Bife Angosto)",
-      "Tenderloin (Lomo)",
-      "Rump (Cuadril)",
-      "Tri-tip (Colita de Cuadril)",
-      "Flank (Vacío)"
-    ],
-    "cowHint": "Hover over or tap a region of the diagram to identify its cuts.",
+    "cowHint": "Hover over or tap a region of the diagram to discover every cut from that area.",
+    "cowPanelKicker": "18 zones · INAC Cuts Manual",
+    "cutsListTitle": "Complete list of cuts",
     "cowZones": [
-      "Neck",
-      "Chuck Roll · Chuck Cover",
-      "Blade Clod · Blade Oyster · Chuck Tender",
-      "Ribeye · Rib Eye Cap",
-      "Striploin",
-      "Tenderloin",
-      "Rump · Rump Cap · Tri-tip",
-      "Ribs · Rib Plate",
-      "Brisket",
-      "Navel Plate · Rose Meat",
-      "Thin Flank · Skirt Steak",
-      "Inside · Inside Cap",
-      "Knuckle",
-      "Eye Round · Outside Flat",
-      "Heel Muscle",
-      "Shin",
-      "Fore Shank",
-      "Hind Shank"
+      { "name": "Neck", "cuts": ["Neck", "Neck Chain"] },
+      {
+        "name": "Chuck",
+        "cuts": [
+          "Chuck Roll",
+          "Chuck Cover",
+          "Chuck Rib Meat",
+          "Sobrecostilla",
+          "Huachalomo"
+        ]
+      },
+      {
+        "name": "Shoulder Clod",
+        "cuts": [
+          "Blade Clod",
+          "Shoulder Clod",
+          "Blade Bolar (Heart of Clod)",
+          "Blade Oyster",
+          "Chuck Tender"
+        ]
+      },
+      {
+        "name": "Rib Eye",
+        "cuts": ["Cube Roll (Rib Eye Roll)", "Spencer Roll", "Rib Eye Cap"]
+      },
+      { "name": "Striploin", "cuts": ["Striploin"] },
+      { "name": "Tenderloin", "cuts": ["Tenderloin"] },
+      {
+        "name": "Rump",
+        "cuts": [
+          "Rump",
+          "Top Sirloin (D-Rump)",
+          "Eye of Rump",
+          "Rump Cap (Picanha)",
+          "Tri-tip"
+        ]
+      },
+      {
+        "name": "Ribs",
+        "cuts": [
+          "Rib Plate",
+          "Rib Plate Flank-on",
+          "Short Plate Portion",
+          "Intercostals (Rib Fingers)"
+        ]
+      },
+      {
+        "name": "Brisket",
+        "cuts": ["Brisket", "Brisket Point End", "Brisket Point End Plate"]
+      },
+      {
+        "name": "Navel Plate",
+        "cuts": ["Brisket Navel Plate", "Rose Meat (Matambre)"]
+      },
+      {
+        "name": "Thin Flank",
+        "cuts": [
+          "Thin Flank",
+          "Flank Steak",
+          "Thick Skirt (Hanging Tender)",
+          "Thin Skirt (Outside Skirt)",
+          "Topside Fillet (Spider Steak)"
+        ]
+      },
+      {
+        "name": "Inside",
+        "cuts": ["Inside", "Inside Cap off", "Inside Cap"]
+      },
+      { "name": "Knuckle", "cuts": ["Knuckle"] },
+      {
+        "name": "Outside",
+        "cuts": ["Outside", "Outside Flat", "Eye Round", "Silverside"]
+      },
+      { "name": "Heel Muscle", "cuts": ["Heel Muscle"] },
+      { "name": "Shin", "cuts": ["Shin", "Conical Muscle"] },
+      { "name": "Fore Shank", "cuts": ["Fore Shank", "Golden Coin"] },
+      { "name": "Hind Shank", "cuts": ["Hind Shank"] }
     ],
     "premiumItems": [
       "Professional challenge from the group's own infrastructure",
