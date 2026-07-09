@@ -217,6 +217,18 @@ const zonePolys = [
                 loading="lazy"
                 decoding="async"
               />
+              <!-- Capas de zona precargadas — el hover solo cruza opacidades (sin swap de src, sin flash) -->
+              {zonePolys.map(({ n }) => (
+                <img
+                  class="cow-zone-img select-none"
+                  data-zone-img={n}
+                  src={`/images/cut-${n}.png`}
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  aria-hidden="true"
+                />
+              ))}
               <!-- SVG overlay — viewBox coincide con dimensiones reales de la imagen (1448×1086) -->
               <svg
                 class="absolute inset-0 w-full h-full"
@@ -225,7 +237,7 @@ const zonePolys = [
                 aria-hidden="true"
               >
                 {zonePolys.map(({ n, points }) => (
-                  <polygon class="sc-zone" data-zone={n} data-image={`/images/cut-${n}.png`} points={points} />
+                  <polygon class="sc-zone" data-zone={n} points={points} />
                 ))}
               </svg>
             </div>
@@ -379,6 +391,14 @@ const zonePolys = [
     object-fit: contain;
     object-position: center;
   }
+  .cow-zone-img {
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+  }
+  .cow-zone-img.is-on {
+    opacity: 1;
+  }
   /* Panel de zona — entrada escalonada de los cortes */
   @keyframes cutSlideIn {
     from { opacity: 0; transform: translateX(18px); }
@@ -432,8 +452,11 @@ const zonePolys = [
 
 <script>
   const zones = document.querySelectorAll<HTMLElement>('.sc-zone');
-  const cowImg = document.querySelector<HTMLImageElement>('#cow-hotmap img');
-  const cowBaseSrc = cowImg?.src ?? '';
+  const zoneImgs = new Map<number, HTMLElement>();
+  document.querySelectorAll<HTMLElement>('.cow-zone-img').forEach(img => {
+    zoneImgs.set(Number(img.dataset.zoneImg), img);
+  });
+  let activeZoneImg: HTMLElement | null = null;
   const panelRest = document.getElementById('cow-panel-rest');
   const panelZone = document.getElementById('cow-panel-zone');
   const panelNum = document.getElementById('cow-panel-num');
@@ -471,14 +494,20 @@ const zonePolys = [
     panelRest?.classList.remove('hidden');
   }
 
+  function highlightZoneImg(n: number | null) {
+    activeZoneImg?.classList.remove('is-on');
+    activeZoneImg = n === null ? null : (zoneImgs.get(n) ?? null);
+    activeZoneImg?.classList.add('is-on');
+  }
+
   zones.forEach(zone => {
     const n = Number(zone.dataset.zone);
     zone.addEventListener('mouseenter', () => {
-      if (cowImg && zone.dataset.image) cowImg.src = zone.dataset.image;
+      highlightZoneImg(n);
       showZone(n);
     });
     zone.addEventListener('mouseleave', () => {
-      if (cowImg) cowImg.src = cowBaseSrc;
+      highlightZoneImg(null);
       showRest();
     });
   });
