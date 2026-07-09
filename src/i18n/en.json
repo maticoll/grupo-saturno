@@ -395,6 +395,7 @@
     "premiumBody": "The beef Uruguay exports to the world's most demanding markets, now available to the Uruguayan consumer. Angus and Hereford steers and heifers, natural pasture grazing, balanced supplementation without growth hormones.",
     "cowHint": "Hover over or tap a region of the diagram to discover every cut from that area.",
     "cowPanelKicker": "18 zones · INAC Cuts Manual",
+    "cowPinHint": "Zone pinned — tap it again to release.",
     "cutsListTitle": "Complete list of cuts",
     "cowZones": [
       { "name": "Neck", "cuts": ["Neck", "Neck Chain"] },

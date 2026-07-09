@@ -395,6 +395,7 @@
     "premiumBody": "Las carnes que Uruguay exporta a los mercados más exigentes del mundo, ahora disponibles para el consumidor uruguayo. Novillos y vaquillonas Angus y Hereford, pastoreo a pradera natural, suplementación equilibrada sin hormonas de crecimiento.",
     "cowHint": "Pasá el cursor o tocá una zona de la vaca para descubrir todos los cortes de esa región.",
     "cowPanelKicker": "18 zonas · Manual de Cortes INAC",
+    "cowPinHint": "Zona fijada — tocala de nuevo para soltarla.",
     "cutsListTitle": "Listado completo de cortes",
     "cowZones": [
       {

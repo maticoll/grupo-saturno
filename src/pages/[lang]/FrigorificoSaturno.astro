@@ -253,6 +253,9 @@ const zonePolys = [
                 <span id="cow-panel-name" class="font-serif text-[1.5rem] font-light text-carbon leading-tight"></span>
               </p>
               <ul id="cow-panel-cuts" class="space-y-2.5"></ul>
+              <p id="cow-panel-pin-hint" class="hidden font-sans text-[0.7rem] font-light text-[#999] mt-6">
+                {t('saturno.cowPinHint')}
+              </p>
             </div>
           </div>
         </div>
@@ -462,13 +465,19 @@ const zonePolys = [
   const panelNum = document.getElementById('cow-panel-num');
   const panelName = document.getElementById('cow-panel-name');
   const panelCuts = document.getElementById('cow-panel-cuts');
+  const pinHint = document.getElementById('cow-panel-pin-hint');
   const zonesData = JSON.parse(
     document.getElementById('cow-zones-json')?.textContent ?? '[]'
   ) as Array<{ name: string; cuts: string[] }>;
 
+  let pinnedZone: number | null = null;
+  let shownZone: number | null = null;
+
   function showZone(n: number) {
     const zone = zonesData[n - 1];
     if (!zone || !panelNum || !panelName || !panelCuts) return;
+    if (shownZone === n) return;
+    shownZone = n;
     panelNum.textContent = String(n).padStart(2, '0');
     panelName.textContent = zone.name;
     panelCuts.innerHTML = '';
@@ -490,6 +499,7 @@ const zonePolys = [
   }
 
   function showRest() {
+    shownZone = null;
     panelZone?.classList.add('hidden');
     panelRest?.classList.remove('hidden');
   }
@@ -500,16 +510,34 @@ const zonePolys = [
     activeZoneImg?.classList.add('is-on');
   }
 
+  function applyZone(n: number | null) {
+    highlightZoneImg(n);
+    if (n === null) showRest();
+    else showZone(n);
+  }
+
+  function setPinned(n: number | null) {
+    pinnedZone = n;
+    pinHint?.classList.toggle('hidden', n === null);
+  }
+
   zones.forEach(zone => {
     const n = Number(zone.dataset.zone);
-    zone.addEventListener('mouseenter', () => {
-      highlightZoneImg(n);
-      showZone(n);
+    zone.addEventListener('mouseenter', () => applyZone(n));
+    // Al salir, vuelve a la zona fijada (o al reposo si no hay ninguna)
+    zone.addEventListener('mouseleave', () => applyZone(pinnedZone));
+    // Click/tap fija la zona; repetir sobre la misma la suelta
+    zone.addEventListener('click', e => {
+      e.stopPropagation();
+      setPinned(pinnedZone === n ? null : n);
+      applyZone(pinnedZone ?? n);
     });
-    zone.addEventListener('mouseleave', () => {
-      highlightZoneImg(null);
-      showRest();
-    });
+  });
+
+  // Click/tap en el área vacía del diagrama suelta la zona fijada
+  document.getElementById('cow-hotmap')?.addEventListener('click', () => {
+    setPinned(null);
+    applyZone(null);
   });
 
   // Pilares — animación scroll
