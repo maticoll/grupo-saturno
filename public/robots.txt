@@ -1,4 +1,33 @@
 User-agent: *
 Allow: /
 
+# Buscadores chinos — clave para compradores de China
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Sogou web spider
+Allow: /
+
+# Crawlers de IA / motores de respuesta (AI search) — permitidos para visibilidad
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://gruposaturno.uy/sitemap-index.xml
